@@ -23,6 +23,11 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=liohamn&show_icons=true&locale=en" alt="liohamn" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=liohamn&" alt="liohamn" /></p>
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=gruvbox" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=frtzhahn&theme=gruvbox" alt="GitHub Streak" />
+</p>
