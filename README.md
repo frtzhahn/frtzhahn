@@ -9,10 +9,13 @@
 
 - 📫 How to reach me **aldrinalciso2@gmail.com**
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://fb.com/aldrin alciso" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="aldrin alciso" height="30" width="40" /></a>
-<a href="https://medium.com/@liohamn" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/medium.svg" alt="@liohamn" height="30" width="40" /></a>
+
+### 🌐 Connect with me
+
+[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/drin0_o)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://web.facebook.com/aldrin.alciso.2024)
+[![Medium](https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white)](https://medium.com/@liohaym)
+
 </p>
 
 ### 🚀 Languages and Tools:
