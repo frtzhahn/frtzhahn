@@ -33,6 +33,11 @@
 
 ---
 
+
+## ⏱️ Coding Time (via WakaTime)
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=radical)](https://github.com/frtzhahn)
 
 ---
