@@ -16,8 +16,8 @@ jobs:
           SHOW_TITLE: true
           SHOW_PROJECTS: true
           SHOW_EDITORS: true
-          SHOW_OS: true
-          SHOW_PROFILE_VIEWS: true
+          SHOW_OS: false
+          SHOW_PROFILE_VIEWS: false
           SHOW_LANGUAGE_PER_REPO: true
           SHOW_TOTAL_CODE_TIME: true
           SHOW_TIMEZONE: false
