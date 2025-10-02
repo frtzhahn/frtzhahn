@@ -53,6 +53,76 @@
 
 ## ⏱️ Coding Time (via WakaTime)
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
+
+![Profile Views](http://img.shields.io/badge/Profile%20Views-5-blue)
+
+**🐱 My GitHub Data** 
+
+> 📦 253.9 kB Used in GitHub's Storage 
+ > 
+> 🏆 224 Contributions in the Year 2025
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 5 Public Repositories 
+ > 
+> 🔑 4 Private Repositories 
+ > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                51 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.37 % 
+🌆 Daytime                44 commits          ███░░░░░░░░░░░░░░░░░░░░░░   12.39 % 
+🌃 Evening                211 commits         ███████████████░░░░░░░░░░   59.44 % 
+🌙 Night                  49 commits          ███░░░░░░░░░░░░░░░░░░░░░░   13.80 % 
+```
+📅 **I'm Most Productive on Saturday** 
+
+```text
+Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.82 % 
+Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.54 % 
+Wednesday                8 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.25 % 
+Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.13 % 
+Friday                   66 commits          █████░░░░░░░░░░░░░░░░░░░░   18.59 % 
+Saturday                 166 commits         ████████████░░░░░░░░░░░░░   46.76 % 
+Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   25.92 % 
+```
+
+
+📊 **This Week I Spent My Time On** 
+
+```text
+🕑︎ Time Zone: Asia/Ulaanbaatar
+
+💬 Programming Languages: 
+No Activity Tracked This Week
+
+🔥 Editors: 
+No Activity Tracked This Week
+
+🐱‍💻 Projects: 
+No Activity Tracked This Week
+
+💻 Operating System: 
+No Activity Tracked This Week
+```
+
+**I Mostly Code in HTML** 
+
+```text
+HTML                     5 repos             ██████████████████░░░░░░░   71.43 % 
+C                        2 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
+```
+
+
+
+**Timeline**
+
+![Lines of Code chart](https://raw.githubusercontent.com/frtzhahn/frtzhahn/main/assets/bar_graph.png)
+
+
+ Last Updated on 02/10/2025 18:32:28 UTC
 <!--END_SECTION:waka-->
 
 
