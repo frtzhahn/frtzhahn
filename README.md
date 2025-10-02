@@ -29,14 +29,12 @@
 
 
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
 
 ---
 
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
 
-## ⏱️ Coding Time (via WakaTime)
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
+---
 
 [![GitHub Stats](https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=radical)](https://github.com/frtzhahn)
 
@@ -45,5 +43,11 @@
 [![GitHub Streak](https://streak-stats.demolab.com?user=frtzhahn&theme=radical&hide_border=true)](https://git.io/streak-stats)
 
 ---
+
+## ⏱️ Coding Time (via WakaTime)
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
+
 
 
