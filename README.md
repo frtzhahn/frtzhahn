@@ -35,6 +35,13 @@
 ---
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
+<p align="left">
+  <img src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=tokyonight" />
+
+  <img src="https://github-readme-streak-stats.herokuapp.com?user=frtzhahn&theme=tokyonight" />
+</p>
+
+
 
 ---
 <h1 align="center">🤓 My GitHub Data </h1>  
@@ -68,7 +75,6 @@ Sunday                   92 commits          ██████░░░░░�
 📊 **This Week I Spent My Time On** 
 
 ```text
-🕑︎ Time Zone: Asia/Ulaanbaatar
 
 💬 Programming Languages: 
 No Activity Tracked This Week
@@ -92,14 +98,14 @@ C                        2 repos             ███████░░░░�
 
 
 
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/frtzhahn/frtzhahn/main/assets/bar_graph.png)
-
-
 
 <!--END_SECTION:waka-->
 
+---
+
+<div align="center">
+<img height="500"src="https://media.tenor.com/q5JB-FKUvSIAAAAM/queendugif-peace.gif"/>
+</div>
 
 
 
