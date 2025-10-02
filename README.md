@@ -38,6 +38,9 @@
 
 ---
 
+<!--START_SECTION:waka-->
+
+
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
 <p align="center">
 <img width="400" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" />
@@ -94,19 +97,11 @@ No Activity Tracked This Week
 No Activity Tracked This Week
 ```
 
-**I Mostly Code in HTML** 
-
-```text
-HTML                     5 repos             ██████████████████░░░░░░░   71.43 % 
-C                        2 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
-```
-
 
 
 
 <!--END_SECTION:waka-->
 
----
 
 <div align="center">
 <img height="500"src="https://media.tenor.com/q5JB-FKUvSIAAAAM/queendugif-peace.gif"/>
