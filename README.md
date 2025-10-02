@@ -37,38 +37,14 @@
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
 
 ---
+<h1 align="center">🤓 My GitHub Data </h1>  
+
+  
 <div align="center">
 <img height="500"src="https://wakatime.com/share/@0e8c0e7e-426d-4531-92bc-cb97f076d55f/ca56a578-d9ba-49b4-b331-1a3d49b5ebc7.svg"/>
 </div>
 
----
-
-[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=radical)](https://github.com/frtzhahn)
-
----
-
-[![GitHub Streak](https://streak-stats.demolab.com?user=frtzhahn&theme=radical&hide_border=true)](https://git.io/streak-stats)
-
----
-
-## ⏱️ Coding Time (via WakaTime)
-<!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
-
-![Profile Views](http://img.shields.io/badge/Profile%20Views-5-blue)
-
-**🐱 My GitHub Data** 
-
-> 📦 253.9 kB Used in GitHub's Storage 
- > 
-> 🏆 224 Contributions in the Year 2025
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 5 Public Repositories 
- > 
-> 🔑 4 Private Repositories 
- > 
+ 
 **I'm a Night 🦉** 
 
 ```text
@@ -124,6 +100,9 @@ C                        2 repos             ███████░░░░�
 
  Last Updated on 02/10/2025 18:32:28 UTC
 <!--END_SECTION:waka-->
+
+
+
 
 
 
