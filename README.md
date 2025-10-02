@@ -28,10 +28,23 @@
 
 
 
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=gruvbox" alt="GitHub Stats" />
-</p>
 
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=frtzhahn&theme=gruvbox" alt="GitHub Streak" />
-</p>
+## 📊 GitHub Activity Graph
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
+
+---
+
+## ⚡ GitHub Stats
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=radical)](https://github.com/frtzhahn)
+
+---
+
+## 🔥 GitHub Streak
+[![GitHub Streak](https://streak-stats.demolab.com?user=frtzhahn&theme=radical&hide_border=true)](https://git.io/streak-stats)
+
+---
+
+## ⏱️ Coding Time (via WakaTime)
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
+
