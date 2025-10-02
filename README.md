@@ -2,11 +2,15 @@
 <h5 align="center">From Univeristy of Caloocan City 🏫</h1>
 <h3 align="center">Beginner in programming🥀💔</h3>
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=liohamn&label=Profile%20views&color=0e75b6&style=flat" alt="liohamn" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=frtzhahn&label=Profile%20views&color=0e75b6&style=flat" alt="frtzhahn" /> </p>
 
-- 🤗 I’m currently working on **Mini-projects in C language**
 
-- 🌱 I’m currently learning **C language and more**
+<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=frtzhahn" alt="liohamn" /></a> </p>
+
+
+- 🤗 I’m currently working on **Mini-projects in C language/Case study Project**
+
+- 🤞 **Manifesting to get a job**
 
 - 📫 How to reach me **aldrinalciso2@gmail.com**
 
@@ -27,7 +31,9 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
+---
 
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=frtzhahn&show_icons=true&locale=en&layout=compact" alt="frtzhahn" /></p>
 
 
 ---
@@ -42,11 +48,6 @@
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=frtzhahn&theme=radical&hide_border=true)](https://git.io/streak-stats)
 
----
-
-## ⏱️ Coding Time (via WakaTime)
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
 
 
 
