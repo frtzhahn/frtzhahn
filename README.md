@@ -35,10 +35,8 @@
 ---
 
 [![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
-<p align="left">
-  <img src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=tokyonight" />
-
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=frtzhahn&theme=tokyonight" />
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=tokyonight"/> <img src="https://github-readme-streak-stats.herokuapp.com?user=frtzhahn&theme=tokyonight" />
 </p>
 
 
