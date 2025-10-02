@@ -49,6 +49,11 @@
 
 [![GitHub Streak](https://streak-stats.demolab.com?user=frtzhahn&theme=radical&hide_border=true)](https://git.io/streak-stats)
 
+---
+
+## ⏱️ Coding Time (via WakaTime)
+<!--START_SECTION:waka-->
+<!--END_SECTION:waka-->
 
 
 
