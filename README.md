@@ -39,7 +39,11 @@
 ---
 <h1 align="center">🤓 My GitHub Data </h1>  
 
-  
+
+<img src="wakatime/stats.svg" height="300"/>
+
+---
+
 <div align="center">
 <img height="500"src="https://wakatime.com/share/@0e8c0e7e-426d-4531-92bc-cb97f076d55f/ca56a578-d9ba-49b4-b331-1a3d49b5ebc7.svg"/>
 </div>
