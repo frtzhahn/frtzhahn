@@ -1,0 +1,41 @@
+name: Update README with Latest Stats
+
+on:
+  schedule:
+    - cron: "0 */6 * * *"   # runs every 6 hours
+  workflow_dispatch:        # lets you run it manually
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Generate GitHub Stats
+        uses: anmol098/waka-readme-stats@master
+        with:
+          GH_TOKEN: ${{ secrets.PAT_1 }}
+          WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          SHOW_TOTAL_COMMITS: "True"
+          SHOW_TOTAL_PR: "True"
+          SHOW_TOTAL_ISSUES: "True"
+          SHOW_DAYS_OF_WEEK: "True"
+          SHOW_LANGUAGE: "True"
+          SHOW_PR: "True"
+          SHOW_ISSUE: "True"
+          SHOW_LOC_CHART: "True"
+          SHOW_EDITORS: "False"
+          SHOW_PROJECTS: "False"
+          SHOW_OS: "False"
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_SHORT_INFO: "True"
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          git add .
+          git commit -m "⏰ Auto-update README with latest stats"
+          git push
