@@ -1,11 +1,12 @@
+<div align="center">
+  <img height="150" src="https://miro.medium.com/v2/1*tGHAV9yItR_FISNYM7HGqQ.gif"  />
+</div>
+
 <h1 align="center">Hi, I'm Aldrin James A. Alciso 👨‍💻</h1>
 <h5 align="center">From Univeristy of Caloocan City 🏫</h1>
 <h3 align="center">Beginner in programming🥀💔</h3>
 
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=frtzhahn&label=Profile%20views&color=0e75b6&style=flat" alt="frtzhahn" /> </p>
-
-
-<p align="center"> <a href="https://github.com/ryo-ma/github-profile-trophy"><img src="https://github-profile-trophy.vercel.app/?username=frtzhahn" alt="liohamn" /></a> </p>
 
 
 - 🤗 I’m currently working on **Mini-projects in C language/Case study Project**
@@ -26,19 +27,19 @@
 ### 😨 Languages and Tools:
 
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
 
 ---
 
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=frtzhahn&show_icons=true&locale=en&layout=compact" alt="frtzhahn" /></p>
-
+[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
 
 ---
-
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
+<div align="center">
+<img height="500"src="https://wakatime.com/share/@0e8c0e7e-426d-4531-92bc-cb97f076d55f/ca56a578-d9ba-49b4-b331-1a3d49b5ebc7.svg"/>
+</div>
 
 ---
 
