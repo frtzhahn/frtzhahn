@@ -55,7 +55,7 @@
 
 > 📦 254.0 kB Used in GitHub's Storage 
  > 
-> 🏆 253 Contributions in the Year 2025
+> 🏆 276 Contributions in the Year 2025
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -67,21 +67,18 @@
 
 ```text
 Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.46 % 
-Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.22 % 
+Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.21 % 
 Wednesday                8 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
-Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.99 % 
-Friday                   117 commits         ███████░░░░░░░░░░░░░░░░░░   28.82 % 
-Saturday                 166 commits         ██████████░░░░░░░░░░░░░░░   40.89 % 
-Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   22.66 % 
+Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.98 % 
+Friday                   118 commits         ███████░░░░░░░░░░░░░░░░░░   28.99 % 
+Saturday                 166 commits         ██████████░░░░░░░░░░░░░░░   40.79 % 
+Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   22.60 % 
 ```
 
 
 📊 **This Week I Spent My Time On** 
 
 ```text
-💬 Programming Languages: 
-No Activity Tracked This Week
-
 🔥 Editors: 
 No Activity Tracked This Week
 
