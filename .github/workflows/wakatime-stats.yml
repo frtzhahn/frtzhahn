@@ -2,19 +2,29 @@ name: WakaTime Readme Stats
 
 on:
   schedule:
-    - cron: '0 */6 * * *'  # Runs every 6 hours
+    - cron: "0 */6 * * *" # every 6 hours
   workflow_dispatch:
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
+      - uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
+          GH_TOKEN: ${{ secrets.PAT_1 }}
 
-          SHOW_TITLE: "True"
-          TIME_RANGE: last_7_days
-          LANG_COUNT: 5
-          SHOW_TOTAL: "True"
-          BLOCKS: ░▒▓█
+          #removed and retained features from my redme.md file
+          SHOW_LINES_OF_CODE: "False"
+          SHOW_COMMIT: "True"
+          SHOW_PROFILE_VIEWS: "False"
+          SHOW_UPDATED_DATE: "False"
+          SHOW_LANGUAGE: "True"
+          SHOW_PROJECTS: "False"
+          SHOW_EDITORS: "True"
+          SHOW_OS: "True"
+          SHOW_TIMEZONE: "False"
+          SHOW_DAYS_OF_WEEK: "True"
+          SHOW_LOC_CHART: "False"
+          SHOW_GITHUB_DATA: "False"      
+          SHOW_TOTAL_CODE_TIME: "False"     
