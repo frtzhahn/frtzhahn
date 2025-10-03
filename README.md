@@ -49,36 +49,24 @@
 
 
 <!--START_SECTION:waka-->
-**🐱 My GitHub Data** 
-
-> 📦 254.0 kB Used in GitHub's Storage 
- > 
-> 🏆 251 Contributions in the Year 2025
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 5 Public Repositories 
- > 
-> 🔑 4 Private Repositories 
- > 
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                58 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.15 % 
-🌆 Daytime                72 commits          ████░░░░░░░░░░░░░░░░░░░░░   17.56 % 
-🌃 Evening                211 commits         █████████████░░░░░░░░░░░░   51.46 % 
-🌙 Night                  69 commits          ████░░░░░░░░░░░░░░░░░░░░░   16.83 % 
+🌞 Morning                58 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.11 % 
+🌆 Daytime                73 commits          ████░░░░░░░░░░░░░░░░░░░░░   17.76 % 
+🌃 Evening                211 commits         █████████████░░░░░░░░░░░░   51.34 % 
+🌙 Night                  69 commits          ████░░░░░░░░░░░░░░░░░░░░░   16.79 % 
 ```
 📅 **I'm Most Productive on Saturday** 
 
 ```text
-Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.44 % 
-Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.20 % 
+Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.43 % 
+Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.19 % 
 Wednesday                8 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.95 % 
-Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.98 % 
-Friday                   121 commits         ███████░░░░░░░░░░░░░░░░░░   29.51 % 
-Saturday                 166 commits         ██████████░░░░░░░░░░░░░░░   40.49 % 
-Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   22.44 % 
+Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.97 % 
+Friday                   122 commits         ███████░░░░░░░░░░░░░░░░░░   29.68 % 
+Saturday                 166 commits         ██████████░░░░░░░░░░░░░░░   40.39 % 
+Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   22.38 % 
 ```
 
 
@@ -94,15 +82,6 @@ No Activity Tracked This Week
 💻 Operating System: 
 No Activity Tracked This Week
 ```
-
-**I Mostly Code in HTML** 
-
-```text
-HTML                     5 repos             ██████████████████░░░░░░░   71.43 % 
-C                        2 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
-```
-
-
 
 
 <!--END_SECTION:waka-->
