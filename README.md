@@ -38,9 +38,6 @@
 ---
 <h1 align="center">🤓My GitHub Stats</h1>
 
-<img src="https://wakatime.com/share/@frtzhahn/4f13cf1f-4879-4271-8561-f0e1652abc50.svg">
-
-
 [![Frtzhahn's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Frtzhahn&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 <div align="center">
