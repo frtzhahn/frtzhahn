@@ -39,50 +39,47 @@
 ---
 
 <!--START_SECTION:waka-->
+![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
 
+![Profile Views](http://img.shields.io/badge/Profile%20Views-10-blue)
 
-[![Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&theme=github-dark&hide_border=true)](https://github.com/frtzhahn)
-<p align="center">
-<img width="400" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=tokyonight&hide_border=true&bg_color=00000000" />
-<img width="425" src="https://github-readme-streak-stats.herokuapp.com?user=frtzhahn&theme=tokyonight&hide_border=true&background=00000000" />
-<img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=tokyonight&hide=Jupyter%20Notebook&hide_border=true&bg_color=00000000" />
+**🐱 My GitHub Data** 
 
-</p>
-
-
-
----
-<h1 align="center">🤓 My GitHub Data </h1>  
-
-<div align="center">
-<img height="500"src="https://wakatime.com/share/@0e8c0e7e-426d-4531-92bc-cb97f076d55f/ca56a578-d9ba-49b4-b331-1a3d49b5ebc7.svg"/>
-</div>
-
- 
+> 📦 254.0 kB Used in GitHub's Storage 
+ > 
+> 🏆 247 Contributions in the Year 2025
+ > 
+> 🚫 Not Opted to Hire
+ > 
+> 📜 5 Public Repositories 
+ > 
+> 🔑 4 Private Repositories 
+ > 
 **I'm a Night 🦉** 
 
 ```text
-🌞 Morning                51 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.37 % 
-🌆 Daytime                44 commits          ███░░░░░░░░░░░░░░░░░░░░░░   12.39 % 
-🌃 Evening                211 commits         ███████████████░░░░░░░░░░   59.44 % 
-🌙 Night                  49 commits          ███░░░░░░░░░░░░░░░░░░░░░░   13.80 % 
+🌞 Morning                54 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.29 % 
+🌆 Daytime                44 commits          ███░░░░░░░░░░░░░░░░░░░░░░   11.64 % 
+🌃 Evening                211 commits         ██████████████░░░░░░░░░░░   55.82 % 
+🌙 Night                  69 commits          █████░░░░░░░░░░░░░░░░░░░░   18.25 % 
 ```
 📅 **I'm Most Productive on Saturday** 
 
 ```text
-Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.82 % 
-Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.54 % 
-Wednesday                8 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.25 % 
-Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.13 % 
-Friday                   66 commits          █████░░░░░░░░░░░░░░░░░░░░   18.59 % 
-Saturday                 166 commits         ████████████░░░░░░░░░░░░░   46.76 % 
-Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   25.92 % 
+Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.65 % 
+Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.38 % 
+Wednesday                8 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.12 % 
+Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.06 % 
+Friday                   89 commits          ██████░░░░░░░░░░░░░░░░░░░   23.54 % 
+Saturday                 166 commits         ███████████░░░░░░░░░░░░░░   43.92 % 
+Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   24.34 % 
 ```
 
 
 📊 **This Week I Spent My Time On** 
 
 ```text
+🕑︎ Time Zone: Asia/Ulaanbaatar
 
 💬 Programming Languages: 
 No Activity Tracked This Week
@@ -97,9 +94,21 @@ No Activity Tracked This Week
 No Activity Tracked This Week
 ```
 
+**I Mostly Code in HTML** 
+
+```text
+HTML                     5 repos             ██████████████████░░░░░░░   71.43 % 
+C                        2 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
+```
 
 
 
+**Timeline**
+
+![Lines of Code chart](https://raw.githubusercontent.com/frtzhahn/frtzhahn/main/assets/bar_graph.png)
+
+
+ Last Updated on 03/10/2025 01:53:34 UTC
 <!--END_SECTION:waka-->
 
 
