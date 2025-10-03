@@ -35,26 +35,21 @@
 ![VS Code](https://img.shields.io/badge/VS%20Code-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 
+---
+<h1>🤓My GitHub Stats</h1>
+[![Frtzhahn's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Frtzhahn&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
+<div align="center">
+<img width="400" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=react&hide_border=true&bg_color=00000000" />
+<img width="425" src="https://github-readme-streak-stats.herokuapp.com?user=frtzhahn&theme=react&hide_border=true&background=00000000" />
+<img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=react&hide=Jupyter%20Notebook&hide_border=true&bg_color=00000000" />
+</div>
 ---
 
+
+
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
 
-![Profile Views](http://img.shields.io/badge/Profile%20Views-10-blue)
-
-**🐱 My GitHub Data** 
-
-> 📦 254.0 kB Used in GitHub's Storage 
- > 
-> 🏆 247 Contributions in the Year 2025
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 5 Public Repositories 
- > 
-> 🔑 4 Private Repositories 
- > 
 **I'm a Night 🦉** 
 
 ```text
@@ -79,7 +74,6 @@ Sunday                   92 commits          ██████░░░░░�
 📊 **This Week I Spent My Time On** 
 
 ```text
-🕑︎ Time Zone: Asia/Ulaanbaatar
 
 💬 Programming Languages: 
 No Activity Tracked This Week
@@ -94,21 +88,7 @@ No Activity Tracked This Week
 No Activity Tracked This Week
 ```
 
-**I Mostly Code in HTML** 
 
-```text
-HTML                     5 repos             ██████████████████░░░░░░░   71.43 % 
-C                        2 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
-```
-
-
-
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/frtzhahn/frtzhahn/main/assets/bar_graph.png)
-
-
- Last Updated on 03/10/2025 01:53:34 UTC
 <!--END_SECTION:waka-->
 
 
