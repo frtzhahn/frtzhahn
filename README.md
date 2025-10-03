@@ -36,7 +36,7 @@
 
 
 ---
-<h1>🤓My GitHub Stats</h1>
+<h1 align="center">🤓My GitHub Stats</h1>
 
 [![Frtzhahn's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Frtzhahn&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
@@ -45,7 +45,6 @@
 <img width="425" src="https://github-readme-streak-stats.herokuapp.com?user=frtzhahn&theme=react&hide_border=true&background=00000000" />
 <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=react&hide=Jupyter%20Notebook&hide_border=true&bg_color=00000000" />
 </div>
----
 
 
 
