@@ -1,4 +1,4 @@
-name: Update README with Latest Stats
+name: WakaTime Readme Stats
 
 on:
   schedule:
