@@ -9,7 +9,7 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - uses: ImBIOS/waka-readme-stats@v1.0.3  # stable, minimalistic fork
+      - uses: anmol098/waka-readme-stats@v1.0.0
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.PAT_1 }}
