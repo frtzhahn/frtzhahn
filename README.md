@@ -61,29 +61,6 @@
  > 
 > 🔑 4 Private Repositories 
  > 
-📅 **I'm Most Productive on Saturday** 
-
-```text
-Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.56 % 
-Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.30 % 
-Wednesday                8 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.05 % 
-Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.02 % 
-Friday                   102 commits         ███████░░░░░░░░░░░░░░░░░░   26.09 % 
-Saturday                 166 commits         ███████████░░░░░░░░░░░░░░   42.46 % 
-Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   23.53 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-🔥 Editors: 
-No Activity Tracked This Week
-
-💻 Operating System: 
-No Activity Tracked This Week
-```
-
 **I Mostly Code in HTML** 
 
 ```text
