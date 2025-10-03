@@ -49,13 +49,11 @@
 
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
-
 **🐱 My GitHub Data** 
 
 > 📦 254.0 kB Used in GitHub's Storage 
  > 
-> 🏆 276 Contributions in the Year 2025
+> 🏆 251 Contributions in the Year 2025
  > 
 > 🚫 Not Opted to Hire
  > 
@@ -63,22 +61,33 @@
  > 
 > 🔑 4 Private Repositories 
  > 
+**I'm a Night 🦉** 
+
+```text
+🌞 Morning                58 commits          ████░░░░░░░░░░░░░░░░░░░░░   14.15 % 
+🌆 Daytime                72 commits          ████░░░░░░░░░░░░░░░░░░░░░   17.56 % 
+🌃 Evening                211 commits         █████████████░░░░░░░░░░░░   51.46 % 
+🌙 Night                  69 commits          ████░░░░░░░░░░░░░░░░░░░░░   16.83 % 
+```
 📅 **I'm Most Productive on Saturday** 
 
 ```text
-Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.46 % 
-Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.21 % 
-Wednesday                8 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.97 % 
+Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.44 % 
+Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.20 % 
+Wednesday                8 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.95 % 
 Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.98 % 
-Friday                   118 commits         ███████░░░░░░░░░░░░░░░░░░   28.99 % 
-Saturday                 166 commits         ██████████░░░░░░░░░░░░░░░   40.79 % 
-Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   22.60 % 
+Friday                   121 commits         ███████░░░░░░░░░░░░░░░░░░   29.51 % 
+Saturday                 166 commits         ██████████░░░░░░░░░░░░░░░   40.49 % 
+Sunday                   92 commits          ██████░░░░░░░░░░░░░░░░░░░   22.44 % 
 ```
 
 
 📊 **This Week I Spent My Time On** 
 
 ```text
+💬 Programming Languages: 
+No Activity Tracked This Week
+
 🔥 Editors: 
 No Activity Tracked This Week
 
