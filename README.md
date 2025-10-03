@@ -43,6 +43,7 @@
 <div align="center">
 <img width="400" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=react&hide_border=true&bg_color=00000000" />
 <img width="425" src="https://github-readme-streak-stats.herokuapp.com?user=frtzhahn&theme=react&hide_border=true&background=00000000" />
+<img width="400" src="https://wakatime.com/share/@frtzhahn/209b0bef-acd5-4b35-aa39-21a7497fd361.svg">
 <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=react&hide=Jupyter%20Notebook&hide_border=true&bg_color=00000000" />
 </div>
 
