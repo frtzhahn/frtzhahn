@@ -56,46 +56,7 @@
   <summary><h3>WakaTime Stats</h3></summary>
 
 <!--START_SECTION:waka-->
-![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
-
 ![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-14.1%20thousand%20lines%20of%20code-blue)
-
-**I'm a Night 🦉** 
-
-```text
-🌞 Morning                58 commits          ███░░░░░░░░░░░░░░░░░░░░░░   13.74 % 
-🌆 Daytime                82 commits          █████░░░░░░░░░░░░░░░░░░░░   19.43 % 
-🌃 Evening                213 commits         █████████████░░░░░░░░░░░░   50.47 % 
-🌙 Night                  69 commits          ████░░░░░░░░░░░░░░░░░░░░░   16.35 % 
-```
-📅 **I'm Most Productive on Saturday** 
-
-```text
-Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.37 % 
-Tuesday                  9 commits           █░░░░░░░░░░░░░░░░░░░░░░░░   02.13 % 
-Wednesday                8 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   01.90 % 
-Thursday                 4 commits           ░░░░░░░░░░░░░░░░░░░░░░░░░   00.95 % 
-Friday                   133 commits         ████████░░░░░░░░░░░░░░░░░   31.52 % 
-Saturday                 166 commits         ██████████░░░░░░░░░░░░░░░   39.34 % 
-Sunday                   92 commits          █████░░░░░░░░░░░░░░░░░░░░   21.80 % 
-```
-
-
-📊 **This Week I Spent My Time On** 
-
-```text
-💬 Programming Languages: 
-No Activity Tracked This Week
-
-🔥 Editors: 
-No Activity Tracked This Week
-
-🐱‍💻 Projects: 
-No Activity Tracked This Week
-
-💻 Operating System: 
-No Activity Tracked This Week
-```
 
 
 <!--END_SECTION:waka-->
