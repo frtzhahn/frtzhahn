@@ -13,7 +13,6 @@ jobs:
       - uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          GH_TOKEN: ${{ secrets.PAT_1 }}
 
           #im hiding these
           SHOW_LINES_OF_CODE: "False"
@@ -25,7 +24,6 @@ jobs:
           SHOW_PROJECTS: "False"
           SHOW_TIMEZONE: "False"
           SHOW_LOC_CHART: "False"
-          SHOW_GITHUB: "False"
 
 
 
