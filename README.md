@@ -37,6 +37,7 @@
 
 ---
 <h1>🤓My GitHub Stats</h1>
+
 [![Frtzhahn's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Frtzhahn&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 <div align="center">
@@ -51,19 +52,6 @@
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-0%20secs-blue)
 
-**🐱 My GitHub Data** 
-
-> 📦 254.0 kB Used in GitHub's Storage 
- > 
-> 🏆 253 Contributions in the Year 2025
- > 
-> 🚫 Not Opted to Hire
- > 
-> 📜 5 Public Repositories 
- > 
-> 🔑 4 Private Repositories 
- > 
-📅 **I'm Most Productive on Saturday** 
 
 ```text
 Monday                   10 commits          █░░░░░░░░░░░░░░░░░░░░░░░░   02.60 % 
@@ -85,20 +73,6 @@ No Activity Tracked This Week
 💻 Operating System: 
 No Activity Tracked This Week
 ```
-
-**I Mostly Code in HTML** 
-
-```text
-HTML                     5 repos             ██████████████████░░░░░░░   71.43 % 
-C                        2 repos             ███████░░░░░░░░░░░░░░░░░░   28.57 % 
-```
-
-
-
-**Timeline**
-
-![Lines of Code chart](https://raw.githubusercontent.com/frtzhahn/frtzhahn/main/assets/bar_graph.png)
-
 
 <!--END_SECTION:waka-->
 
