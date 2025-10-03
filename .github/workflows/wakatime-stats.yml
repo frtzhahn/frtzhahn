@@ -25,7 +25,7 @@ jobs:
           SHOW_PROJECTS: "False"
           SHOW_TIMEZONE: "False"
           SHOW_LOC_CHART: "False"
-          SHOW_MY_GITHUB_DATA: "False"
+          SHOW_GITHUB: "False"
 
 
 
