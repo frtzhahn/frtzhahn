@@ -1,3 +1,4 @@
+
 <div align="center">
   <img height="150" src="https://miro.medium.com/v2/1*tGHAV9yItR_FISNYM7HGqQ.gif"  />
 </div>
@@ -5,8 +6,6 @@
 <h1 align="center">Hi, I'm Aldrin James A. Alciso 👨‍💻</h1>
 <h5 align="center">From Univeristy of Caloocan City 🏫</h1>
 <h3 align="center">Beginner in programming🥀💔</h3>
-
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=frtzhahn&label=Profile%20views&color=0e75b6&style=flat" alt="frtzhahn" /> </p>
 
 
 - 🤗 I’m currently working on **Mini-projects in C language/Case study Project**
