@@ -48,7 +48,7 @@
 
 <div align="center">
   <img width="400" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=react&hide_border=true&bg_color=0d1117" />  
-  <img width="425" src="https://streak-stats.demolab.com?user=frtzhahn&theme=react&hide_border=true&background=0d1117" />
+  <img width="425" src="https://streak-stats.demolab.com?user=liohamn&theme=react&hide_border=true&background=0d1117" />
   <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=react&hide=Jupyter%20Notebook&hide_border=true&bg_color=0d1117" />  
 </div>
 </details>
