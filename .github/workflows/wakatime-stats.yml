@@ -2,7 +2,7 @@ name: WakaTime Readme Stats
 
 on:
   schedule:
-    - cron: "0 0 * * 0" # per week
+    - cron: "0 0 1 * *" # wakatime will refresh every 1st of the month
   workflow_dispatch:
 
 jobs:
