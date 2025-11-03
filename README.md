@@ -5,10 +5,10 @@
 
 <h1 align="center">Hi, I'm Aldrin James A. Alciso 👨‍💻</h1>
 <h5 align="center">From Univeristy of Caloocan City 🏫</h1>
-<h3 align="center">Beginner in programming🥀💔</h3>
+<!--<h3 align="center">Beginner in programming🥀💔</h3>-->
 
 
-- 🤗 I’m currently working on **Mini-projects in C language/Case study Project**
+<!--- 🤗 I’m currently working on **Mini-projects in C language/Case study Project**-->
 
 - 🤞 **Manifesting to get a job**
 
@@ -46,9 +46,9 @@
 
 [![Frtzhahn's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Frtzhahn&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
-  <img width="400" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=react&hide_border=true&bg_color=0d1117"  />  
-  <img width="425" src="https://streak-stats.demolab.com?user=frtzhahn&theme=react&hide_border=true&background=0d1117"  />  
-  <img width="400" src="https://github-readme-stats-git-masterrstaa-rickstaa.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=react&hide=Jupyter%20Notebook&hide_border=true&bg_color=0d1117" />
+<img width="475" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=react&hide_border=true&bg_color=0d1117"  />  
+<img width="475" src="https://streak-stats.demolab.com?user=frtzhahn&theme=react&hide_border=true&background=0d1117"  />  
+<img width="500" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=react&hide_border=true&bg_color=0d1117" />
 
 </div>
 </details>
