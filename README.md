@@ -51,7 +51,7 @@
 <img width="475" src="https://streak-stats.demolab.com?user=frtzhahn&theme=react&hide_border=true&background=0d1117"  />  
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <!-- <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=pie&theme=react" alt="Top Langs" /> -->
-  <img width="500" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&theme=react&hide_progress=true" />
+  <img width="450" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&theme=react&hide_progress=true" />
 </a>
 
 </div>
