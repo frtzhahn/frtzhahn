@@ -46,9 +46,13 @@
 
 [![Frtzhahn's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Frtzhahn&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
+
 <img width="475" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=react&hide_border=true&bg_color=0d1117"  />  
 <img width="475" src="https://streak-stats.demolab.com?user=frtzhahn&theme=react&hide_border=true&background=0d1117"  />  
-<img width="500" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=compact&theme=react&hide_border=true&bg_color=0d1117" />
+<a href="https://github.com/anuraghazra/github-readme-stats">
+  <!-- <img width="400" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&layout=pie&theme=react" alt="Top Langs" /> -->
+  <img width="500" src="https://github-readme-stats.vercel.app/api/top-langs/?username=frtzhahn&theme=react&hide_progress=true" />
+</a>
 
 </div>
 </details>
@@ -63,7 +67,7 @@
 <!--START_SECTION:waka-->
 ![Code Time](http://img.shields.io/badge/Code%20Time-28%20hrs%205%20mins-blue)
 
-![Lines of code](https://img.shields.io/badge/From%20Hello%20World%20I%27ve%20Written-16.1%20thousand%20lines%20of%20code-blue)
+![Lines of code](https://img.shields.io/badge/I%27ve%20Written-16.1%20thousand%20lines%20of%20code-blue)
 
 **I'm a Night 🦉** 
 
