@@ -8,7 +8,7 @@
 <!--<h3 align="center">Beginner in programming🥀💔</h3>-->
 
 
-<!--- 🤗 I’m currently working on **Mini-projects in C language/Case study Project**-->
+<!---  I’m currently studying **Web Development, Ethical Hacking & Operating Systems**-->
 
 - 🤞 **Manifesting to get a job**
 
