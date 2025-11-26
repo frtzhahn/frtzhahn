@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img height="150" src="https://miro.medium.com/v2/1*tGHAV9yItR_FISNYM7HGqQ.gif"  />
+  <img height="150" src="https://motionbgs.com/media/1432/aesthetic-landscape-with-train.960x540.mp4"  />
 </div>
 
 <h1 align="center">Hi, I'm Aldrin James A. Alciso 👨‍💻</h1>
@@ -121,7 +121,7 @@ Linux                    2 hrs 8 mins        ███████████�
 <!--END_SECTION:waka-->
 
 
-<div align="center">
+<!--<div align="center">
 <img height="500"src="https://media.tenor.com/q5JB-FKUvSIAAAAM/queendugif-peace.gif"/>
 </div>
 
@@ -131,4 +131,4 @@ Linux                    2 hrs 8 mins        ███████████�
 
 
 
-
+-->
