@@ -48,6 +48,8 @@
 <!--<details align="center">
   <summary> <h3>My GitHub Stats</h3> </summary>
 -->
+
+
 [![Frtzhahn's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Frtzhahn&theme=react)](https://github.com/ashutosh00710/github-readme-activity-graph)
 
 <!-- <img width="475" src="https://github-readme-stats.vercel.app/api?username=frtzhahn&show_icons=true&theme=react&hide_border=true&bg_color=0d1117&rank_icon=github"  />  
