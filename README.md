@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img height="150" src="https://motionbgs.com/media/1432/aesthetic-landscape-with-train.960x540.mp4"  />
+  <img src="https://motionbgs.com/media/1432/aesthetic-landscape-with-train.960x540.mp4"  />
 </div>
 
 <h1 align="center">Hi, I'm Aldrin James A. Alciso 👨‍💻</h1>
