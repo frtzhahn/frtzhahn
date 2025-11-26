@@ -1,6 +1,6 @@
 
 <div align="center">
-  <img src="https://i.pinimg.com/originals/50/0d/05/500d05bcbc3c80383458ee245122acb8.gif"  />
+  <img src="https://i.pinimg.com/originals/12/b2/3a/12b23a7752e8a7a4464c1ff5e596237f.gif"  />
 </div>
 
 <h1 align="center">Hi, I'm Aldrin James A. Alciso 👨‍💻</h1>
