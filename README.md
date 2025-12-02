@@ -24,7 +24,7 @@ Here are some ideas to get you started:
 <h6>From Univeristy of Caloocan City 🏫</h6>
 Beginner in programming 
   <br>
-Currently Studying 🔭 :
+Currently Studying/Exploring 🔭 :
   
 Web Development, Java programming 
   & Operating Systems 🌱
@@ -77,10 +77,11 @@ Web Development, Java programming
 
 <div align="center">
 
-  ![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=frtzhahn&theme=transparent) 
+  ![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=frtzhahn&theme=transparent)
   ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=frtzhahn&theme=transparent) 
-  ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=frtzhahn&theme=transparent) 
-  <!--![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=frtzhahn&theme=transparent)-->
+  ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=frtzhahn&theme=transparent)
+  [![](https://github-readme-streak-stats-brown-seven.vercel.app?user=frtzhahn&theme=transparent&border_radius=&short_numbers=true&date_format=%5BY.%5Dn.j&card_width=440&card_height=)](https://git.io/streak-stats)
+  ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=frtzhahn&theme=transparent)
   
   <br><br>
 
