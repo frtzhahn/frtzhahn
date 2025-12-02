@@ -18,7 +18,7 @@ Here are some ideas to get you started:
 <div align="center">
 <pre>
 
-  <img src="https://f8n-production-collection-assets.imgix.net//0x02c4394307de62241aa8d5a0915494a96B288261/38/nft.gif" />
+<img src="https://f8n-production-collection-assets.imgix.net//0x02c4394307de62241aa8d5a0915494a96B288261/38/nft.gif" />
   
 <h3>Hello, I'm Aldrin  👨‍💻</h3>
 <h6>From Univeristy of Caloocan City 🏫</h6>
