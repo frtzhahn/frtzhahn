@@ -20,12 +20,10 @@ Here are some ideas to get you started:
 
 <img src="https://f8n-production-collection-assets.imgix.net//0x02c4394307de62241aa8d5a0915494a96B288261/38/nft.gif" />
   
-<h3>Hello, I'm Aldrin  👨‍💻</h3>
-<h6>From Univeristy of Caloocan City 🏫</h6>
-Beginner in programming 
-  <br>
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Pixelify+Sans&size=25&duration=5000&pause=1000&color=208FFF&center=true&vCenter=true&width=435&lines=Hello%2C+I'm+Aldrin+James+A.+Alciso;From+University+of+Caloocan+City;Beginner+in+Programming+.+.+.+.+.)](https://git.io/typing-svg)
+<br>
 Currently Studying/Exploring 🔭 :
-  
+
 Web Development, Java programming 
   & Operating Systems 🌱
 </pre>
@@ -42,7 +40,9 @@ Web Development, Java programming
 [![Status: Unemployed](https://img.shields.io/badge/Status-Unemployed-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 <br><br>
 
-<pre> Used Languages and Tools: </pre>
+<pre> 
+  <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Pixelify+Sans&duration=1&pause=3000&color=208FFF&center=true&vCenter=true&width=435&lines=Used+Languages+and+Tools%3A;Operating+Systems;Desktop+Environments;Window+Managers;IDE%2FText+Editors;Programming+Languages" alt="Typing SVG" /></a>
+</pre>
 <br>
 
 
@@ -80,7 +80,7 @@ Web Development, Java programming
   ![](http://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=frtzhahn&theme=transparent)
   ![](http://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=frtzhahn&theme=transparent) 
   ![](http://github-profile-summary-cards.vercel.app/api/cards/stats?username=frtzhahn&theme=transparent)
-  [![](https://github-readme-streak-stats-brown-seven.vercel.app?user=frtzhahn&theme=transparent&border_radius=&short_numbers=true&date_format=%5BY.%5Dn.j&card_width=440&card_height=)](https://git.io/streak-stats)
+  [![](https://github-readme-streak-stats-brown-seven.vercel.app?user=frtzhahn&theme=transparent&hide_border=true&border_radius=&short_numbers=true&date_format=%5BY.%5Dn.j&card_width=440&card_height=)](https://git.io/streak-stats)
   ![](http://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=frtzhahn&theme=transparent)
   
   <br><br>
