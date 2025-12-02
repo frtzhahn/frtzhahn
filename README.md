@@ -23,8 +23,11 @@ Here are some ideas to get you started:
 <h6>From Univeristy of Caloocan City 🏫</h6>
 Beginner in programming 
 
+  
 Currently Studying 🔭 :
-Web Development, Java programming & Operating Systems 🌱
+  
+Web Development, Java programming 
+  & Operating Systems 🌱
 </pre>
 </div>
 
