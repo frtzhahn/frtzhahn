@@ -16,14 +16,14 @@ Here are some ideas to get you started:
 -->
 
 <div align="center">
-  <!--<img src="https://i.pinimg.com/originals/12/b2/3a/12b23a7752e8a7a4464c1ff5e596237f.gif"  />-->
-
 <pre>
-<h3>Hello, I'm Aldrin  👨‍💻</h1>
+
+  <img src="https://f8n-production-collection-assets.imgix.net//0x02c4394307de62241aa8d5a0915494a96B288261/38/nft.gif" />
+  
+<h3>Hello, I'm Aldrin  👨‍💻</h3>
 <h6>From Univeristy of Caloocan City 🏫</h6>
 Beginner in programming 
-
-  
+  <br>
 Currently Studying 🔭 :
   
 Web Development, Java programming 
