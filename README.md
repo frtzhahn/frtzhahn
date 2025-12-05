@@ -52,6 +52,7 @@ Web Development, Java programming
   [![OS:Android15](https://img.shields.io/badge/OS-Android15-green?style=flat-square&logo=android)](https://www.android.com/)
   [![OS: Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
   [![DE:KDE](https://img.shields.io/badge/DE-KDE-blue?style=flat-square&logo=KDE)](https://kde.org)
+[![DE:GNOME](https://img.shields.io/badge/DE-GNOME-darkblue?style=flat-square&logo=GNOME&logoColor=white)](https://www.gnome.org)
   [![WM: Sway](https://img.shields.io/badge/WM-Sway-blue?style=flat-square&logo=sway&logoColor=white)](https://swaywm.org)
   [![WM: i3](https://img.shields.io/badge/WM-i3-5c5c5c?style=flat-square&logo=i3&logoColor=white)](https://i3wm.org/)
   [![WM: GlazeWM](https://img.shields.io/badge/WM-GlazeWM-5c5c5c?style=flat-square&logo=windows&logoColor=white)](https://github.com/glzr-io/glazewm)
