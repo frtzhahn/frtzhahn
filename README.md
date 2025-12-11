@@ -36,6 +36,7 @@ Web Development, Java programming
 
 [![Joined: Feb 16, 2025](https://img.shields.io/badge/Joined-Feb_16,_2025-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 [![Stars: 5](https://img.shields.io/badge/Stars-5-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
+[![Status: Unemployed](https://img.shields.io/badge/Status-Unemployed-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 
 <img 
     src="https://estruyf-github.azurewebsites.net/api/VisitorHit?user=frtzhahn&repo=frtzhahn&countColor=%2394F3B3" 
@@ -43,7 +44,6 @@ Web Development, Java programming
     height="150"
 />
 
-[![Status: Unemployed](https://img.shields.io/badge/Status-Unemployed-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 <br><br>
 
 <pre> 
