@@ -44,8 +44,6 @@ Web Development, Java programming
     height="150"
 />
 
-<br><br>
-
 <pre> 
   <a href="https://git.io/typing-svg"><img src="https://readme-typing-svg.demolab.com?font=Pixelify+Sans&duration=1&pause=3000&color=208FFF&center=true&vCenter=true&width=435&lines=Used+Languages+and+Tools%3A;Operating+Systems;Desktop+Environments;Window+Managers;IDE%2FText+Editors;Programming+Languages" alt="Typing SVG" /></a>
 </pre>
