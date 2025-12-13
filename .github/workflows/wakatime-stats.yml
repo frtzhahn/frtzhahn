@@ -17,7 +17,7 @@ jobs:
           #removed and retained features from my redme.md file
           SHOW_LINES_OF_CODE: "True"
           SHOW_COMMIT: "True"
-          # SHOW_PROFILE_VIEWS: "True"
+          SHOW_PROFILE_VIEWS: "False"
           SHOW_UPDATED_DATE: "False"
           SHOW_LANGUAGE: "True"
           SHOW_PROJECTS: "True"
