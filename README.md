@@ -25,7 +25,7 @@ Here are some ideas to get you started:
 Currently Studying/Exploring 🔭 :
 
 Web Development, Java programming 
-  & Operating Systems 🌱
+  & Arduino 🌱
 </pre>
 </div>
 
@@ -35,7 +35,7 @@ Web Development, Java programming
 <div align="center">
 
 [![Joined: Feb 16, 2025](https://img.shields.io/badge/Joined-Feb_16,_2025-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
-[![Stars: 5](https://img.shields.io/badge/Stars-5-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
+[![Total Stars](https://img.shields.io/github/stars/frtzhahn?style=flat-square&label=Total%20Stars&logo=github&color=32CD32)](https://github.com/frtzhahn)
 [![Status: Unemployed](https://img.shields.io/badge/Status-Unemployed-green?style=flat-square&logo=github&logoColor=white)](https://github.com/)
 
 <img 
@@ -54,27 +54,28 @@ Web Development, Java programming
   [![OS: CachyOS](https://img.shields.io/badge/OS-CachyOS-13e098?style=flat-square&logo=arch-linux&logoColor=white)](https://cachyos.org/)
   [![OS: Windows 10](https://img.shields.io/badge/OS-Windows_10-0078D4?style=flat-square&logo=windows&logoColor=white)](https://www.microsoft.com)
   [![OS:Android15](https://img.shields.io/badge/OS-Android15-green?style=flat-square&logo=android)](https://www.android.com/)
-  [![OS: Ubuntu](https://img.shields.io/badge/OS-Ubuntu-E95420?style=flat-square&logo=ubuntu&logoColor=white)](https://ubuntu.com/)
+  [![OS: Kali Linux](https://img.shields.io/badge/OS-Kali_Linux-557C94?style=flat-square&logo=kalilinux&logoColor=white)](https://www.kali.org/)
   [![DE:KDE](https://img.shields.io/badge/DE-KDE-blue?style=flat-square&logo=KDE)](https://kde.org)
-[![DE:GNOME](https://img.shields.io/badge/DE-GNOME-darkblue?style=flat-square&logo=GNOME&logoColor=white)](https://www.gnome.org)
+  [![DE:GNOME](https://img.shields.io/badge/DE-GNOME-darkblue?style=flat-square&logo=GNOME&logoColor=white)](https://www.gnome.org)
   [![WM: Sway](https://img.shields.io/badge/WM-Sway-blue?style=flat-square&logo=sway&logoColor=white)](https://swaywm.org)
   [![WM: i3](https://img.shields.io/badge/WM-i3-5c5c5c?style=flat-square&logo=i3&logoColor=white)](https://i3wm.org/)
   [![WM: GlazeWM](https://img.shields.io/badge/WM-GlazeWM-5c5c5c?style=flat-square&logo=windows&logoColor=white)](https://github.com/glzr-io/glazewm)
   
   [![IDE:VSCode](https://img.shields.io/badge/IDE-VSCode-blue?style=flat-square)](https://code.visualstudio.com/)
-  [![Editor: Vim](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=white)](https://www.vim.org/)
+  [![main editor: Vim](https://img.shields.io/badge/Editor-Vim-019733?style=flat-square&logo=vim&logoColor=white)](https://www.vim.org/)
   [![IDE:IDEA](https://img.shields.io/badge/IDE-IDEA-yellow?style=flat-square&logo=IntellijIDEA)](https://www.jetbrains.com/idea/)
-  [![Editor: Neovim](https://img.shields.io/badge/Editor-Neovim-57A143?style=flat-square&logo=neovim&logoColor=white)](https://neovim.io/)
+  [![main IDE and Editor: Neovim](https://img.shields.io/badge/Editor-Neovim-57A143?style=flat-square&logo=neovim&logoColor=white)](https://neovim.io/)
+  [![IDE: Arduino](https://img.shields.io/badge/IDE-Arduino-00979D?style=flat-square&logo=arduino&logoColor=white)](https://www.arduino.cc/en/software)
+  [![notes: Obsidian](https://img.shields.io/badge/Second_Brain-Obsidian-7C3AED?style=flat-square&logo=obsidian&logoColor=white)](https://obsidian.md/)
 
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![Canva](https://img.shields.io/badge/Canva-00C4CC?style=for-the-badge&logo=canva&logoColor=white)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-
+![CSS](https://img.shields.io/badge/css-%23663399.svg?style=for-the-badge&logo=css&logoColor=white)
+![Arduino](https://img.shields.io/badge/Arduino-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 </div>
 
 <div align="center">
