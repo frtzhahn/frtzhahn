@@ -88,7 +88,7 @@
 
         @media (max-width: 500px) {
           .content { flex-direction: column; gap: 10px; }
-          .container { height: auto; min-height: 600px; }
+          .container { height: auto; min-height: 800px; }
           .right-col { width: 100%; }
           .window-title { font-size: 9px; }
         }
