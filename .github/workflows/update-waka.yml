@@ -8,6 +8,8 @@ on:
 jobs:
   update-svg:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
@@ -19,23 +21,22 @@ jobs:
           STATS=$(curl -s -u "${{ secrets.WAKATIME_API_KEY }}": https://wakatime.com/api/v1/users/current/stats/last_7_days)
           
           # Extract values using jq
-          TIME=$(echo $STATS | jq -r '.data.human_readable_total_including_other_language')
+          TIME=$(echo "$STATS" | jq -r '.data.human_readable_total_including_other_language')
           
           # Update simple text fields in wakatime.svg
-          sed -i "s|<span id=\"stat-time\">.*</span>|<span id=\"stat-time\">$TIME total</span>|g" wakatime.svg
+          sed -i "s|<span id=\"stat-time\">[^<]*</span>|<span id=\"stat-time\">$TIME total</span>|g" wakatime.svg
           
           # Extract and Format Editors
-          EDITORS=$(echo $STATS | jq -r '.data.editors[:4] | map("● " + .name) | join("<br/>")')
-          # We use @ as delimiter to avoid issues with / in HTML
-          sed -i "s|<div id=\"editor-list\">.*</div>|<div id=\"editor-list\"><div class=\"stat-item\">$EDITORS</div></div>|g" wakatime.svg
+          EDITORS=$(echo "$STATS" | jq -r '.data.editors[:4] | map("                <div class=\"stat-item\">● " + .name + "</div>") | join("\n")')
+          perl -0777 -pi -e "s|(<div id=\"editor-list\">).*?(              </div>)|\$1\n$EDITORS\n\$2|gs" wakatime.svg
 
           # Extract and Format Projects
-          PROJECTS=$(echo $STATS | jq -r '.data.projects[:4] | map("● " + .name) | join("<br/>")')
-          sed -i "s|<div id=\"project-list\" class=\"cyan\">.*</div>|<div id=\"project-list\" class=\"cyan\"><div class=\"stat-item\">$PROJECTS</div></div>|g" wakatime.svg
+          PROJECTS=$(echo "$STATS" | jq -r '.data.projects[:4] | map("                <div class=\"stat-item\">● " + .name + "</div>") | join("\n")')
+          perl -0777 -pi -e "s|(<div id=\"project-list\" class=\"cyan\">).*?(              </div>)|\$1\n$PROJECTS\n\$2|gs" wakatime.svg
 
           # Extract and Format OS
-          OSS=$(echo $STATS | jq -r '.data.operating_systems[:4] | map("● " + .name) | join("<br/>")')
-          sed -i "s|<div id=\"os-list\">.*</div>|<div id=\"os-list\"><div class=\"stat-item\">$OSS</div></div>|g" wakatime.svg
+          OSS=$(echo "$STATS" | jq -r '.data.operating_systems[:4] | map("                <div class=\"stat-item\">● " + .name + "</div>") | join("\n")')
+          perl -0777 -pi -e "s|(<div id=\"os-list\">).*?(              </div>)|\$1\n$OSS\n\$2|gs" wakatime.svg
 
       - name: Commit and Push
         run: |
