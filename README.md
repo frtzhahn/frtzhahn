@@ -2,17 +2,14 @@
 <!-- Header & Bio Window -->
 <img src="./header.svg" width="100%" alt="Header & Bio" />
 
-<br/>
 
 <!-- Discord Live Presence Window -->
 <img src="./discord.svg" width="100%" alt="Discord Status" />
 
-<br/>
 
 <!-- WakaTime Analytics Window -->
 <img src="./wakatime.svg" width="100%" alt="WakaTime Stats" />
 
-<br/>
 
 <!-- <details> -->
 <!-- <summary><b>Tools, Programming languages, and Development environment</b></summary> -->
