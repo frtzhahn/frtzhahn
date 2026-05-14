@@ -23,10 +23,14 @@ jobs:
           # Fix Lanyard's invalid viewBox that contains "px" (e.g. viewBox="0 0 410px 210")
           sed -i 's/viewBox="0 0 \([0-9]*\)px/viewBox="0 0 \1/g' lanyard.svg
           
+          # Remove broken alt text that ruins the layout when GitHub blocks external images
+          sed -i 's/alt="Activity Large Image"//g' lanyard.svg
+          sed -i 's/alt="Activity Small Image"//g' lanyard.svg
+          
           B64_IMG=$(base64 -w 0 lanyard.svg)
           
           # Inject the base64 image directly into discord.svg
-          perl -0777 -pi -e "s|(<img class=\"live-card\" src=\").*?(\" alt=\"Live Discord Status\" />)|\$1data:image/svg+xml;base64,$B64_IMG\$2|gs" discord.svg
+          perl -0777 -pi -e "s|(<img class=\"live-card\" src=\").*?(\" />)|\$1data:image/svg+xml;base64,$B64_IMG\$2|gs" discord.svg
 
       - name: Commit and Push
         run: |
