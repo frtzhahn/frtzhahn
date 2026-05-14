@@ -14,52 +14,14 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Fetch Lanyard Status
+      - name: Fetch and Embed Lanyard Image
         run: |
-          # Fetch JSON data from Lanyard
-          RESPONSE=$(curl -s https://api.lanyard.rest/v1/users/1476532337499177012)
+          # Download the SVG image from Lanyard
+          LANYARD_URL="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=16161e&hideActivity=false&borderRadius=5px"
+          B64_IMG=$(curl -s "$LANYARD_URL" | base64 -w 0)
           
-          # Extract status (online, idle, dnd, offline)
-          STATUS=$(echo $RESPONSE | jq -r '.data.discord_status')
-          
-          # Extract activity (e.g., "Coding in Neovim")
-          # If multiple activities exist, take the first one. If none, set to "Idle"
-          ACTIVITY=$(echo $RESPONSE | jq -r '.data.activities[0].state // .data.activities[0].name // "Waiting for interrupts..."')
-          
-          # Determine CSS class and text for active line
-          case $STATUS in
-            "online")
-              STATE_TEXT="active (running)"
-              STATE_CLASS="active-text"
-              DOT_COLOR="#9ece6a"
-              ;;
-            "idle")
-              STATE_TEXT="active (elapsed)"
-              STATE_CLASS="idle-text"
-              DOT_COLOR="#e0af68"
-              ;;
-            "dnd")
-              STATE_TEXT="active (busy)"
-              STATE_CLASS="dnd-text"
-              DOT_COLOR="#f7768e"
-              ;;
-            *)
-              STATE_TEXT="inactive (dead)"
-              STATE_CLASS="offline-text"
-              ACTIVITY="Waiting for interrupts..."
-              DOT_COLOR="#565f89"
-              ;;
-          esac
-
-          # Update the discord.svg file using sed
-          # Note: We use @ as a delimiter for sed to avoid issues with / in ACTIVITY strings
-          sed -i "s@<span class=\"active-text\">.*</span>@<span class=\"$STATE_CLASS\">$STATE_TEXT</span>@g" discord.svg
-          sed -i "s@<span class=\"accent\">.*</span>@<span class=\"accent\">\"$ACTIVITY\"</span>@g" discord.svg
-          sed -i "s@<span class=\"blue\">●</span>@<span style=\"color: $DOT_COLOR\">●</span>@g" discord.svg
-          
-          # Update the "since" date to current UTC
-          CURRENT_DATE=$(date -u +"%a %Y-%m-%d %H:%M:%S UTC")
-          sed -i "s@since Thu 2026-05-14; 5min ago@since $CURRENT_DATE@g" discord.svg
+          # Inject the base64 image directly into discord.svg
+          perl -0777 -pi -e "s|(<img class=\"live-card\" src=\").*?(\" alt=\"Live Discord Status\" />)|\$1data:image/svg+xml;base64,$B64_IMG\$2|gs" discord.svg
 
       - name: Commit and Push
         run: |
