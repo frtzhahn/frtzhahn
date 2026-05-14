@@ -103,7 +103,7 @@ svg_template = f"""<svg fill="none" viewBox="0 0 600 950" width="100%" height="1
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
           color: #a9b1d6;
-          height: 950px;
+          height: 750px;
           border-radius: 6px;
           border: 1px solid #414868;
           display: flex;
