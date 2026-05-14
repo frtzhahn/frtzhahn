@@ -79,6 +79,7 @@ structure = [
         ("    ├── ", "HTML5"),
         ("    ├── ", "CSS"),
         ("    ├── ", "Git"),
+        ("    ├── ", "GitHub"),
         ("    ├── ", "Maven"),
         ("    ├── ", "JavaFX"),
         ("    ├── ", "Figma"),
@@ -94,7 +95,7 @@ for item in structure:
         b64 = icons[c_name]
         lines_html += f'<div><span class="tree-line">{c_prefix}</span><span class="item"><img class="icon" src="{b64}"/> <span class="file">{c_name}</span></span></div>\n'
 
-svg_template = f"""<svg fill="none" viewBox="0 0 600 850" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+svg_template = f"""<svg fill="none" viewBox="0 0 600 950" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -102,7 +103,7 @@ svg_template = f"""<svg fill="none" viewBox="0 0 600 850" width="100%" height="1
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
           color: #a9b1d6;
-          height: 850px;
+          height: 950px;
           border-radius: 6px;
           border: 1px solid #414868;
           display: flex;
