@@ -140,7 +140,7 @@
 
         <div class="footer-logs">
           <span>LOGS: monitoring pid 1476</span>
-          <span class="accent">NODE_ENV: production</span>
+          <span class="accent">"Vault: hackathon notes"</span>
         </div>
       </div>
     </div>
