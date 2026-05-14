@@ -23,5 +23,5 @@
 
 
 <!-- Spotify ncmpcpp Player -->
-<img src="./spotify.svg" width="100%" alt="Now Playing on Spotify" />
+<img src="https://spotify-widget-readme.vercel.app/api" width="100%" alt="Now Playing on Spotify" />
 
