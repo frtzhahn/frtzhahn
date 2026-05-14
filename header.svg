@@ -6,7 +6,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 420px;
+          height: 550px;
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
