@@ -14,5 +14,11 @@
 <!-- Skills Tree Window -->
 <img src="./skills.svg?v=2" width="100%" alt="Tech Stack" />
 
-![frtzhahn's GitHub Activity Graph](https://github-readme-activity-graph.vercel.app/graph?username=frtzhahn&bg_color=1a1b26&color=c0caf5&line=7aa2f7&point=bb9af7&area=true&custom_title=frtzhahn's+Contribution+Graph&hide_border=true)
+
+<!-- Contribution Snake -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./dist/snake-tokyo.svg" />
+  <img src="./dist/snake.svg" width="100%" alt="Contribution Snake" />
+</picture>
+
 

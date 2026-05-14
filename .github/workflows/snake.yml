@@ -1,0 +1,37 @@
+name: Generate Contribution Snake
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs daily at midnight UTC
+  workflow_dispatch: # Allow manual trigger
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Generate Snake Animation
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake.svg
+            dist/snake-dark.svg?palette=github-dark
+
+      - name: Generate Tokyo Night Snake (Custom Palette)
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/snake-tokyo.svg?color_snake=bb9af7&color_dots=#1a1b26,#1f2335,#3d59a1,#7aa2f7,#bb9af7&color_empty=#1a1b26&color_border=#414868
+
+      - name: Commit and Push Snake
+        uses: EndBug/add-and-commit@v9
+        with:
+          add: dist/
+          message: 'ci: regenerate contribution snake [skip ci]'
+          default_author: github_actions
