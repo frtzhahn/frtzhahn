@@ -23,5 +23,5 @@
 
 
 <!-- Spotify ncmpcpp Player -->
-<img src="https://spotify-widget-readme-puce.vercel.app/api?v=4" width="100%" alt="Now Playing on Spotify" />
+<img src="https://spotify-widget-readme-puce.vercel.app/api?v=5" width="100%" alt="Now Playing on Spotify" />
 
