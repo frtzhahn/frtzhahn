@@ -22,3 +22,6 @@
 </picture>
 
 
+<!-- Spotify ncmpcpp Player -->
+<img src="./spotify.svg" width="100%" alt="Now Playing on Spotify" />
+
