@@ -1,8 +1,8 @@
 <!-- Meta Badges -->
 <div align="center">
 
-[![Joined: Feb 16, 2025](https://img.shields.io/badge/Joined-Feb_16,_2025-9ece6a?style=flat-square&logo=github&logoColor=a9b1d6&labelColor=1f2335)](https://github.com/frtzhahn)
-[![Total Stars](https://img.shields.io/github/stars/frtzhahn?style=flat-square&label=Total%20Stars&logo=github&logoColor=a9b1d6&color=e0af68&labelColor=1f2335)](https://github.com/frtzhahn)
+[![Joined: Feb 16, 2025](https://img.shields.io/badge/Joined-Feb_16,_2025-73daca?style=flat-square&logo=github&logoColor=a9b1d6&labelColor=1f2335)](https://github.com/frtzhahn)
+[![Total Stars](https://img.shields.io/github/stars/frtzhahn?style=flat-square&label=Total%20Stars&logo=github&logoColor=a9b1d6&color=73daca&labelColor=1f2335)](https://github.com/frtzhahn)
 [![Profile Views](https://estruyf-github.azurewebsites.net/api/VisitorHit?user=frtzhahn&repo=frtzhahn&countColor=%2373daca)](https://github.com/frtzhahn)
 
 </div>
