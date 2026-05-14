@@ -5,8 +5,11 @@
 
 <!-- Discord Live Presence Window -->
 <img src="./discord.svg" width="100%" alt="Discord Terminal Status" />
+<div align="center">
+<img src="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=26px" width="60%" alt="Live Lanyard Status" />
+</div>
 <br>
-<img src="https://lanyard-profile-readme.vercel.app/api/1476532337499177012?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=25px&animated=true" width="60%" alt="Live Lanyard Status" />
+<br>
 
 <!-- WakaTime Analytics Window -->
 <img src="./wakatime.svg" width="100%" alt="WakaTime Stats" />
