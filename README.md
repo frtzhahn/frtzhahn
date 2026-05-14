@@ -22,7 +22,7 @@
 
 
 <!-- Skills Tree Window -->
-<img src="./skills.svg?v=2" width="100%" alt="Tech Stack" />
+<!-- <img src="./skills.svg?v=2" width="100%" alt="Tech Stack" /> -->
 
 
 <!-- Contribution Snake -->
