@@ -4,8 +4,9 @@
 
 
 <!-- Discord Live Presence Window -->
-<img src="./discord.svg" width="100%" alt="Discord Status" />
-
+<img src="./discord.svg" width="100%" alt="Discord Terminal Status" />
+<br>
+<img src="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=6px" width="100%" alt="Live Lanyard Status" />
 
 <!-- WakaTime Analytics Window -->
 <img src="./wakatime.svg" width="100%" alt="WakaTime Stats" />
