@@ -1,0 +1,124 @@
+<svg fill="none" viewBox="0 0 800 400" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          background-color: #1a1b26;
+          font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+          color: #a9b1d6;
+          height: 380px;
+          border-radius: 4px;
+          overflow: hidden;
+          border: 1px solid #414868;
+          display: flex;
+          flex-direction: column;
+        }
+        .sway-bar {
+          background-color: #16161e;
+          height: 25px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 0 10px;
+          font-size: 12px;
+          border-bottom: 1px solid #414868;
+          flex-shrink: 0;
+        }
+        .workspaces span { padding: 0 5px; color: #7aa2f7; }
+        .status-right { color: #bb9af7; }
+        
+        .terminal-window {
+          margin: auto;
+          width: 90%;
+          background: #24283b;
+          border: 1px solid #414868;
+          border-radius: 6px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .window-header {
+          background: #1f2335;
+          padding: 5px 15px;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #414868;
+        }
+        .buttons { display: flex; gap: 6px; width: 60px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; }
+        .red { background: #f7768e; }
+        .yellow { background: #e0af68; }
+        .green { background: #9ece6a; }
+        .window-title { font-size: 11px; color: #565f89; flex-grow: 1; text-align: center; }
+        .header-spacer { width: 60px; }
+
+        .window-content { padding: 15px; line-height: 1.5; font-size: 14px; min-height: 120px; }
+        .command { color: #7aa2f7; }
+        .accent { color: #73daca; }
+        
+        /* Bidirectional Typing Animation */
+        .line {
+          overflow: hidden;
+          white-space: nowrap;
+          width: 0;
+        }
+
+        @keyframes typing-in-out {
+          0%, 5% { width: 0; }            /* Delay start */
+          20%, 80% { width: 100%; }        /* Type in and Stay */
+          95%, 100% { width: 0; }          /* Type out and Reset */
+        }
+
+        .line-1 { animation: typing-in-out 12s infinite; animation-delay: 0s; }
+        .line-2 { animation: typing-in-out 12s infinite; animation-delay: 0.8s; }
+        .line-3 { animation: typing-in-out 12s infinite; animation-delay: 1.6s; }
+
+        .cursor {
+          border-right: 2px solid #7aa2f7;
+          animation: blink 0.7s infinite;
+        }
+        
+        @keyframes blink { 50% { border-color: transparent } }
+
+        @media (max-width: 500px) {
+          .sway-bar { font-size: 10px; padding: 0 5px; }
+          .status-right { font-size: 8px; }
+          .window-title { font-size: 9px; }
+          .window-content { padding: 10px; font-size: 12px; }
+          .terminal-window { width: 95%; }
+        }
+      </style>
+      <div class="container">
+        <div class="sway-bar">
+          <div class="workspaces">
+            <span>[1]</span><span>[2]</span><span style="color:#f7768e; font-weight:bold;">[3:github_readme]</span><span>[4]</span>
+          </div>
+          <div class="status-right">
+            <span>BSCS_student</span> | <span>1st_year</span> | <span>UCC</span>
+          </div>
+        </div>
+
+        <div class="terminal-window">
+          <div class="window-header">
+            <div class="buttons">
+              <div class="dot red"></div>
+              <div class="dot yellow"></div>
+              <div class="dot green"></div>
+            </div>
+            <div class="window-title">aldrin@frtzhahn: ~</div>
+            <div class="header-spacer"></div>
+          </div>
+          <div class="window-content">
+            <div><span class="command">aldrin@frtzhahn:~$</span> cat about_me.txt</div>
+            <div style="margin-top: 10px; color: #9ece6a;">
+              <div class="line line-1">&gt; Hello, I'm <span class="accent">Aldrin James A. Alciso</span></div>
+              <div class="line line-2">&gt; Student at <span class="accent">University of Caloocan City</span></div>
+              <div class="line line-3">&gt; Exploring new things everyday :3</div>
+            </div>
+            <div style="margin-top: 15px;">
+              <span class="command">aldrin@frtzhahn:~$</span> <span class="cursor">_</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

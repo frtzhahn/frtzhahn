@@ -1,0 +1,116 @@
+<svg fill="none" viewBox="0 0 720 620" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          background-color: #1a1b26;
+          font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+          color: #a9b1d6;
+          height: 600px;
+          border-radius: 6px;
+          overflow: hidden;
+          border: 1px solid #414868;
+          display: flex;
+          flex-direction: column;
+        }
+        .window-header {
+          background: #1f2335;
+          padding: 8px 15px;
+          display: flex;
+          align-items: center;
+          border-bottom: 1px solid #414868;
+          flex-shrink: 0;
+        }
+        .buttons { display: flex; gap: 6px; width: 60px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; }
+        .red { background: #f7768e; }
+        .yellow { background: #e0af68; }
+        .green { background: #9ece6a; }
+        .window-title { font-size: 11px; color: #565f89; flex-grow: 1; text-align: center; }
+        .header-spacer { width: 60px; }
+
+        .content { padding: 15px; display: flex; flex-direction: column; gap: 15px; flex-grow: 1; }
+        
+        .section-label { color: #565f89; font-size: 15px; text-transform: uppercase; margin-bottom: 8px; font-weight: bold; display: block; border-bottom: 1px solid #24283b; padding-bottom: 2px; }
+        
+        .bar-row { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 11px; }
+        .bar-name { min-width: 70px; color: #7aa2f7; }
+        .bar-bg { flex-grow: 1; background: #24283b; height: 8px; border-radius: 4px; overflow: hidden; }
+        .bar-fill { height: 100%; border-radius: 4px; }
+        .bar-val { min-width: 35px; text-align: right; color: #a9b1d6; }
+
+        .list-container { display: flex; flex-direction: column; gap: 12px; }
+        .stat-group { display: flex; flex-direction: column; gap: 4px; }
+        .stat-item { color: #a9b1d6; font-size: 12px; padding-left: 10px; border-left: 2px solid #24283b; }
+        
+        .accent { color: #bb9af7; }
+        .cyan { color: #73daca; }
+        .green-text { color: #9ece6a; }
+        .blue { color: #7aa2f7; }
+
+        @media (max-width: 480px) {
+          .section-label { font-size: 12px; }
+          .bar-name { min-width: 50px; font-size: 10px; }
+          .stat-item { font-size: 10px; }
+          .window-title { font-size: 9px; }
+          .container { height: auto; min-height: 550px; }
+        }
+      </style>
+      <div class="container">
+        <div class="window-header">
+          <div class="buttons">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+          </div>
+          <div class="window-title">htop --frtzhahn@aldrin coding-stats</div>
+          <div class="header-spacer"></div>
+        </div>
+
+        <div class="content">
+          <div class="section">
+            <span class="section-label">Top Languages</span>
+            <div id="lang-bars">
+              <!-- Placeholder bars for the script to target -->
+              <div class="bar-row"><span class="bar-name">Java</span><div class="bar-bg"><div class="bar-fill" style="width: 45%; background: #e0af68;"></div></div><span class="bar-val">45%</span></div>
+              <div class="bar-row"><span class="bar-name">JS</span><div class="bar-bg"><div class="bar-fill" style="width: 30%; background: #7aa2f7;"></div></div><span class="bar-val">30%</span></div>
+              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 20%; background: #bb9af7;"></div></div><span class="bar-val">20%</span></div>
+            </div>
+          </div>
+
+          <div class="list-container">
+            <div class="stat-group">
+              <span class="section-label">Active Editors</span>
+              <div id="editor-list">
+                <div class="stat-item">● Neovim (primary)</div>
+                <div class="stat-item">● Visual Studio Code</div>
+              </div>
+            </div>
+
+            <div class="stat-group">
+              <span class="section-label">Current Projects</span>
+              <div id="project-list" class="cyan">
+                <div class="stat-item">● amoeba.sh</div>
+                <div class="stat-item">● BSCS-ARCHIVE</div>
+              </div>
+            </div>
+
+            <div class="stat-group">
+              <span class="section-label">Operating Systems</span>
+              <div id="os-list">
+                <div class="stat-item">● Arch Linux (CachyOS)</div>
+                <div class="stat-item">● Windows 10</div>
+              </div>
+            </div>
+
+            <div class="stat-group">
+              <span class="section-label">System Performance</span>
+              <div class="stat-item"><span class="green-text">LOC:</span> <span id="stat-loc" class="accent">552.39k lines</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">486h 32m total</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
