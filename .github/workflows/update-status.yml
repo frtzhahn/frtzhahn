@@ -23,14 +23,33 @@ jobs:
           # Fix Lanyard's invalid viewBox that contains "px" (e.g. viewBox="0 0 410px 210")
           sed -i 's/viewBox="0 0 \([0-9]*\)px/viewBox="0 0 \1/g' lanyard.svg
           
+          # Use Python to embed the base64 image to avoid shell argument length limits
+          python3 -c "
+          import base64
+          import re
+          
+          with open('lanyard.svg', 'rb') as f:
+              raw_svg = f.read().decode('utf-8')
+              
           # Remove broken alt text that ruins the layout when GitHub blocks external images
-          sed -i 's/alt="Activity Large Image"//g' lanyard.svg
-          sed -i 's/alt="Activity Small Image"//g' lanyard.svg
+          raw_svg = raw_svg.replace('alt=\"Activity Large Image\"', '')
+          raw_svg = raw_svg.replace('alt=\"Activity Small Image\"', '')
           
-          B64_IMG=$(base64 -w 0 lanyard.svg)
+          b64_img = base64.b64encode(raw_svg.encode('utf-8')).decode()
           
-          # Inject the base64 image directly into discord.svg
-          perl -0777 -pi -e "s|(<img class=\"live-card\" src=\").*?(\" />)|\$1data:image/svg+xml;base64,$B64_IMG\$2|gs" discord.svg
+          with open('discord.svg', 'r') as f:
+              content = f.read()
+          
+          content = re.sub(
+              r'(<img class=\"live-card\" src=\").*?(\" />)',
+              rf'\g<1>data:image/svg+xml;base64,{b64_img}\g<2>',
+              content,
+              flags=re.DOTALL
+          )
+          
+          with open('discord.svg', 'w') as f:
+              f.write(content)
+          "
 
       - name: Commit and Push
         run: |
