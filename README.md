@@ -13,7 +13,7 @@
 
 
 <div align="center">
-<img src="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=26px" width="60%" alt="Live Lanyard Status" />
+<img src="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=26px" width="80%" alt="Live Lanyard Status" />
 </div>
 <br>
 
