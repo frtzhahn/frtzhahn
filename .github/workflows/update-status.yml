@@ -24,7 +24,7 @@ jobs:
           sed -i 's/viewBox="0 0 \([0-9]*\)px/viewBox="0 0 \1/g' lanyard.svg
           
           # Use Python to embed the base64 image to avoid shell argument length limits
-          python3 -c "
+          python3 << 'EOF'
           import base64
           import re
           
@@ -41,7 +41,7 @@ jobs:
               content = f.read()
           
           content = re.sub(
-              r'(<img class=\"live-card\" src=\").*?(\" />)',
+              r'(<img class="live-card" src=").*?(" />)',
               rf'\g<1>data:image/svg+xml;base64,{b64_img}\g<2>',
               content,
               flags=re.DOTALL
@@ -49,7 +49,7 @@ jobs:
           
           with open('discord.svg', 'w') as f:
               f.write(content)
-          "
+          EOF
 
       - name: Commit and Push
         run: |
