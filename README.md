@@ -4,7 +4,7 @@
 
 
 <!-- Discord Live Presence Window -->
-<img src="./discord.svg" width="100%" height="100%" alt="Discord Status" />
+<img src="./discord.svg" width="100%" alt="Discord Status" />
 
 
 <!-- WakaTime Analytics Window -->

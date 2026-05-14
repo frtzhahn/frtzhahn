@@ -18,7 +18,12 @@ jobs:
         run: |
           # Download the SVG image from Lanyard
           LANYARD_URL="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=16161e&hideActivity=false&borderRadius=5px"
-          B64_IMG=$(curl -s "$LANYARD_URL" | base64 -w 0)
+          curl -s "$LANYARD_URL" > lanyard.svg
+          
+          # Fix Lanyard's invalid viewBox that contains "px" (e.g. viewBox="0 0 410px 210")
+          sed -i 's/viewBox="0 0 \([0-9]*\)px/viewBox="0 0 \1/g' lanyard.svg
+          
+          B64_IMG=$(base64 -w 0 lanyard.svg)
           
           # Inject the base64 image directly into discord.svg
           perl -0777 -pi -e "s|(<img class=\"live-card\" src=\").*?(\" alt=\"Live Discord Status\" />)|\$1data:image/svg+xml;base64,$B64_IMG\$2|gs" discord.svg
