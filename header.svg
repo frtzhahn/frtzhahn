@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 600 500" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 600 422" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -6,7 +6,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 380px;
+          height: 420px;
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -153,11 +153,7 @@
               </div>
             </div>
           </div>
-					<br/>
-					<br/>
-					<br/>
-					<br/>
-          <div class="window-content" style="padding: 0 10px; font-size: 14px; display: flex; flex-direction: column;">
+          <div class="window-content" style="padding: 0 10px; font-size: 14px; display: flex; flex-direction: column; margin-top: 18px;">
             <div><span class="command">aldrin@frtzhahn:~$</span> cat about_me.txt</div>
             <div style="margin-top: 10px; color: #9ece6a;">
               <div class="line line-1">&gt; Hello, I'm <span class="accent">Aldrin James A. Alciso</span></div>
