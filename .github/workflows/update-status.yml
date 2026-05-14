@@ -31,9 +31,9 @@ jobs:
           with open('lanyard.svg', 'rb') as f:
               raw_svg = f.read().decode('utf-8')
               
-          # Remove broken alt text that ruins the layout when GitHub blocks external images
-          raw_svg = raw_svg.replace('alt=\"Activity Large Image\"', '')
-          raw_svg = raw_svg.replace('alt=\"Activity Small Image\"', '')
+          # Aggressively strip alt and title attributes to prevent layout breaking on broken images
+          raw_svg = re.sub(r'alt="[^"]*"', '', raw_svg)
+          raw_svg = re.sub(r'title="[^"]*"', '', raw_svg)
           
           b64_img = base64.b64encode(raw_svg.encode('utf-8')).decode()
           

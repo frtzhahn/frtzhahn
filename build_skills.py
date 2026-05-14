@@ -63,7 +63,7 @@ structure = [
         ("│   ├── ", "i3"),
         ("│   └── ", "GlazeWM"),
     ]),
-    ("├── ", "Editors & IDEs", True, [
+    ("├── ", "Editors &amp; IDEs", True, [
         ("│   ├── ", "VSCode"),
         ("│   ├── ", "Vim"),
         ("│   ├── ", "Neovim"),
@@ -71,7 +71,7 @@ structure = [
         ("│   ├── ", "Arduino"),
         ("│   └── ", "Obsidian"),
     ]),
-    ("└── ", "Languages & Tools", True, [
+    ("└── ", "Languages &amp; Tools", True, [
         ("    ├── ", "C"),
         ("    ├── ", "Java"),
         ("    ├── ", "JavaScript"),
