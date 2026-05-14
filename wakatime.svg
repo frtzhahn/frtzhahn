@@ -108,6 +108,7 @@
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
               <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">Loading...</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">Loading...</span></div>
             </div>
           </div>
         </div>

@@ -53,7 +53,9 @@ jobs:
 
           # Time & Performance section
           time_str = stats.get('human_readable_total_including_other_language', '0 secs')
+          avg_str = stats.get('human_readable_daily_average_including_other_language', '0 secs')
           svg = re.sub(r'<span id=\"stat-time\">[^<]*</span>', f'<span id=\"stat-time\">{time_str} total</span>', svg)
+          svg = re.sub(r'<span id=\"stat-avg\">[^<]*</span>', f'<span id=\"stat-avg\">{avg_str} / day</span>', svg)
           svg = svg.replace('<span class=\"section-label\">System Performance</span>', '<span class=\"section-label\">aldrin@frtzhahn performance</span>')
           
           # Remove hardcoded fake LOC stat to guarantee 100% accuracy
