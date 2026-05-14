@@ -1,9 +1,9 @@
 <!-- Meta Badges -->
 <div align="center">
 
-[![Joined: Feb 16, 2025](https://img.shields.io/badge/Joined-Feb_16,_2025-73daca?style=flat-square&logo=github&logoColor=a9b1d6&labelColor=1f2335)](https://github.com/frtzhahn)
-[![Total Stars](https://img.shields.io/github/stars/frtzhahn?style=flat-square&label=Total%20Stars&logo=github&logoColor=a9b1d6&color=73daca&labelColor=1f2335)](https://github.com/frtzhahn)
-[![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ffrtzhahn&count_bg=%2373daca&title_bg=%231f2335&icon=github-sponsors&icon_color=%23a9b1d6&title=Visitors&edge_flat=true)](https://github.com/frtzhahn)
+[![Joined: Feb 16, 2025](https://img.shields.io/badge/Joined-Feb_16,_2025-73daca?style=for-the-badge&logo=github&logoColor=a9b1d6&labelColor=1f2335)](https://github.com/frtzhahn)
+[![Total Stars](https://img.shields.io/github/stars/frtzhahn?style=for-the-badge&label=Total%20Stars&logo=github&logoColor=a9b1d6&color=73daca&labelColor=1f2335)](https://github.com/frtzhahn)
+[![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Ffrtzhahn&count_bg=%2373daca&title_bg=%231f2335&icon=github-sponsors&icon_color=%23a9b1d6&title=Visitors&edge_flat=false)](https://github.com/frtzhahn)
 
 </div>
 
