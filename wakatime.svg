@@ -82,31 +82,31 @@
             <div class="stat-group">
               <span class="section-label">Active Editors</span>
               <div id="editor-list">
-                <div class="stat-item">● Neovim (primary)</div>
-                <div class="stat-item">● Visual Studio Code</div>
+                <div class="stat-item">● Obsidian</div>
+                <div class="stat-item">● Neovim</div>
               </div>
             </div>
 
             <div class="stat-group">
               <span class="section-label">Current Projects</span>
               <div id="project-list" class="cyan">
-                <div class="stat-item">● amoeba.sh</div>
-                <div class="stat-item">● BSCS-ARCHIVE</div>
+                <div class="stat-item">● amoeba</div>
+                <div class="stat-item">● Unknown Project</div>
+                <div class="stat-item">● EXPO</div>
               </div>
             </div>
 
             <div class="stat-group">
               <span class="section-label">Operating Systems</span>
               <div id="os-list">
-                <div class="stat-item">● Arch Linux (CachyOS)</div>
-                <div class="stat-item">● Windows 10</div>
+                <div class="stat-item">● Linux</div>
               </div>
             </div>
 
             <div class="stat-group">
               <span class="section-label">System Performance</span>
               <div class="stat-item"><span class="green-text">LOC:</span> <span id="stat-loc" class="accent">552.39k lines</span></div>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">486h 32m total</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">3 hrs 17 mins total</span></div>
             </div>
           </div>
         </div>
