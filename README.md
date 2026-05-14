@@ -1,14 +1,10 @@
 
-<!-- Header & Bio Window -->
-<img src="./header.svg" width="100%" alt="Header & Bio" />
-
-
-<!-- Discord Live Presence Window -->
-<img src="./discord.svg" width="100%" alt="Discord Status" />
-
-
-<!-- WakaTime Analytics Window -->
-<img src="./wakatime.svg" width="100%" alt="WakaTime Stats" />
+<!-- Fused Terminal Window -->
+<div align="center">
+  <img src="./header.svg" width="100%" alt="Header & Bio" style="display: block; margin: 0; padding: 0;" />
+  <img src="./discord.svg" width="100%" alt="Discord Status" style="display: block; margin: 0; padding: 0;" />
+  <img src="./wakatime.svg" width="100%" alt="WakaTime Stats" style="display: block; margin: 0; padding: 0;" />
+</div>
 
 
 <!-- <details> -->

@@ -7,9 +7,10 @@
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
           height: 380px;
-          border-radius: 4px;
+          border-radius: 4px 4px 0 0;
           overflow: hidden;
           border: 1px solid #414868;
+          border-bottom: none;
           display: flex;
           flex-direction: column;
         }
