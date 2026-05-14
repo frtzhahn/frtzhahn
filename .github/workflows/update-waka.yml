@@ -14,34 +14,69 @@ jobs:
       - name: Checkout Repo
         uses: actions/checkout@v4
 
-      - name: Fetch WakaTime Data
+      - name: Fetch and Update WakaTime Data
         id: waka
         run: |
-          # Fetch raw stats from WakaTime
-          STATS=$(curl -s -u "${{ secrets.WAKATIME_API_KEY }}": https://wakatime.com/api/v1/users/current/stats/last_7_days)
-          
-          # Extract values using jq
-          TIME=$(echo "$STATS" | jq -r '.data.human_readable_total_including_other_language')
-          
-          # Update simple text fields in wakatime.svg
-          sed -i "s|<span id=\"stat-time\">[^<]*</span>|<span id=\"stat-time\">$TIME total</span>|g" wakatime.svg
-          
-          # Extract and Format Editors
-          EDITORS=$(echo "$STATS" | jq -r '.data.editors[:4] | map("                <div class=\"stat-item\">● " + .name + "</div>") | join("\n")')
-          perl -0777 -pi -e "s|(<div id=\"editor-list\">).*?(              </div>)|\$1\n$EDITORS\n\$2|gs" wakatime.svg
+          curl -s -u "${{ secrets.WAKATIME_API_KEY }}": https://wakatime.com/api/v1/users/current/stats/last_7_days > stats.json
+          python3 -c "
+          import json, re
 
-          # Extract and Format Projects
-          PROJECTS=$(echo "$STATS" | jq -r '.data.projects[:4] | map("                <div class=\"stat-item\">● " + .name + "</div>") | join("\n")')
-          perl -0777 -pi -e "s|(<div id=\"project-list\" class=\"cyan\">).*?(              </div>)|\$1\n$PROJECTS\n\$2|gs" wakatime.svg
+          with open('stats.json') as f:
+              stats = json.load(f).get('data', {})
 
-          # Extract and Format OS
-          OSS=$(echo "$STATS" | jq -r '.data.operating_systems[:4] | map("                <div class=\"stat-item\">● " + .name + "</div>") | join("\n")')
-          perl -0777 -pi -e "s|(<div id=\"os-list\">).*?(              </div>)|\$1\n$OSS\n\$2|gs" wakatime.svg
+          with open('wakatime.svg', 'r') as f:
+              svg = f.read()
+
+          def generate_list(items, template):
+              return '\n'.join([template.format(item=i) for i in items]) if items else '                <div class=\"stat-item\">● No data</div>'
+
+          # Languages
+          langs = []
+          for l in stats.get('languages', []):
+              color = l.get('color') or '#7aa2f7'
+              pct = round(l.get('percent', 0), 1)
+              langs.append(f'              <div class=\"bar-row\"><span class=\"bar-name\">{l[\"name\"]}</span><div class=\"bar-bg\"><div class=\"bar-fill\" style=\"width: {pct}%; background: {color};\"></div></div><span class=\"bar-val\">{pct}%</span></div>')
+          
+          svg = re.sub(r'(<div id=\"lang-bars\">).*?(              </div>)', r'\1\n' + '\n'.join(langs) + r'\n\2', svg, flags=re.DOTALL)
+
+          # Editors
+          editors = generate_list(stats.get('editors', []), '                <div class=\"stat-item\">● {item[name]}</div>')
+          svg = re.sub(r'(<div id=\"editor-list\">).*?(              </div>)', r'\1\n' + editors + r'\n\2', svg, flags=re.DOTALL)
+
+          # Projects
+          projects = generate_list(stats.get('projects', []), '                <div class=\"stat-item\">● {item[name]}</div>')
+          svg = re.sub(r'(<div id=\"project-list\" class=\"cyan\">).*?(              </div>)', r'\1\n' + projects + r'\n\2', svg, flags=re.DOTALL)
+
+          # OS
+          oss = generate_list(stats.get('operating_systems', []), '                <div class=\"stat-item\">● {item[name]}</div>')
+          svg = re.sub(r'(<div id=\"os-list\">).*?(              </div>)', r'\1\n' + oss + r'\n\2', svg, flags=re.DOTALL)
+
+          # Time & Performance section
+          time_str = stats.get('human_readable_total_including_other_language', '0 secs')
+          svg = re.sub(r'<span id=\"stat-time\">[^<]*</span>', f'<span id=\"stat-time\">{time_str} total</span>', svg)
+          svg = svg.replace('<span class=\"section-label\">System Performance</span>', '<span class=\"section-label\">aldrin@frtzhahn performance</span>')
+          
+          # Remove hardcoded fake LOC stat to guarantee 100% accuracy
+          svg = re.sub(r'\s*<div class=\"stat-item\"><span class=\"green-text\">LOC:</span> <span id=\"stat-loc\" class=\"accent\">.*?</span></div>', '', svg)
+
+          # Calculate total height dynamically to prevent cutoff
+          total_langs = len(stats.get('languages', []))
+          total_items = len(stats.get('editors', [])) + len(stats.get('projects', [])) + len(stats.get('operating_systems', []))
+          
+          new_height = 250 + (total_langs * 25) + (total_items * 18)
+          new_height = max(new_height, 600)
+
+          svg = re.sub(r'viewBox=\"0 0 600 \d+\"', f'viewBox=\"0 0 600 {new_height + 20}\"', svg)
+          svg = re.sub(r'(\.container\s*\{[^\}]*?)height:\s*\d+px;', fr'\1height: {new_height}px;', svg, flags=re.DOTALL)
+
+          with open('wakatime.svg', 'w') as f:
+              f.write(svg)
+          "
 
       - name: Commit and Push
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add wakatime.svg
-          git commit -m "docs: update wakatime stats dashboard [skip ci]" || exit 0
+          git commit -m "docs: dynamic wakatime stats dashboard update [skip ci]" || exit 0
           git push
