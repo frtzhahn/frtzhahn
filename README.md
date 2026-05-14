@@ -3,12 +3,9 @@
 <img src="./header.svg" width="100%" alt="Header & Bio" />
 
 
-<!-- Discord Live Presence Window -->
-<img src="./discord.svg" width="100%" alt="Discord Terminal Status" />
 <div align="center">
 <img src="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=26px" width="60%" alt="Live Lanyard Status" />
 </div>
-<br>
 <br>
 
 <!-- WakaTime Analytics Window -->
