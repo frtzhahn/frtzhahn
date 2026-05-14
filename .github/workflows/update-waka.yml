@@ -1,0 +1,46 @@
+name: Update Riced Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *" # Every day at midnight
+  workflow_dispatch:
+
+jobs:
+  update-svg:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4
+
+      - name: Fetch WakaTime Data
+        id: waka
+        run: |
+          # Fetch raw stats from WakaTime
+          STATS=$(curl -s -u "${{ secrets.WAKATIME_API_KEY }}": https://wakatime.com/api/v1/users/current/stats/last_7_days)
+          
+          # Extract values using jq
+          TIME=$(echo $STATS | jq -r '.data.human_readable_total_including_other_language')
+          
+          # Update simple text fields in wakatime.svg
+          sed -i "s|<span id=\"stat-time\">.*</span>|<span id=\"stat-time\">$TIME total</span>|g" wakatime.svg
+          
+          # Extract and Format Editors
+          EDITORS=$(echo $STATS | jq -r '.data.editors[:4] | map("● " + .name) | join("<br/>")')
+          # We use @ as delimiter to avoid issues with / in HTML
+          sed -i "s|<div id=\"editor-list\">.*</div>|<div id=\"editor-list\"><div class=\"stat-item\">$EDITORS</div></div>|g" wakatime.svg
+
+          # Extract and Format Projects
+          PROJECTS=$(echo $STATS | jq -r '.data.projects[:4] | map("● " + .name) | join("<br/>")')
+          sed -i "s|<div id=\"project-list\" class=\"cyan\">.*</div>|<div id=\"project-list\" class=\"cyan\"><div class=\"stat-item\">$PROJECTS</div></div>|g" wakatime.svg
+
+          # Extract and Format OS
+          OSS=$(echo $STATS | jq -r '.data.operating_systems[:4] | map("● " + .name) | join("<br/>")')
+          sed -i "s|<div id=\"os-list\">.*</div>|<div id=\"os-list\"><div class=\"stat-item\">$OSS</div></div>|g" wakatime.svg
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add wakatime.svg
+          git commit -m "docs: update wakatime stats dashboard [skip ci]" || exit 0
+          git push
