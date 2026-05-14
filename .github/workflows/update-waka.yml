@@ -37,19 +37,19 @@ jobs:
               pct = round(l.get('percent', 0), 1)
               langs.append(f'              <div class=\"bar-row\"><span class=\"bar-name\">{l[\"name\"]}</span><div class=\"bar-bg\"><div class=\"bar-fill\" style=\"width: {pct}%; background: {color};\"></div></div><span class=\"bar-val\">{pct}%</span></div>')
           
-          svg = re.sub(r'(<div id=\"lang-bars\">).*?(              </div>)', r'\1\n' + '\n'.join(langs) + r'\n\2', svg, flags=re.DOTALL)
+          svg = re.sub(r'(<!-- LANG_START -->).*?(<!-- LANG_END -->)', r'\1\n' + '\n'.join(langs) + r'\n              \2', svg, flags=re.DOTALL)
 
           # Editors
           editors = generate_list(stats.get('editors', []), '                <div class=\"stat-item\">● {item[name]}</div>')
-          svg = re.sub(r'(<div id=\"editor-list\">).*?(              </div>)', r'\1\n' + editors + r'\n\2', svg, flags=re.DOTALL)
+          svg = re.sub(r'(<!-- EDITORS_START -->).*?(<!-- EDITORS_END -->)', r'\1\n' + editors + r'\n                \2', svg, flags=re.DOTALL)
 
           # Projects
           projects = generate_list(stats.get('projects', []), '                <div class=\"stat-item\">● {item[name]}</div>')
-          svg = re.sub(r'(<div id=\"project-list\" class=\"cyan\">).*?(              </div>)', r'\1\n' + projects + r'\n\2', svg, flags=re.DOTALL)
+          svg = re.sub(r'(<!-- PROJECTS_START -->).*?(<!-- PROJECTS_END -->)', r'\1\n' + projects + r'\n                \2', svg, flags=re.DOTALL)
 
           # OS
           oss = generate_list(stats.get('operating_systems', []), '                <div class=\"stat-item\">● {item[name]}</div>')
-          svg = re.sub(r'(<div id=\"os-list\">).*?(              </div>)', r'\1\n' + oss + r'\n\2', svg, flags=re.DOTALL)
+          svg = re.sub(r'(<!-- OS_START -->).*?(<!-- OS_END -->)', r'\1\n' + oss + r'\n                \2', svg, flags=re.DOTALL)
 
           # Time & Performance section
           time_str = stats.get('human_readable_total_including_other_language', '0 secs')
