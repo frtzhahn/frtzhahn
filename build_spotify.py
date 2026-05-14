@@ -173,7 +173,7 @@ def generate_svg(track, is_playing, progress_ms):
       <div class="card">
         <div class="titlebar">
           <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
-          <span class="win-title">bash &mdash; ncmpcpp</span>
+          <span class="win-title">bash — ncmpcpp</span>
         </div>
         <div class="body">
           <div class="status">{status_label}</div>
