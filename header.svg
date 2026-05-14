@@ -152,7 +152,10 @@
               </div>
             </div>
           </div>
-
+					<br/>
+					<br/>
+					<br/>
+					<br/>
           <div class="window-content" style="padding: 0 10px; font-size: 14px; display: flex; flex-direction: column;">
             <div><span class="command">aldrin@frtzhahn:~$</span> cat about_me.txt</div>
             <div style="margin-top: 10px; color: #9ece6a;">

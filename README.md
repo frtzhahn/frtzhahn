@@ -3,7 +3,7 @@
 
 [![Joined: Feb 16, 2025](https://img.shields.io/badge/Joined-Feb_16,_2025-73daca?style=for-the-badge&logo=github&logoColor=a9b1d6&labelColor=1f2335)](https://github.com/frtzhahn)
 [![Total Stars](https://img.shields.io/github/stars/frtzhahn?style=for-the-badge&label=Total%20Stars&logo=github&logoColor=a9b1d6&color=73daca&labelColor=1f2335)](https://github.com/frtzhahn)
-[![Visitors](https://komarev.com/ghpvc/?username=frtzhahn&color=73daca&style=for-the-badge&label=VISITORS&logo=github-sponsors&logoColor=a9b1d6&labelColor=1f2335)](https://github.com/frtzhahn)
+[![Visitors](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fapi.counterapi.dev%2Fv1%2Ffrtzhahn%2Fprofile%2Fup&query=%24.count&style=for-the-badge&label=VISITORS&color=73daca&labelColor=1f2335&logo=github-sponsors&logoColor=a9b1d6)](https://github.com/frtzhahn)
 
 </div>
 
