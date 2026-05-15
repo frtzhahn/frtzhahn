@@ -17,7 +17,7 @@
 
 <div align="center">
 <a href="https://discord.com/users/1188097147334295554">
-  <img src="https://lanyard.cnrad.dev/api/1476532337499177012?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=26px" width="80%" alt="Live Lanyard Status" />
+  <img src="https://lanyard.cnrad.dev/api/1188097147334295554?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=26px" width="80%" alt="Live Lanyard Status" />
 </a>
 </div>
 <br>
