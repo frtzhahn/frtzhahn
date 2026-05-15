@@ -21,19 +21,8 @@ jobs:
       - name: Fetch and Update WakaTime Data
         id: waka
         run: |
-          curl -s -u "${{ secrets.WAKATIME_API_KEY }}": \
-            https://wakatime.com/api/v1/users/current/stats/last_7_days > stats.json
-
-          # Validate API response
-          python3 -c "
-import json, sys
-d = json.load(open('stats.json'))
-if 'data' not in d:
-    print('API error:', d, file=sys.stderr)
-    sys.exit(1)
-print('API OK:', len(d['data'].get('languages', [])), 'languages')
-"
-          # Run the SVG update script (no inline quote-escaping issues)
+          curl -s -u "${{ secrets.WAKATIME_API_KEY }}": https://wakatime.com/api/v1/users/current/stats/last_7_days > stats.json
+          python3 -c "import json,sys; d=json.load(open('stats.json')); [print('API error:',d,file=sys.stderr) or sys.exit(1)] if 'data' not in d else print('API OK:',len(d['data'].get('languages',[])), 'languages')"
           python3 .github/scripts/update_waka_svg.py
 
       - name: Commit and Push
