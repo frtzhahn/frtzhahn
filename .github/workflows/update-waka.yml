@@ -8,16 +8,28 @@ on:
 jobs:
   update-svg:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     permissions:
       contents: write
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v4
+        with:
+          submodules: false
 
       - name: Fetch and Update WakaTime Data
         id: waka
         run: |
           curl -s -u "${{ secrets.WAKATIME_API_KEY }}": https://wakatime.com/api/v1/users/current/stats/last_7_days > stats.json
+
+          # Validate the API response before processing
+          if ! python3 -c "import json,sys; d=json.load(open('stats.json')); assert 'data' in d, f'API error: {d}'; print('API OK:', len(d[\"data\"].get(\"languages\",[])),'languages')" ; then
+            echo "WakaTime API returned an error. Dumping response:"
+            cat stats.json
+            exit 1
+          fi
+
           python3 -c "
           import json, re
 
