@@ -24,9 +24,8 @@
   <img src="./wakatime.svg" width="100%" alt="WakaTime Stats" />
 </a>
 
-
 <!-- Skills Tree Window -->
-<!-- <img src="./skills.svg?v=2" width="100%" alt="Tech Stack" /> -->
+<img src="./skills.svg?v=2" width="100%" alt="Tech Stack" />
 
 
 <!-- Contribution Snake -->
@@ -36,7 +35,6 @@
     <img src="./dist/snake.svg" width="100%" alt="Contribution Snake" />
   </picture>
 </a>
-
 
 <!-- Spotify ncmpcpp Player -->
 <a href="https://open.spotify.com/user/31xntfvulr5wmuqwqdadxm2pfyya">
