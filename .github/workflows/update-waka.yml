@@ -69,7 +69,7 @@ jobs:
           new_height = max(new_height, 600)
 
           svg = re.sub(r'viewBox=\"0 0 600 \d+\"', f'viewBox=\"0 0 600 {new_height + 20}\"', svg)
-          svg = re.sub(r'(\.container\s*\{[^\}]*?)height:\s*\d+px;', fr'\1height: {new_height}px;', svg, flags=re.DOTALL)
+          svg = re.sub(r'(\.container\s*\{[^}]*?)height:\s*\d+px;', fr'\1height: {new_height}px;', svg, flags=re.DOTALL)
 
           with open('wakatime.svg', 'w') as f:
               f.write(svg)
