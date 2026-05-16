@@ -101,7 +101,7 @@
         </div>
         <div class="content">
           <div class="scroll-area">
-            <div class="type-line"><span class="prompt">aldrin@frtzhahn</span>:<span class="dir">~/skills</span>$ <span class="command">tree</span><span class="cursor"></span></div>
+            <div class="type-line"><span class="prompt">aldrin@frtzhahn</span>:<span class="dir">~/tech_stack</span>$ <span class="command">tree</span><span class="cursor"></span></div>
             <div class="tree-output">
             <div class="dir">.</div>
             <div class="columns-wrapper">
