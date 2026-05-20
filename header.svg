@@ -138,8 +138,8 @@
               </div>
               <div class="bar-container">
                 <span style="width: 80px; color: #bb9af7;">irl_age</span>
-                <div class="bar-bg"><div class="bar-fill" style="width: 17%; background: #bb9af7;"></div></div>
-                <span style="width: 25px; text-align: right;">17%</span>
+                <div class="bar-bg"><div class="bar-fill" style="width: 18%; background: #bb9af7;"></div></div>
+                <span style="width: 25px; text-align: right;">18%</span>
               </div>
               <div class="bar-container">
                 <span style="width: 80px; color: #bb9af7;">college_level</span>
@@ -148,8 +148,9 @@
               </div>
               <div style="color: #414868; margin: 4px 0;">-------------------------------------------------------------</div>
               <div class="OS">
-                <span class="OS" style="color: #7aa2f7;">OS</span>: CachyOS Linux x86_64          
-                <span class="OS" style="color: #7aa2f7;">KERNEL</span>: Linux 7.0.5-2-cachyos<br/>
+                <span class="OS" style="color: #7aa2f7;">COURSE</span>: Bachelor of Science in Computer Science
+								<br/>
+                <span class="OS" style="color: #7aa2f7;">TRAITS</span>: Procrastinator, Crammer, Night Owl<br/>
               </div>
             </div>
           </div>
@@ -168,7 +169,7 @@
 
         <div class="footer-logs">
           <span>LOGS: monitoring pid 1476</span>
-          <span class="accent">"STATUS: ACTIVE"</span>
+          <span class="accent">"STATUS: EN_COURS"</span>
         </div>
       </div>
     </div>
