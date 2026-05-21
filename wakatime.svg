@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 600 886" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 600 879" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -6,7 +6,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 866px;
+          height: 859px;
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -115,7 +115,7 @@
           .bar-name { min-width: 50px; font-size: 10px; }
           .stat-item { font-size: 10px; }
           .window-title { font-size: 9px; }
-          .container { height: auto; min-height: 866px; }
+          .container { height: auto; min-height: 859px; }
         }
       </style>
       <div class="container">
@@ -134,11 +134,11 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 38.2%; background: #7aa2f7;"></div></div><span class="bar-val">38.2%</span></div>
-              <div class="bar-row"><span class="bar-name">Image (svg)</span><div class="bar-bg"><div class="bar-fill" style="width: 24.4%; background: #7aa2f7;"></div></div><span class="bar-val">24.4%</span></div>
-              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 23.3%; background: #7aa2f7;"></div></div><span class="bar-val">23.3%</span></div>
-              <div class="bar-row"><span class="bar-name">JavaScript</span><div class="bar-bg"><div class="bar-fill" style="width: 7.2%; background: #7aa2f7;"></div></div><span class="bar-val">7.2%</span></div>
-              <div class="bar-row"><span class="bar-name">tmux</span><div class="bar-bg"><div class="bar-fill" style="width: 2.7%; background: #7aa2f7;"></div></div><span class="bar-val">2.7%</span></div>
+              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 39.1%; background: #7aa2f7;"></div></div><span class="bar-val">39.1%</span></div>
+              <div class="bar-row"><span class="bar-name">Image (svg)</span><div class="bar-bg"><div class="bar-fill" style="width: 24.3%; background: #7aa2f7;"></div></div><span class="bar-val">24.3%</span></div>
+              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 23.2%; background: #7aa2f7;"></div></div><span class="bar-val">23.2%</span></div>
+              <div class="bar-row"><span class="bar-name">JavaScript</span><div class="bar-bg"><div class="bar-fill" style="width: 8.1%; background: #7aa2f7;"></div></div><span class="bar-val">8.1%</span></div>
+              <div class="bar-row"><span class="bar-name">HTML</span><div class="bar-bg"><div class="bar-fill" style="width: 1.1%; background: #7aa2f7;"></div></div><span class="bar-val">1.1%</span></div>
               <div class="bar-row"><span class="bar-name">Python</span><div class="bar-bg"><div class="bar-fill" style="width: 1.1%; background: #7aa2f7;"></div></div><span class="bar-val">1.1%</span></div>
               <div class="bar-row"><span class="bar-name">TOML</span><div class="bar-bg"><div class="bar-fill" style="width: 1.0%; background: #7aa2f7;"></div></div><span class="bar-val">1.0%</span></div>
               <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 0.8%; background: #7aa2f7;"></div></div><span class="bar-val">0.8%</span></div>
@@ -147,7 +147,6 @@
               <div class="bar-row"><span class="bar-name">XML</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
               <div class="bar-row"><span class="bar-name">Java</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
               <div class="bar-row"><span class="bar-name">Binary</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
-              <div class="bar-row"><span class="bar-name">HTML</span><div class="bar-bg"><div class="bar-fill" style="width: 0.0%; background: #7aa2f7;"></div></div><span class="bar-val">0.0%</span></div>
               <div class="bar-row"><span class="bar-name">CSS</span><div class="bar-bg"><div class="bar-fill" style="width: 0.0%; background: #7aa2f7;"></div></div><span class="bar-val">0.0%</span></div>
               <div class="bar-row"><span class="bar-name">sh</span><div class="bar-bg"><div class="bar-fill" style="width: 0.0%; background: #7aa2f7;"></div></div><span class="bar-val">0.0%</span></div>
               <!-- LANG_END -->
@@ -174,6 +173,7 @@
                 <div class="stat-item">● amoeba</div>
                 <div class="stat-item">● Javascript-practice</div>
                 <div class="stat-item">● spotify-widget-readme</div>
+                <div class="stat-item">● HandConnect</div>
                 <div class="stat-item">● cord.nvim</div>
                 <div class="stat-item">● PP-Namias</div>
                 <div class="stat-item">● BSCS-ARCHIVE</div>
@@ -193,7 +193,7 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">13 hrs 46 mins total</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">13 hrs 49 mins total</span></div>
               <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 58 mins / day</span></div>
             </div>
           </div>
