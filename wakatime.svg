@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 600 620" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 600 718" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -6,7 +6,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 600px;
+          height: 698px;
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -115,7 +115,7 @@
           .bar-name { min-width: 50px; font-size: 10px; }
           .stat-item { font-size: 10px; }
           .window-title { font-size: 9px; }
-          .container { height: auto; min-height: 600px; }
+          .container { height: auto; min-height: 698px; }
         }
       </style>
       <div class="container">
@@ -134,12 +134,15 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 60.3%; background: #7aa2f7;"></div></div><span class="bar-val">60.3%</span></div>
-              <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 17.9%; background: #7aa2f7;"></div></div><span class="bar-val">17.9%</span></div>
-              <div class="bar-row"><span class="bar-name">Image (svg)</span><div class="bar-bg"><div class="bar-fill" style="width: 8.5%; background: #7aa2f7;"></div></div><span class="bar-val">8.5%</span></div>
-              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 6.3%; background: #7aa2f7;"></div></div><span class="bar-val">6.3%</span></div>
-              <div class="bar-row"><span class="bar-name">JavaScript</span><div class="bar-bg"><div class="bar-fill" style="width: 3.5%; background: #7aa2f7;"></div></div><span class="bar-val">3.5%</span></div>
-              <div class="bar-row"><span class="bar-name">HTML</span><div class="bar-bg"><div class="bar-fill" style="width: 3.4%; background: #7aa2f7;"></div></div><span class="bar-val">3.4%</span></div>
+              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 42.8%; background: #7aa2f7;"></div></div><span class="bar-val">42.8%</span></div>
+              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 29.1%; background: #7aa2f7;"></div></div><span class="bar-val">29.1%</span></div>
+              <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 13.2%; background: #7aa2f7;"></div></div><span class="bar-val">13.2%</span></div>
+              <div class="bar-row"><span class="bar-name">Image (svg)</span><div class="bar-bg"><div class="bar-fill" style="width: 6.3%; background: #7aa2f7;"></div></div><span class="bar-val">6.3%</span></div>
+              <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 3.0%; background: #7aa2f7;"></div></div><span class="bar-val">3.0%</span></div>
+              <div class="bar-row"><span class="bar-name">JavaScript</span><div class="bar-bg"><div class="bar-fill" style="width: 2.6%; background: #7aa2f7;"></div></div><span class="bar-val">2.6%</span></div>
+              <div class="bar-row"><span class="bar-name">HTML</span><div class="bar-bg"><div class="bar-fill" style="width: 2.5%; background: #7aa2f7;"></div></div><span class="bar-val">2.5%</span></div>
+              <div class="bar-row"><span class="bar-name">JSON</span><div class="bar-bg"><div class="bar-fill" style="width: 0.3%; background: #7aa2f7;"></div></div><span class="bar-val">0.3%</span></div>
+              <div class="bar-row"><span class="bar-name">gitconfig</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
               <div class="bar-row"><span class="bar-name">XML</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
               <!-- LANG_END -->
             </div>
@@ -150,8 +153,8 @@
               <span class="section-label">Active Editors</span>
               <div id="editor-list">
                 <!-- EDITORS_START -->
-                <div class="stat-item">● Obsidian</div>
                 <div class="stat-item">● Neovim</div>
+                <div class="stat-item">● Obsidian</div>
                 <!-- EDITORS_END -->
               </div>
             </div>
@@ -160,11 +163,13 @@
               <span class="section-label">Current Projects</span>
               <div id="project-list" class="cyan">
                 <!-- PROJECTS_START -->
-                <div class="stat-item">● amoeba</div>
                 <div class="stat-item">● Unknown Project</div>
+                <div class="stat-item">● amoeba</div>
                 <div class="stat-item">● frtzhahn</div>
+                <div class="stat-item">● C-programming</div>
                 <div class="stat-item">● Javascript-practice</div>
                 <div class="stat-item">● HandConnect</div>
+                <div class="stat-item">● nvim-config</div>
                 <div class="stat-item">● RandFacts</div>
                 <!-- PROJECTS_END -->
               </div>
@@ -181,8 +186,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">4 hrs 27 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">38 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">6 hrs 2 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">51 mins / day</span></div>
             </div>
           </div>
         </div>
