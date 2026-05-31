@@ -1,4 +1,4 @@
-<svg fill="none" viewBox="0 0 600 668" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+<svg fill="none" viewBox="0 0 600 736" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
   <foreignObject width="100%" height="100%">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
@@ -6,7 +6,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 648px;
+          height: 716px;
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -115,7 +115,7 @@
           .bar-name { min-width: 50px; font-size: 10px; }
           .stat-item { font-size: 10px; }
           .window-title { font-size: 9px; }
-          .container { height: auto; min-height: 648px; }
+          .container { height: auto; min-height: 716px; }
         }
       </style>
       <div class="container">
@@ -134,14 +134,16 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 40.5%; background: #7aa2f7;"></div></div><span class="bar-val">40.5%</span></div>
-              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 36.1%; background: #7aa2f7;"></div></div><span class="bar-val">36.1%</span></div>
-              <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 18.5%; background: #7aa2f7;"></div></div><span class="bar-val">18.5%</span></div>
-              <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 3.6%; background: #7aa2f7;"></div></div><span class="bar-val">3.6%</span></div>
-              <div class="bar-row"><span class="bar-name">JavaScript</span><div class="bar-bg"><div class="bar-fill" style="width: 0.8%; background: #7aa2f7;"></div></div><span class="bar-val">0.8%</span></div>
-              <div class="bar-row"><span class="bar-name">JSON</span><div class="bar-bg"><div class="bar-fill" style="width: 0.4%; background: #7aa2f7;"></div></div><span class="bar-val">0.4%</span></div>
+              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 44.9%; background: #7aa2f7;"></div></div><span class="bar-val">44.9%</span></div>
+              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 41.8%; background: #7aa2f7;"></div></div><span class="bar-val">41.8%</span></div>
+              <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 6.8%; background: #7aa2f7;"></div></div><span class="bar-val">6.8%</span></div>
+              <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 3.4%; background: #7aa2f7;"></div></div><span class="bar-val">3.4%</span></div>
+              <div class="bar-row"><span class="bar-name">conf</span><div class="bar-bg"><div class="bar-fill" style="width: 1.5%; background: #7aa2f7;"></div></div><span class="bar-val">1.5%</span></div>
+              <div class="bar-row"><span class="bar-name">JavaScript</span><div class="bar-bg"><div class="bar-fill" style="width: 0.6%; background: #7aa2f7;"></div></div><span class="bar-val">0.6%</span></div>
+              <div class="bar-row"><span class="bar-name">JSON</span><div class="bar-bg"><div class="bar-fill" style="width: 0.5%; background: #7aa2f7;"></div></div><span class="bar-val">0.5%</span></div>
               <div class="bar-row"><span class="bar-name">gitconfig</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
               <div class="bar-row"><span class="bar-name">XML</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
+              <div class="bar-row"><span class="bar-name">Other</span><div class="bar-bg"><div class="bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="bar-val">0.1%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -168,6 +170,7 @@
                 <div class="stat-item">● Javascript-practice</div>
                 <div class="stat-item">● frtzhahn</div>
                 <div class="stat-item">● RandFacts</div>
+                <div class="stat-item">● home</div>
                 <!-- PROJECTS_END -->
               </div>
             </div>
@@ -184,8 +187,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">4 hrs 59 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">49 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">3 hrs 41 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">36 mins / day</span></div>
             </div>
           </div>
         </div>
