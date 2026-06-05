@@ -134,12 +134,11 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 34.6%; background: #7aa2f7;"></div></div><span class="bar-val">34.6%</span></div>
-              <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 27.6%; background: #7aa2f7;"></div></div><span class="bar-val">27.6%</span></div>
-              <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 22.2%; background: #7aa2f7;"></div></div><span class="bar-val">22.2%</span></div>
-              <div class="bar-row"><span class="bar-name">conf</span><div class="bar-bg"><div class="bar-fill" style="width: 12.4%; background: #7aa2f7;"></div></div><span class="bar-val">12.4%</span></div>
-              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 2.1%; background: #7aa2f7;"></div></div><span class="bar-val">2.1%</span></div>
-              <div class="bar-row"><span class="bar-name">Other</span><div class="bar-bg"><div class="bar-fill" style="width: 1.1%; background: #7aa2f7;"></div></div><span class="bar-val">1.1%</span></div>
+              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 39.6%; background: #7aa2f7;"></div></div><span class="bar-val">39.6%</span></div>
+              <div class="bar-row"><span class="bar-name">Other</span><div class="bar-bg"><div class="bar-fill" style="width: 26.1%; background: #7aa2f7;"></div></div><span class="bar-val">26.1%</span></div>
+              <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 21.4%; background: #7aa2f7;"></div></div><span class="bar-val">21.4%</span></div>
+              <div class="bar-row"><span class="bar-name">conf</span><div class="bar-bg"><div class="bar-fill" style="width: 11.0%; background: #7aa2f7;"></div></div><span class="bar-val">11.0%</span></div>
+              <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 1.8%; background: #7aa2f7;"></div></div><span class="bar-val">1.8%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -159,9 +158,10 @@
               <span class="section-label">Current Projects</span>
               <div id="project-list" class="cyan">
                 <!-- PROJECTS_START -->
-                <div class="stat-item">● Unknown Project</div>
                 <div class="stat-item">● amoeba</div>
+                <div class="stat-item">● testing-AI-models</div>
                 <div class="stat-item">● C-programming</div>
+                <div class="stat-item">● Unknown Project</div>
                 <div class="stat-item">● BudgetC</div>
                 <div class="stat-item">● home</div>
                 <!-- PROJECTS_END -->
@@ -180,8 +180,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">27 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">6 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">30 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">7 mins / day</span></div>
             </div>
           </div>
         </div>
