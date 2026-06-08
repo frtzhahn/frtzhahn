@@ -134,12 +134,13 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 75.7%; background: #7aa2f7;"></div></div><span class="bar-val">75.7%</span></div>
-              <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 8.7%; background: #7aa2f7;"></div></div><span class="bar-val">8.7%</span></div>
-              <div class="bar-row"><span class="bar-name">swayconfig</span><div class="bar-bg"><div class="bar-fill" style="width: 8.0%; background: #7aa2f7;"></div></div><span class="bar-val">8.0%</span></div>
-              <div class="bar-row"><span class="bar-name">tmux</span><div class="bar-bg"><div class="bar-fill" style="width: 6.1%; background: #7aa2f7;"></div></div><span class="bar-val">6.1%</span></div>
+              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 72.3%; background: #7aa2f7;"></div></div><span class="bar-val">72.3%</span></div>
+              <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 8.3%; background: #7aa2f7;"></div></div><span class="bar-val">8.3%</span></div>
+              <div class="bar-row"><span class="bar-name">swayconfig</span><div class="bar-bg"><div class="bar-fill" style="width: 7.6%; background: #7aa2f7;"></div></div><span class="bar-val">7.6%</span></div>
+              <div class="bar-row"><span class="bar-name">tmux</span><div class="bar-bg"><div class="bar-fill" style="width: 5.8%; background: #7aa2f7;"></div></div><span class="bar-val">5.8%</span></div>
+              <div class="bar-row"><span class="bar-name">kitty</span><div class="bar-bg"><div class="bar-fill" style="width: 4.5%; background: #7aa2f7;"></div></div><span class="bar-val">4.5%</span></div>
               <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 0.7%; background: #7aa2f7;"></div></div><span class="bar-val">0.7%</span></div>
-              <div class="bar-row"><span class="bar-name">Assembly</span><div class="bar-bg"><div class="bar-fill" style="width: 0.6%; background: #7aa2f7;"></div></div><span class="bar-val">0.6%</span></div>
+              <div class="bar-row"><span class="bar-name">Assembly</span><div class="bar-bg"><div class="bar-fill" style="width: 0.5%; background: #7aa2f7;"></div></div><span class="bar-val">0.5%</span></div>
               <div class="bar-row"><span class="bar-name">SWIG</span><div class="bar-bg"><div class="bar-fill" style="width: 0.2%; background: #7aa2f7;"></div></div><span class="bar-val">0.2%</span></div>
               <!-- LANG_END -->
             </div>
@@ -180,8 +181,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">2 hrs 50 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">56 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">2 hrs 57 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">44 mins / day</span></div>
             </div>
           </div>
         </div>
