@@ -134,16 +134,16 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 64.8%; background: #7aa2f7;"></div></div><span class="bar-val">64.8%</span></div>
+              <div class="bar-row"><span class="bar-name">Markdown</span><div class="bar-bg"><div class="bar-fill" style="width: 65.2%; background: #7aa2f7;"></div></div><span class="bar-val">65.2%</span></div>
               <div class="bar-row"><span class="bar-name">C</span><div class="bar-bg"><div class="bar-fill" style="width: 6.9%; background: #7aa2f7;"></div></div><span class="bar-val">6.9%</span></div>
-              <div class="bar-row"><span class="bar-name">conf</span><div class="bar-bg"><div class="bar-fill" style="width: 6.5%; background: #7aa2f7;"></div></div><span class="bar-val">6.5%</span></div>
-              <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 4.3%; background: #7aa2f7;"></div></div><span class="bar-val">4.3%</span></div>
-              <div class="bar-row"><span class="bar-name">JSON</span><div class="bar-bg"><div class="bar-fill" style="width: 3.7%; background: #7aa2f7;"></div></div><span class="bar-val">3.7%</span></div>
-              <div class="bar-row"><span class="bar-name">CSS</span><div class="bar-bg"><div class="bar-fill" style="width: 3.5%; background: #7aa2f7;"></div></div><span class="bar-val">3.5%</span></div>
+              <div class="bar-row"><span class="bar-name">conf</span><div class="bar-bg"><div class="bar-fill" style="width: 6.3%; background: #7aa2f7;"></div></div><span class="bar-val">6.3%</span></div>
+              <div class="bar-row"><span class="bar-name">Bash</span><div class="bar-bg"><div class="bar-fill" style="width: 4.2%; background: #7aa2f7;"></div></div><span class="bar-val">4.2%</span></div>
+              <div class="bar-row"><span class="bar-name">JSON</span><div class="bar-bg"><div class="bar-fill" style="width: 3.6%; background: #7aa2f7;"></div></div><span class="bar-val">3.6%</span></div>
+              <div class="bar-row"><span class="bar-name">CSS</span><div class="bar-bg"><div class="bar-fill" style="width: 3.4%; background: #7aa2f7;"></div></div><span class="bar-val">3.4%</span></div>
               <div class="bar-row"><span class="bar-name">SWIG</span><div class="bar-bg"><div class="bar-fill" style="width: 3.1%; background: #7aa2f7;"></div></div><span class="bar-val">3.1%</span></div>
               <div class="bar-row"><span class="bar-name">INI</span><div class="bar-bg"><div class="bar-fill" style="width: 2.1%; background: #7aa2f7;"></div></div><span class="bar-val">2.1%</span></div>
-              <div class="bar-row"><span class="bar-name">swayconfig</span><div class="bar-bg"><div class="bar-fill" style="width: 1.4%; background: #7aa2f7;"></div></div><span class="bar-val">1.4%</span></div>
               <div class="bar-row"><span class="bar-name">Lua</span><div class="bar-bg"><div class="bar-fill" style="width: 1.4%; background: #7aa2f7;"></div></div><span class="bar-val">1.4%</span></div>
+              <div class="bar-row"><span class="bar-name">swayconfig</span><div class="bar-bg"><div class="bar-fill" style="width: 1.4%; background: #7aa2f7;"></div></div><span class="bar-val">1.4%</span></div>
               <div class="bar-row"><span class="bar-name">Python</span><div class="bar-bg"><div class="bar-fill" style="width: 0.8%; background: #7aa2f7;"></div></div><span class="bar-val">0.8%</span></div>
               <div class="bar-row"><span class="bar-name">Desktop file</span><div class="bar-bg"><div class="bar-fill" style="width: 0.5%; background: #7aa2f7;"></div></div><span class="bar-val">0.5%</span></div>
               <div class="bar-row"><span class="bar-name">gitignore</span><div class="bar-bg"><div class="bar-fill" style="width: 0.2%; background: #7aa2f7;"></div></div><span class="bar-val">0.2%</span></div>
@@ -196,8 +196,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">22 hrs 28 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">3 hrs 12 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">22 hrs 52 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">3 hrs 16 mins / day</span></div>
             </div>
           </div>
         </div>
