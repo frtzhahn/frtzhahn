@@ -35,11 +35,13 @@
     <a href="https://discord.com/users/1188097147334295554">
         <img src="https://lanyard.cnrad.dev/api/1188097147334295554?theme=dark&bg=1a1b26&hideActivity=false&borderRadius=26px" width="80%" alt="Live Lanyard Status" />
     </a>
+</div>
 
 
 <!-- Spotify ncmpcpp Player -->
-<a href="https://open.spotify.com/user/31xntfvulr5wmuqwqdadxm2pfyya">
-    <img src="https://spotify-widget-readme-puce.vercel.app/api?v=5" width="100%" alt="Now Playing on Spotify" />
+<div align="center">
+    <a href="https://open.spotify.com/user/31xntfvulr5wmuqwqdadxm2pfyya">
+        <img src="https://spotify-widget-readme-puce.vercel.app/api?v=5" width="100%" alt="Now Playing on Spotify" />
     </a>
 </div>
 
