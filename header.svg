@@ -1,5 +1,5 @@
-<svg fill="none" viewBox="0 0 600 382" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
+<svg fill="none" viewBox="0 0 600 382" width="600" height="382" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="600" height="382">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
@@ -38,10 +38,10 @@
           flex-grow: 1;
         }
         
-        .fastfetch { display: flex; flex-direction: row; gap: 20px; align-items: center; padding: 0 10px; }
+        .fastfetch { display: flex; flex-direction: row; gap: 20px; align-items: center; padding: 0 10px; flex-shrink: 0; }
         .ascii-art { color: #a9b1d6; font-size: 14px; line-height: 1.2; font-weight: bold; white-space: pre; }
         
-        .sys-info { flex: 1; display: flex; flex-direction: column; gap: 4px; font-size: 11px; }
+        .sys-info { flex: 1; display: flex; flex-direction: column; gap: 4px; font-size: 11px; flex-shrink: 0; }
         .terminal-prompt { font-size: 13px; margin-bottom: 6px; }
         .command { color: #7aa2f7; }
         .accent { color: #bb9af7; }
