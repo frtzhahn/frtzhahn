@@ -183,52 +183,44 @@ def main():
         }
 
         /* Typing Animations for Commands */
-        .cmd-fastfetch { animation: type-fastfetch 20s infinite; }
-        .cmd-cat       { animation: type-cat 20s infinite; }
-        .cmd-htop      { animation: type-htop 20s infinite; }
-        .cmd-skills    { animation: type-skills 20s infinite; }
+        .cmd-fastfetch { animation: type-fastfetch 45s infinite; }
+        .cmd-cat       { animation: type-cat 45s infinite; }
+        .cmd-htop      { animation: type-htop 45s infinite; }
+        .cmd-skills    { animation: type-skills 45s infinite; }
 
         @keyframes type-fastfetch {
-          0% { width: 0; }
-          5% { width: 0; animation-timing-function: steps(9, end); }
-          15% { width: 9ch; }
-          85% { width: 9ch; animation-timing-function: steps(9, end); }
-          95% { width: 0; }
+          0%, 2.2% { width: 0; }
+          2.2% { width: 0; animation-timing-function: steps(9, end); }
+          6.6%, 95.5% { width: 9ch; }
           100% { width: 0; }
         }
         @keyframes type-cat {
-          0% { width: 0; }
-          5% { width: 0; animation-timing-function: steps(16, end); }
-          15% { width: 16ch; }
-          85% { width: 16ch; animation-timing-function: steps(16, end); }
-          95% { width: 0; }
+          0%, 2.2% { width: 0; }
+          2.2% { width: 0; animation-timing-function: steps(16, end); }
+          6.6%, 95.5% { width: 16ch; }
           100% { width: 0; }
         }
         @keyframes type-htop {
-          0% { width: 0; }
-          5% { width: 0; animation-timing-function: steps(12, end); }
-          15% { width: 12ch; }
-          85% { width: 12ch; animation-timing-function: steps(12, end); }
-          95% { width: 0; }
+          0%, 2.2% { width: 0; }
+          2.2% { width: 0; animation-timing-function: steps(12, end); }
+          6.6%, 95.5% { width: 12ch; }
           100% { width: 0; }
         }
         @keyframes type-skills {
-          0% { width: 0; }
-          5% { width: 0; animation-timing-function: steps(16, end); }
-          15% { width: 16ch; }
-          85% { width: 16ch; animation-timing-function: steps(16, end); }
-          95% { width: 0; }
+          0%, 2.2% { width: 0; }
+          2.2% { width: 0; animation-timing-function: steps(16, end); }
+          6.6%, 95.5% { width: 16ch; }
           100% { width: 0; }
         }
 
-        /* Output Fades - Unified 5s staggered transition pacing */
+        /* Output Fades - Unified 45s staggered transition pacing */
         .fastfetch-output, .aboutme-output, .waka-output, .skills-grid {
-          animation: output-fade 20s infinite;
+          animation: output-fade 45s infinite;
         }
         @keyframes output-fade {
-          0%, 15% { opacity: 0; }
-          40%, 65% { opacity: 1; }
-          90%, 100% { opacity: 0; }
+          0%, 6.6% { opacity: 0; }
+          17.7%, 84.4% { opacity: 1; }
+          95.5%, 100% { opacity: 0; }
         }
         
         /* Fastfetch Logo and Columns */
@@ -236,18 +228,18 @@ def main():
         .ascii-art { color: #a9b1d6; font-size: 14px; line-height: 1.2; font-weight: bold; white-space: pre; }
         .sys-info { flex: 1; display: flex; flex-direction: column; gap: 4px; font-size: 11px; flex-shrink: 0; }
         
-        /* Progress Bar Styling (Fastfetch and WakaTime) - 5s Fill Rate */
+        /* Progress Bar Styling (Fastfetch and WakaTime) - 45s Loop */
         .bar-container { display: flex; align-items: center; gap: 10px; }
         .bar-bg { background: #24283b; height: 6px; border-radius: 3px; flex: 1; }
         .bar-fill, .waka-bar-fill { 
           height: 100%; border-radius: 3px; 
           transform-origin: left;
-          animation: fill-bar 20s infinite;
+          animation: fill-bar 45s infinite;
         }
         @keyframes fill-bar {
-          0%, 15% { transform: scaleX(0); }
-          40%, 65% { transform: scaleX(1); }
-          90%, 100% { transform: scaleX(0); }
+          0%, 6.6% { transform: scaleX(0); }
+          17.7%, 84.4% { transform: scaleX(1); }
+          95.5%, 100% { transform: scaleX(0); }
         }
 
         .OS {
@@ -272,26 +264,26 @@ def main():
           width: 0;
           display: block;
         }
-        .line-1 { animation: type-bio-1 20s infinite; }
-        .line-2 { animation: type-bio-2 20s infinite; }
-        .line-3 { animation: type-bio-3 20s infinite; }
+        .line-1 { animation: type-bio-1 45s infinite; }
+        .line-2 { animation: type-bio-2 45s infinite; }
+        .line-3 { animation: type-bio-3 45s infinite; }
         @keyframes type-bio-1 {
-          0%, 10% { width: 0; }
-          10% { width: 0; animation-timing-function: steps(35, end); }
-          18%, 60% { width: 35ch; }
-          85%, 100% { width: 0; }
+          0%, 4.4% { width: 0; }
+          4.4% { width: 0; animation-timing-function: steps(35, end); }
+          10.0%, 80.0% { width: 35ch; }
+          92.2%, 100% { width: 0; }
         }
         @keyframes type-bio-2 {
-          0%, 18% { width: 0; }
-          18% { width: 0; animation-timing-function: steps(40, end); }
-          26%, 60% { width: 40ch; }
-          85%, 100% { width: 0; }
+          0%, 10.0% { width: 0; }
+          10.0% { width: 0; animation-timing-function: steps(40, end); }
+          15.5%, 80.0% { width: 40ch; }
+          92.2%, 100% { width: 0; }
         }
         @keyframes type-bio-3 {
-          0%, 26% { width: 0; }
-          26% { width: 0; animation-timing-function: steps(34, end); }
-          34%, 60% { width: 34ch; }
-          85%, 100% { width: 0; }
+          0%, 15.5% { width: 0; }
+          15.5% { width: 0; animation-timing-function: steps(34, end); }
+          21.1%, 80.0% { width: 34ch; }
+          92.2%, 100% { width: 0; }
         }
 
         .info-line {
@@ -300,14 +292,14 @@ def main():
           max-width: 0;
           width: max-content;
           border-right: 2px solid transparent;
-          animation: type-info 20s infinite;
+          animation: type-info 45s infinite;
         }
         @keyframes type-info {
-          0%, 10% { max-width: 0; border-right-color: transparent; }
-          11% { border-right-color: #bb9af7; }
-          35%, 60% { max-width: 50ch; border-right-color: transparent; }
-          61% { border-right-color: #bb9af7; }
-          85%, 100% { max-width: 0; border-right-color: transparent; }
+          0%, 4.4% { max-width: 0; border-right-color: transparent; }
+          4.8% { border-right-color: #bb9af7; }
+          21.1%, 80.0% { max-width: 50ch; border-right-color: transparent; }
+          80.2% { border-right-color: #bb9af7; }
+          92.2%, 100% { max-width: 0; border-right-color: transparent; }
         }
         .info-line:nth-child(1) { animation-delay: 0.2s; }
         .info-line:nth-child(2) { animation-delay: 0.6s; }
@@ -319,25 +311,25 @@ def main():
           display: block; border-bottom: 1px solid #24283b; padding-bottom: 2px;
           overflow: hidden; white-space: nowrap; max-width: 0; width: max-content;
           border-right: 2px solid transparent;
-          animation: type-section 20s infinite;
+          animation: type-section 45s infinite;
         }
         @keyframes type-section {
-          0%, 10% { max-width: 0; border-right-color: transparent; }
-          11% { border-right-color: #bb9af7; }
-          35%, 60% { max-width: 25ch; border-right-color: transparent; }
-          61% { border-right-color: #bb9af7; }
-          85%, 100% { max-width: 0; border-right-color: transparent; }
+          0%, 4.4% { max-width: 0; border-right-color: transparent; }
+          4.8% { border-right-color: #bb9af7; }
+          21.1%, 80.0% { max-width: 25ch; border-right-color: transparent; }
+          80.2% { border-right-color: #bb9af7; }
+          92.2%, 100% { max-width: 0; border-right-color: transparent; }
         }
         
         .waka-bar-row { 
           display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 11px; 
           opacity: 0;
-          animation: fade-row 20s infinite forwards;
+          animation: fade-row 45s infinite forwards;
         }
         @keyframes fade-row {
-          0%, 10% { opacity: 0; transform: translateX(-10px); }
-          35%, 60% { opacity: 1; transform: translateX(0); }
-          85%, 100% { opacity: 0; transform: translateX(10px); }
+          0%, 4.4% { opacity: 0; transform: translateX(-10px); }
+          21.1%, 80.0% { opacity: 1; transform: translateX(0); }
+          92.2%, 100% { opacity: 0; transform: translateX(10px); }
         }
         .waka-bar-row:nth-child(1) { animation-delay: 0.1s; }
         .waka-bar-row:nth-child(2) { animation-delay: 0.3s; }
@@ -359,14 +351,14 @@ def main():
           color: #a9b1d6; font-size: 12px; padding-left: 10px; border-left: 2px solid #24283b; 
           overflow: hidden; white-space: nowrap; max-width: 0; width: max-content;
           border-right: 2px solid transparent;
-          animation: type-stat 20s infinite forwards;
+          animation: type-stat 45s infinite forwards;
         }
         @keyframes type-stat {
-          0%, 10% { max-width: 0; border-right-color: transparent; }
-          11% { border-right-color: #7aa2f7; }
-          35%, 60% { max-width: 30ch; border-right-color: transparent; }
-          61% { border-right-color: #7aa2f7; }
-          85%, 100% { max-width: 0; border-right-color: transparent; }
+          0%, 4.4% { max-width: 0; border-right-color: transparent; }
+          4.8% { border-right-color: #7aa2f7; }
+          21.1%, 80.0% { max-width: 30ch; border-right-color: transparent; }
+          80.2% { border-right-color: #7aa2f7; }
+          92.2%, 100% { max-width: 0; border-right-color: transparent; }
         }
         .stat-item:nth-child(1) { animation-delay: 0.1s; }
         .stat-item:nth-child(2) { animation-delay: 0.5s; }
@@ -411,7 +403,7 @@ def main():
           max-width: 0;
           width: max-content;
           border-right: 2px solid transparent;
-          animation: type-section 20s infinite;
+          animation: type-section 45s infinite;
         }
         /* Stagger category headers */
         .skills-column:nth-child(1) .skills-category:nth-child(1) .skills-category-title { animation-delay: 0s; }
@@ -444,7 +436,7 @@ def main():
           max-width: 0;
           width: max-content;
           border-right: 2px solid transparent;
-          animation: type-stat 20s infinite forwards;
+          animation: type-stat 45s infinite forwards;
         }
         /* Stagger grid list items */
         .skill-entry:nth-child(1) .skill-name-type { animation-delay: 0.1s; }
