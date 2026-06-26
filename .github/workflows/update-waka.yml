@@ -29,7 +29,7 @@ jobs:
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git diff wakatime.svg
-          git add wakatime.svg
+          git diff profile.svg
+          git add profile.svg
           git commit -m "docs: dynamic wakatime stats dashboard update [skip ci]" || exit 0
           git push
