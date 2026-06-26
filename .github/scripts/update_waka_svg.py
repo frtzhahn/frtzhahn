@@ -3,7 +3,7 @@ import json, re, sys
 with open('stats.json') as f:
     stats = json.load(f).get('data', {})
 
-with open('wakatime.svg', 'r') as f:
+with open('profile.svg', 'r') as f:
     svg = f.read()
 
 # ── Debug: print what the API actually returned ───────────────────────────────
@@ -24,10 +24,10 @@ for l in langs_raw:
     color = l.get('color') or '#7aa2f7'
     pct   = round(l.get('percent', 0), 1)
     langs.append(
-        f'              <div class="bar-row">'
-        f'<span class="bar-name">{l["name"]}</span>'
-        f'<div class="bar-bg"><div class="bar-fill" style="width: {pct}%; background: {color};"></div></div>'
-        f'<span class="bar-val">{pct}%</span></div>'
+        f'              <div class="waka-bar-row">'
+        f'<span class="waka-bar-name">{l["name"]}</span>'
+        f'<div class="waka-bar-bg"><div class="waka-bar-fill" style="width: {pct}%; background: {color};"></div></div>'
+        f'<span class="waka-bar-val">{pct}%</span></div>'
     )
 
 svg = re.sub(
@@ -67,18 +67,21 @@ svg = re.sub(
 svg = re.sub(r'<span id="stat-time">[^<]*</span>', f'<span id="stat-time">{time_str} total</span>', svg)
 svg = re.sub(r'<span id="stat-avg">[^<]*</span>',  f'<span id="stat-avg">{avg_str} / day</span>',   svg)
 
-# Dynamic height
+# Dynamic height for merged terminal
 total_langs = len(langs_raw)
 total_items = (len(stats.get('editors', []))
              + len(stats.get('projects', []))
              + len(stats.get('operating_systems', [])))
-new_height  = max(250 + (total_langs * 25) + (total_items * 18), 600)
+new_height  = max(1030 + (total_langs * 25) + (total_items * 18), 1330)
 
-svg = re.sub(r'viewBox="0 0 600 \d+"',              f'viewBox="0 0 600 {new_height + 20}"', svg)
+svg = re.sub(r'viewBox="0 0 600 \d+"',              f'viewBox="0 0 600 {new_height + 2}"', svg)
+svg = re.sub(r'width="600" height="\d+"',           f'width="600" height="{new_height + 2}"', svg)
+svg = re.sub(r'<foreignObject width="600" height="\d+"', fr'<foreignObject width="600" height="{new_height + 2}"', svg)
 svg = re.sub(r'(\.container\s*\{[^}]*?)height:\s*\d+px;',
              fr'\1height: {new_height}px;', svg, flags=re.DOTALL)
 
-with open('wakatime.svg', 'w') as f:
+with open('profile.svg', 'w') as f:
     f.write(svg)
 
 print(f"Written: {total_langs} langs, height={new_height}px, time={time_str!r}, avg={avg_str!r}")
+
