@@ -8,27 +8,9 @@
 </div>
 
 
-<!-- Header & Bio Window -->
-<a href="https://www.facebook.com/aldrin.alciso.2024">
-  <img src="./header.svg" width="100%" alt="Header & Bio" />
-</a>  
+<!-- Unified Profile Terminal Widget -->
+<img src="./profile.svg" width="100%" alt="aldrin@frtzhahn terminal dashboard" />
 
-<!-- WakaTime Analytics Window -->
-<a href="https://wakatime.com/@frtzhahn">
-  <img src="./wakatime.svg" width="100%" alt="WakaTime Stats" />
-</a>
-
-<!-- Skills Tree Window -->
-<img src="./skills.svg" width="100%" alt="Tech Stack" />
-
-
-<!-- Contribution Snake -->
-<a href="https://github.com/frtzhahn?tab=overview">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="./dist/snake-tokyo.svg" />
-    <img src="./dist/snake.svg" width="100%" alt="Contribution Snake" />
-  </picture>
-</a>
 
 <!-- discord lanyard  -->
 <div align="center">
