@@ -1,5 +1,5 @@
-<svg fill="none" viewBox="0 0 600 1537" width="600" height="1537" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="600" height="1537">
+<svg fill="none" viewBox="0 0 600 1548" width="600" height="1548" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="600" height="1548">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
@@ -8,7 +8,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 1535px; /* Increased from 1200px to accommodate full grid without scrolling */
+          height: 1546px; /* Increased from 1200px to accommodate full grid without scrolling */
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -434,19 +434,18 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 67.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">67.3%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 20.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">20.3%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">conf</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 10.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">10.3%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">gitignore</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.8%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.8%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">JavaScript</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.5%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 67.7%; background: #7aa2f7;"></div></div><span class="waka-bar-val">67.7%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 20.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">20.5%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Image (svg)</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 5.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">5.5%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">conf</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 3.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">3.9%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">gitignore</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.6%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.6%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">JavaScript</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.6%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.6%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">kitty</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.5%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">CSS</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.2%</span></div>
               <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.2%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">kitty</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.2%</span></div>
               <div class="waka-bar-row"><span class="waka-bar-name">Bash</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.2%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">INI</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.1%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">swayconfig</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.1%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">CSS</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.1%</span></div>
               <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.0%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">JSON</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.0%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">swayconfig</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.0%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -458,6 +457,7 @@
                 <!-- EDITORS_START -->
                 <div class="stat-item">● Obsidian</div>
                 <div class="stat-item">● Neovim</div>
+                <div class="stat-item">● VS Code</div>
                 <!-- EDITORS_END -->
               </div>
             </div>
@@ -468,6 +468,7 @@
                 <!-- PROJECTS_START -->
                 <div class="stat-item">● amoeba</div>
                 <div class="stat-item">● C-programming</div>
+                <div class="stat-item">● frtzhahn</div>
                 <div class="stat-item">● Unknown Project</div>
                 <div class="stat-item">● mini-projects.C</div>
                 <div class="stat-item">● Javascript-practice</div>
@@ -488,8 +489,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">11 hrs 55 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 42 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">10 hrs 43 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 31 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
