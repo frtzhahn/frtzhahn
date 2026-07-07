@@ -426,9 +426,9 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 79.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">79.2%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 17.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">17.0%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 3.8%; background: #7aa2f7;"></div></div><span class="waka-bar-val">3.8%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 84.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">84.2%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 15.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">15.4%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.5%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -452,7 +452,7 @@
                 <div class="stat-item">● amoeba</div>
                 <div class="stat-item">● C-programming</div>
                 <div class="stat-item">● BudgetC</div>
-                <div class="stat-item">● c</div>
+                <div class="stat-item">● exercises-dataset</div>
                 <!-- PROJECTS_END -->
               </div>
             </div>
@@ -468,8 +468,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">2 hrs 34 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">30 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">2 hrs 6 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">25 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
