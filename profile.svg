@@ -426,10 +426,10 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 54.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">54.4%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 41.7%; background: #7aa2f7;"></div></div><span class="waka-bar-val">41.7%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 2.7%; background: #7aa2f7;"></div></div><span class="waka-bar-val">2.7%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 1.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">1.2%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 53.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">53.1%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 43.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">43.5%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 2.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">2.3%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 1.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">1.0%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -470,8 +470,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">4 hrs 51 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 12 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">6 hrs 2 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 30 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
