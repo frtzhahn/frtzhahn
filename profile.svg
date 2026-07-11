@@ -426,10 +426,10 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 53.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">53.1%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 43.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">43.5%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 2.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">2.3%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 1.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">1.0%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 54.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">54.9%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 40.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">40.3%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 2.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">2.9%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 1.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">1.9%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -452,9 +452,9 @@
                 <!-- PROJECTS_START -->
                 <div class="stat-item">● C-programming</div>
                 <div class="stat-item">● amoeba</div>
-                <div class="stat-item">● mocha</div>
+                <div class="stat-item">● mini-projects.C</div>
                 <div class="stat-item">● nvim</div>
-                <div class="stat-item">● exercises-dataset</div>
+                <div class="stat-item">● mocha</div>
                 <!-- PROJECTS_END -->
               </div>
             </div>
@@ -470,8 +470,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">6 hrs 2 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 30 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">11 hrs 23 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">2 hrs 50 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
