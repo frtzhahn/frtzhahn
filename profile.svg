@@ -1,5 +1,5 @@
-<svg fill="none" viewBox="0 0 600 1391" width="600" height="1391" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="600" height="1391">
+<svg fill="none" viewBox="0 0 600 1409" width="600" height="1409" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="600" height="1409">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
@@ -8,7 +8,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 1389px; /* Increased from 1200px to accommodate full grid without scrolling */
+          height: 1407px; /* Increased from 1200px to accommodate full grid without scrolling */
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -426,11 +426,11 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 60.7%; background: #7aa2f7;"></div></div><span class="waka-bar-val">60.7%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 21.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">21.9%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">C#</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 8.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">8.2%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 4.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">4.9%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 4.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">4.2%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 43.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">43.9%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C#</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 34.7%; background: #7aa2f7;"></div></div><span class="waka-bar-val">34.7%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 17.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">17.2%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 3.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">3.4%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.8%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.8%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -442,9 +442,8 @@
                 <!-- EDITORS_START -->
                 <div class="stat-item">● Neovim</div>
                 <div class="stat-item">● Antigravity CLI</div>
-                <div class="stat-item">● Obsidian</div>
-                <div class="stat-item">● Antigravity</div>
                 <div class="stat-item">● VS Code</div>
+                <div class="stat-item">● Obsidian</div>
                 <div class="stat-item">● Antigravity Desktop</div>
                 <!-- EDITORS_END -->
               </div>
@@ -454,10 +453,11 @@
               <span class="section-label">Current Projects</span>
               <div id="project-list" class="cyan">
                 <!-- PROJECTS_START -->
-                <div class="stat-item">● java-programming</div>
                 <div class="stat-item">● Unknown Project</div>
+                <div class="stat-item">● java-programming</div>
                 <div class="stat-item">● nvim</div>
                 <div class="stat-item">● amoeba</div>
+                <div class="stat-item">● C-programming</div>
                 <div class="stat-item">● dsa</div>
                 <div class="stat-item">● antigravity-cli-wakatime</div>
                 <!-- PROJECTS_END -->
@@ -469,14 +469,15 @@
               <div id="os-list">
                 <!-- OS_START -->
                 <div class="stat-item">● Linux</div>
+                <div class="stat-item">● Android</div>
                 <!-- OS_END -->
               </div>
             </div>
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">8 hrs 38 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 43 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">9 hrs 14 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 50 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
