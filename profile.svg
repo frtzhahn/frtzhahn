@@ -426,11 +426,11 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 52.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">52.9%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">C#</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 44.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">44.4%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 1.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">1.4%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 1.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">1.1%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.2%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C#</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 54.8%; background: #7aa2f7;"></div></div><span class="waka-bar-val">54.8%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 41.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">41.4%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 2.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">2.1%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 1.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">1.4%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.3%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -441,8 +441,8 @@
               <div id="editor-list">
                 <!-- EDITORS_START -->
                 <div class="stat-item">● Neovim</div>
-                <div class="stat-item">● VS Code</div>
                 <div class="stat-item">● Obsidian</div>
+                <div class="stat-item">● VS Code</div>
                 <div class="stat-item">● Antigravity CLI</div>
                 <div class="stat-item">● Antigravity Desktop</div>
                 <!-- EDITORS_END -->
@@ -475,8 +475,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">7 hrs 2 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">2 hrs 20 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">5 hrs 41 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 53 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
