@@ -426,9 +426,9 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 76.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">76.9%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 13.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">13.5%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 7.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">7.4%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 77.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">77.2%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 13.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">13.3%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 7.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">7.3%</span></div>
               <div class="waka-bar-row"><span class="waka-bar-name">Bash</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.7%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.7%</span></div>
               <div class="waka-bar-row"><span class="waka-bar-name">C#</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.5%</span></div>
               <div class="waka-bar-row"><span class="waka-bar-name">gitignore</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.4%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.4%</span></div>
@@ -481,8 +481,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">9 hrs 17 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 19 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">9 hrs 25 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 20 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
