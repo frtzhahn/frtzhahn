@@ -21,9 +21,9 @@
 
 
 <!-- Spotify ncmpcpp Player -->
-<div align="center">
-    <a href="https://open.spotify.com/user/31xntfvulr5wmuqwqdadxm2pfyya">
-        <img src="https://spotify-widget-readme-puce.vercel.app/api?v=5" width="100%" alt="Now Playing on Spotify" />
-    </a>
-</div>
+<!-- <div align="center"> -->
+<!--     <a href="https://open.spotify.com/user/31xntfvulr5wmuqwqdadxm2pfyya"> -->
+<!--         <img src="https://spotify-widget-readme-puce.vercel.app/api?v=5" width="100%" alt="Now Playing on Spotify" /> -->
+<!--     </a> -->
+<!-- </div> -->
 
