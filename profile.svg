@@ -426,9 +426,9 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 46.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">46.0%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 32.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">32.0%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 22.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">22.1%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 44.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">44.2%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 33.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">33.0%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 22.8%; background: #7aa2f7;"></div></div><span class="waka-bar-val">22.8%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -475,8 +475,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">5 hrs 53 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 10 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">5 hrs 42 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 25 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
