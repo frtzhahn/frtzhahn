@@ -1,5 +1,5 @@
-<svg fill="none" viewBox="0 0 600 1377" width="600" height="1377" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="600" height="1377">
+<svg fill="none" viewBox="0 0 600 1332" width="600" height="1332" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="600" height="1332">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
@@ -8,7 +8,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 1375px; /* Increased from 1200px to accommodate full grid without scrolling */
+          height: 1330px; /* Increased from 1200px to accommodate full grid without scrolling */
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -426,9 +426,9 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 44.2%; background: #7aa2f7;"></div></div><span class="waka-bar-val">44.2%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 33.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">33.0%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 22.8%; background: #7aa2f7;"></div></div><span class="waka-bar-val">22.8%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 44.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">44.5%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 30.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">30.5%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 25.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">25.0%</span></div>
               <!-- LANG_END -->
             </div>
           </div>
@@ -454,11 +454,9 @@
                 <div class="stat-item">● encours</div>
                 <div class="stat-item">● dsa</div>
                 <div class="stat-item">● minecraft_servers</div>
-                <div class="stat-item">● Git-lessons</div>
-                <div class="stat-item">● Unknown Project</div>
+                <div class="stat-item">● DSA-activity-4</div>
                 <div class="stat-item">● mocha</div>
                 <div class="stat-item">● frtzhahn</div>
-                <div class="stat-item">● C-programming</div>
                 <!-- PROJECTS_END -->
               </div>
             </div>
@@ -468,15 +466,14 @@
               <div id="os-list">
                 <!-- OS_START -->
                 <div class="stat-item">● Linux</div>
-                <div class="stat-item">● Android</div>
                 <!-- OS_END -->
               </div>
             </div>
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">5 hrs 42 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 25 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">4 hrs 11 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 2 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
