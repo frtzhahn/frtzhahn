@@ -1,5 +1,5 @@
-<svg fill="none" viewBox="0 0 600 1398" width="600" height="1398" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="600" height="1398">
+<svg fill="none" viewBox="0 0 600 1405" width="600" height="1405" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="600" height="1405">
     <div xmlns="http://www.w3.org/1999/xhtml">
       <style>
         .container {
@@ -8,7 +8,7 @@
           background-color: #1a1b26;
           font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
           color: #a9b1d6;
-          height: 1396px; /* Increased from 1200px to accommodate full grid without scrolling */
+          height: 1403px; /* Increased from 1200px to accommodate full grid without scrolling */
           border-radius: 6px;
           overflow: hidden;
           border: 1px solid #414868;
@@ -426,11 +426,12 @@
             <span class="section-label">Top Languages</span>
             <div id="lang-bars">
               <!-- LANG_START -->
-              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 52.5%; background: #7aa2f7;"></div></div><span class="waka-bar-val">52.5%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 24.0%; background: #7aa2f7;"></div></div><span class="waka-bar-val">24.0%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 16.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">16.9%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 3.9%; background: #7aa2f7;"></div></div><span class="waka-bar-val">3.9%</span></div>
-              <div class="waka-bar-row"><span class="waka-bar-name">C#</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 2.7%; background: #7aa2f7;"></div></div><span class="waka-bar-val">2.7%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Java</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 62.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">62.1%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Markdown</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 23.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">23.1%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Other</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 8.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">8.3%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 3.3%; background: #7aa2f7;"></div></div><span class="waka-bar-val">3.3%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">C#</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 3.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">3.1%</span></div>
+              <div class="waka-bar-row"><span class="waka-bar-name">Text</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.1%</span></div>
               <div class="waka-bar-row"><span class="waka-bar-name">Lua</span><div class="waka-bar-bg"><div class="waka-bar-fill" style="width: 0.1%; background: #7aa2f7;"></div></div><span class="waka-bar-val">0.1%</span></div>
               <!-- LANG_END -->
             </div>
@@ -455,7 +456,6 @@
                 <div class="stat-item">● dsa</div>
                 <div class="stat-item">● encours</div>
                 <div class="stat-item">● DSA-activity-4</div>
-                <div class="stat-item">● minecraft_servers</div>
                 <div class="stat-item">● Unknown Project</div>
                 <div class="stat-item">● C-programming</div>
                 <div class="stat-item">● mocha</div>
@@ -475,8 +475,8 @@
 
             <div class="stat-group">
               <span class="section-label">aldrin@frtzhahn performance</span>
-              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">7 hrs 42 mins total</span></div>
-              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 32 mins / day</span></div>
+              <div class="stat-item"><span class="blue">TIME:</span> <span id="stat-time">9 hrs 11 mins total</span></div>
+              <div class="stat-item"><span class="green-text">DAILY AVG:</span> <span id="stat-avg">1 hr 50 mins / day</span></div>
             </div>
           </div>            </div>
           </div>
