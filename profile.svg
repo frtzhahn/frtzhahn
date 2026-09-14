@@ -262,68 +262,68 @@
       <g class="waka-bar-row">
         <text x="20" y="366" class="waka-lang-name">Markdown</text>
         <rect x="135" y="357" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="357" width="180.9" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="366" text-anchor="end" class="waka-lang-val">48.9%</text>
+        <rect x="135" y="357" width="205.0" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="366" text-anchor="end" class="waka-lang-val">55.4%</text>
       </g>
       <g class="waka-bar-row">
         <text x="20" y="388" class="waka-lang-name">Other</text>
         <rect x="135" y="379" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="379" width="111.7" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="388" text-anchor="end" class="waka-lang-val">30.2%</text>
+        <rect x="135" y="379" width="90.3" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="388" text-anchor="end" class="waka-lang-val">24.4%</text>
       </g>
       <g class="waka-bar-row">
         <text x="20" y="410" class="waka-lang-name">Bash</text>
         <rect x="135" y="401" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="401" width="29.6" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="410" text-anchor="end" class="waka-lang-val">8.0%</text>
+        <rect x="135" y="401" width="30.7" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="410" text-anchor="end" class="waka-lang-val">8.3%</text>
       </g>
       <g class="waka-bar-row">
         <text x="20" y="432" class="waka-lang-name">Lua</text>
         <rect x="135" y="423" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="423" width="19.2" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="432" text-anchor="end" class="waka-lang-val">5.2%</text>
+        <rect x="135" y="423" width="18.9" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="432" text-anchor="end" class="waka-lang-val">5.1%</text>
       </g>
       <g class="waka-bar-row">
         <text x="20" y="454" class="waka-lang-name">JSON</text>
         <rect x="135" y="445" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="445" width="8.9" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="454" text-anchor="end" class="waka-lang-val">2.4%</text>
+        <rect x="135" y="445" width="9.2" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="454" text-anchor="end" class="waka-lang-val">2.5%</text>
       </g>
       <g class="waka-bar-row">
         <text x="20" y="476" class="waka-lang-name">Vim Script</text>
         <rect x="135" y="467" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="467" width="7.4" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="476" text-anchor="end" class="waka-lang-val">2.0%</text>
+        <rect x="135" y="467" width="7.8" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="476" text-anchor="end" class="waka-lang-val">2.1%</text>
       </g>
       <g class="waka-bar-row">
-        <text x="20" y="498" class="waka-lang-name">CSS</text>
+        <text x="20" y="498" class="waka-lang-name">Todotxt</text>
         <rect x="135" y="489" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="489" width="4.1" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="498" text-anchor="end" class="waka-lang-val">1.1%</text>
+        <rect x="135" y="489" width="3.0" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="498" text-anchor="end" class="waka-lang-val">0.8%</text>
       </g>
       <g class="waka-bar-row">
-        <text x="20" y="520" class="waka-lang-name">Todotxt</text>
+        <text x="20" y="520" class="waka-lang-name">CSS</text>
         <rect x="135" y="511" width="370" height="8" rx="4" class="bar-bg" />
         <rect x="135" y="511" width="3.0" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
         <text x="580" y="520" text-anchor="end" class="waka-lang-val">0.8%</text>
       </g>
       <g class="waka-bar-row">
-        <text x="20" y="542" class="waka-lang-name">conf</text>
+        <text x="20" y="542" class="waka-lang-name">C</text>
         <rect x="135" y="533" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="533" width="2.2" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="542" text-anchor="end" class="waka-lang-val">0.6%</text>
+        <rect x="135" y="533" width="1.5" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="542" text-anchor="end" class="waka-lang-val">0.4%</text>
       </g>
       <g class="waka-bar-row">
         <text x="20" y="564" class="waka-lang-name">Text</text>
         <rect x="135" y="555" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="555" width="1.5" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="564" text-anchor="end" class="waka-lang-val">0.4%</text>
+        <rect x="135" y="555" width="1.1" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="564" text-anchor="end" class="waka-lang-val">0.3%</text>
       </g>
       <g class="waka-bar-row">
-        <text x="20" y="586" class="waka-lang-name">C</text>
+        <text x="20" y="586" class="waka-lang-name">YAML</text>
         <rect x="135" y="577" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="577" width="1.5" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
-        <text x="580" y="586" text-anchor="end" class="waka-lang-val">0.4%</text>
+        <rect x="135" y="577" width="0.0" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="580" y="586" text-anchor="end" class="waka-lang-val">0.0%</text>
       </g>
       <!-- LANG_END -->
 
@@ -332,7 +332,7 @@
       <text x="20" y="623" class="section-title">ACTIVE EDITORS</text>
       <line x1="20" y1="629" x2="280" y2="629" stroke="#24283b" />
       <!-- EDITORS_START -->
-      <text x="20" y="643" class="stat-item"><tspan fill="#414868">●</tspan> Antigravity CLI</text><text x="20" y="661" class="stat-item"><tspan fill="#414868">●</tspan> Obsidian</text><text x="20" y="679" class="stat-item"><tspan fill="#414868">●</tspan> Neovim</text><text x="20" y="697" class="stat-item"><tspan fill="#414868">●</tspan> Antigravity Desktop</text><text x="20" y="715" class="stat-item"><tspan fill="#414868">●</tspan> Antigravity</text>
+      <text x="20" y="643" class="stat-item"><tspan fill="#414868">●</tspan> Obsidian</text><text x="20" y="661" class="stat-item"><tspan fill="#414868">●</tspan> Antigravity CLI</text><text x="20" y="679" class="stat-item"><tspan fill="#414868">●</tspan> Neovim</text><text x="20" y="697" class="stat-item"><tspan fill="#414868">●</tspan> Antigravity</text><text x="20" y="715" class="stat-item"><tspan fill="#414868">●</tspan> Antigravity Desktop</text>
       <!-- EDITORS_END -->
 
       <!-- OS -->
@@ -345,13 +345,13 @@
       <!-- Performance -->
       <text x="20" y="801" class="section-title">aldrin@frtzhahn performance</text>
       <line x1="20" y1="807" x2="280" y2="807" stroke="#24283b" />
-      <text x="20" y="821" class="stat-item"><tspan fill="#7aa2f7" font-weight="bold">TIME:</tspan> <tspan id="stat-time">16 hrs 14 mins total</tspan></text><text x="20" y="839" class="stat-item"><tspan fill="#9ece6a" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">2 hrs 19 mins / day</tspan></text>
+      <text x="20" y="821" class="stat-item"><tspan fill="#7aa2f7" font-weight="bold">TIME:</tspan> <tspan id="stat-time">15 hrs 36 mins total</tspan></text><text x="20" y="839" class="stat-item"><tspan fill="#9ece6a" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">2 hrs 13 mins / day</tspan></text>
 
       <!-- Right Column: Current Projects -->
       <text x="310" y="623" class="section-title">CURRENT PROJECTS</text>
       <line x1="310" y1="629" x2="580" y2="629" stroke="#24283b" />
       <!-- PROJECTS_START -->
-      <text x="310" y="643" class="stat-item stat-project"><tspan fill="#414868">●</tspan> encours</text><text x="310" y="661" class="stat-item stat-project"><tspan fill="#414868">●</tspan> mocha</text><text x="310" y="679" class="stat-item stat-project"><tspan fill="#414868">●</tspan> Unknown Project</text><text x="310" y="697" class="stat-item stat-project"><tspan fill="#414868">●</tspan> nvim</text><text x="310" y="715" class="stat-item stat-project"><tspan fill="#414868">●</tspan> copy-history.nvim</text><text x="310" y="733" class="stat-item stat-project"><tspan fill="#414868">●</tspan> linux-config-files</text><text x="310" y="751" class="stat-item stat-project"><tspan fill="#414868">●</tspan> lazy</text><text x="310" y="769" class="stat-item stat-project"><tspan fill="#414868">●</tspan> Downloads</text><text x="310" y="787" class="stat-item stat-project"><tspan fill="#414868">●</tspan> archived-projects</text><text x="310" y="805" class="stat-item stat-project"><tspan fill="#414868">●</tspan> waybar</text>
+      <text x="310" y="643" class="stat-item stat-project"><tspan fill="#414868">●</tspan> encours</text><text x="310" y="661" class="stat-item stat-project"><tspan fill="#414868">●</tspan> mocha</text><text x="310" y="679" class="stat-item stat-project"><tspan fill="#414868">●</tspan> Unknown Project</text><text x="310" y="697" class="stat-item stat-project"><tspan fill="#414868">●</tspan> nvim</text><text x="310" y="715" class="stat-item stat-project"><tspan fill="#414868">●</tspan> copy-history.nvim</text><text x="310" y="733" class="stat-item stat-project"><tspan fill="#414868">●</tspan> linux-config-files</text><text x="310" y="751" class="stat-item stat-project"><tspan fill="#414868">●</tspan> lazy</text><text x="310" y="769" class="stat-item stat-project"><tspan fill="#414868">●</tspan> archived-projects</text><text x="310" y="787" class="stat-item stat-project"><tspan fill="#414868">●</tspan> waybar</text>
       <!-- PROJECTS_END -->
     </g>
   </g>
