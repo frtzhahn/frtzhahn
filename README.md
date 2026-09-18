@@ -7,7 +7,9 @@
 <!---->
 <!-- </div> -->
 <!-- Unified Profile Terminal Widget -->
+<a href="https://wakatime.com/@frtzhahn">
 <img src="./profile.svg" width="100%" alt="aldrin@frtzhahn terminal dashboard" />
+</a>
 
 
 <!-- stats badge -->
