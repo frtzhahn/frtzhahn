@@ -18,6 +18,8 @@ jobs:
 
       - name: Fetch and Update WakaTime Data
         id: waka
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           curl -s -u "${{ secrets.WAKATIME_API_KEY }}": https://wakatime.com/api/v1/users/current/stats/last_7_days > stats.json
           python3 -c "import json,sys; d=json.load(open('stats.json')); [print('API error:',d,file=sys.stderr) or sys.exit(1)] if 'data' not in d else print('API OK:',len(d['data'].get('languages',[])), 'languages')"

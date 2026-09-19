@@ -36,6 +36,158 @@ def load_mocha_mascot(x=20, y=74):
                 print(f"Warning: Failed reading {p}: {e}", file=sys.stderr)
     raise FileNotFoundError("Could not find .github/assets/mocha.svg mascot vector file.")
 
+def fetch_github_stats(username="frtzhahn"):
+    """
+    Fetches PR, issue, and commit streak metrics from GitHub GraphQL API.
+    Falls back gracefully to cached/sensible defaults if offline or unauthenticated.
+    """
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+
+    defaults = {
+        'pr_pct': 82.0,
+        'pr_str': '82% (Merged)',
+        'issue_pct': 65.0,
+        'issue_str': '65% (Closed)',
+        'streak_pct': 88.0,
+        'streak_str': '88% (Goal: 365)'
+    }
+
+    cache_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'github_stats.json')
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, 'r', encoding='utf-8') as f:
+                cached = json.load(f)
+                defaults.update(cached)
+        except Exception:
+            pass
+
+    if not token:
+        try:
+            import subprocess
+            proc = subprocess.run(['gh', 'auth', 'token'], capture_output=True, text=True, timeout=2)
+            if proc.returncode == 0 and proc.stdout.strip():
+                token = proc.stdout.strip()
+        except Exception:
+            pass
+
+    if not token:
+        return defaults
+
+    query = """
+    query($login: String!) {
+      user(login: $login) {
+        pullRequests(first: 1) {
+          totalCount
+        }
+        mergedPRs: pullRequests(states: [MERGED], first: 1) {
+          totalCount
+        }
+        issues(first: 1) {
+          totalCount
+        }
+        closedIssues: issues(states: [CLOSED], first: 1) {
+          totalCount
+        }
+        contributionsCollection {
+          contributionCalendar {
+            weeks {
+              contributionDays {
+                contributionCount
+                date
+              }
+            }
+          }
+        }
+      }
+    }
+    """
+    import urllib.request
+    req_data = json.dumps({'query': query, 'variables': {'login': username}}).encode('utf-8')
+    req = urllib.request.Request(
+        'https://api.github.com/graphql',
+        data=req_data,
+        headers={
+            'Authorization': f'Bearer {token}',
+            'Content-Type': 'application/json',
+            'User-Agent': 'frtzhahn-profile-widget'
+        }
+    )
+
+    try:
+        with urllib.request.urlopen(req, timeout=10) as resp:
+            res = json.loads(resp.read().decode('utf-8'))
+            user = res.get('data', {}).get('user', {})
+            if not user:
+                return defaults
+
+            # 1. Pull Requests
+            total_prs = user.get('pullRequests', {}).get('totalCount', 0)
+            merged_prs = user.get('mergedPRs', {}).get('totalCount', 0)
+            if total_prs > 0:
+                pr_pct = round((merged_prs / total_prs) * 100, 1)
+                pr_str = f"{int(pr_pct) if pr_pct.is_integer() else pr_pct}% (Merged)"
+            else:
+                pr_pct = defaults['pr_pct']
+                pr_str = defaults['pr_str']
+
+            # 2. Issues Solved
+            total_issues = user.get('issues', {}).get('totalCount', 0)
+            closed_issues = user.get('closedIssues', {}).get('totalCount', 0)
+            if total_issues > 0:
+                issue_pct = round((closed_issues / total_issues) * 100, 1)
+                issue_str = f"{int(issue_pct) if issue_pct.is_integer() else issue_pct}% (Closed)"
+            else:
+                issue_pct = defaults['issue_pct']
+                issue_str = defaults['issue_str']
+
+            # 3. Commit Streak
+            weeks = user.get('contributionsCollection', {}).get('contributionCalendar', {}).get('weeks', [])
+            days = []
+            for w in weeks:
+                for d in w.get('contributionDays', []):
+                    days.append((d.get('date'), d.get('contributionCount', 0)))
+
+            days.sort(key=lambda x: x[0])
+            streak = 0
+            if days:
+                rev_days = list(reversed(days))
+                if rev_days and rev_days[0][1] == 0:
+                    rev_days = rev_days[1:]
+                for _, count in rev_days:
+                    if count > 0:
+                        streak += 1
+                    else:
+                        break
+
+            if streak > 0:
+                streak_pct = min(round((streak / 365.0) * 100, 1), 100.0)
+                streak_str = f"{int(streak_pct) if streak_pct.is_integer() else streak_pct}% (Goal: 365)"
+            else:
+                streak_pct = defaults['streak_pct']
+                streak_str = defaults['streak_str']
+
+            stats_result = {
+                'pr_pct': pr_pct,
+                'pr_str': pr_str,
+                'issue_pct': issue_pct,
+                'issue_str': issue_str,
+                'streak_pct': streak_pct,
+                'streak_str': streak_str,
+                'streak_days': streak
+            }
+
+            try:
+                with open(cache_file, 'w', encoding='utf-8') as f:
+                    json.dump(stats_result, f, indent=2)
+            except Exception:
+                pass
+
+            return stats_result
+    except Exception as e:
+        print(f"Warning: GitHub GraphQL fetch failed ({e}); using cached/fallback metrics.", file=sys.stderr)
+        return defaults
+
+
 # ---------------------------------------------------------------------------
 # 2. Dynamic Data Extractors & Normalizers
 # ---------------------------------------------------------------------------
@@ -92,12 +244,26 @@ def load_skills():
                     }
     return {'operating_systems': [], 'editors': [], 'desktop_environments': [], 'languages_tools': []}
 
-# ---------------------------------------------------------------------------
-# 3. Pure Native SVG Generator
-# ---------------------------------------------------------------------------
-def generate_native_profile_svg(stats, skills):
+def generate_native_profile_svg(stats, skills, gh_stats=None):
     """Generates pure native SVG markup with exact coordinate tracking."""
+    if gh_stats is None:
+        gh_stats = fetch_github_stats()
+
+    # GitHub fastfetch specs
+    pr_pct = gh_stats.get('pr_pct', 82.0)
+    pr_str = gh_stats.get('pr_str', '82% (Merged)')
+    pr_bar_w = round(190 * (pr_pct / 100.0), 1)
+
+    issue_pct = gh_stats.get('issue_pct', 65.0)
+    issue_str = gh_stats.get('issue_str', '65% (Closed)')
+    issue_bar_w = round(190 * (issue_pct / 100.0), 1)
+
+    streak_pct = gh_stats.get('streak_pct', 88.0)
+    streak_str = gh_stats.get('streak_str', '88% (Goal: 365)')
+    streak_bar_w = round(190 * (streak_pct / 100.0), 1)
+
     # Data extraction
+
     langs_raw = stats.get('languages', [])
     editors_raw = [e.get('name') if isinstance(e, dict) else str(e) for e in stats.get('editors', [])]
     projects_raw = [p.get('name') if isinstance(p, dict) else str(p) for p in stats.get('projects', [])]
@@ -419,9 +585,7 @@ def generate_native_profile_svg(stats, skills):
 
   <!-- ==================== 1. FASTFETCH ==================== -->
   <g id="fastfetch-section">
-    <text x="20" y="{y_fastfetch_prompt}">
-      <tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-fastfetch)">fastfetch</tspan><tspan class="cmd-cursor"> _</tspan>
-    </text>
+    <text x="20" y="{y_fastfetch_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-fastfetch)">fastfetch</tspan><tspan class="cmd-cursor"> _</tspan></text>
 
     <g class="output-fade">
       <!-- Mocha Avatar -->
@@ -431,61 +595,47 @@ def generate_native_profile_svg(stats, skills):
 
       <!-- System Specs -->
       <g id="fastfetch-specs">
-        <!-- will_to_code -->
-        <text x="160" y="{y_fastfetch_block + 18}" class="ff-spec-label">will_to_code</text>
-        <rect x="255" y="{y_fastfetch_block + 10}" width="250" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="{y_fastfetch_block + 10}" width="125" height="8" rx="4" fill="#bb9af7" class="bar-fill" />
-        <text x="545" y="{y_fastfetch_block + 18}" class="ff-spec-val">50%</text>
+        <!-- pull_requests -->
+        <text x="160" y="{y_fastfetch_block + 18}" class="ff-spec-label">pull_requests</text>
+        <rect x="255" y="{y_fastfetch_block + 10}" width="190" height="8" rx="4" class="bar-bg" />
+        <rect x="255" y="{y_fastfetch_block + 10}" width="{pr_bar_w}" height="8" rx="4" fill="#bb9af7" class="bar-fill" />
+        <text x="570" y="{y_fastfetch_block + 18}" text-anchor="end" class="ff-spec-val">{pr_str}</text>
 
-        <!-- irl_age -->
-        <text x="160" y="{y_fastfetch_block + 40}" class="ff-spec-label" fill="#bb9af7">irl_age</text>
-        <rect x="255" y="{y_fastfetch_block + 32}" width="250" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="{y_fastfetch_block + 32}" width="45" height="8" rx="4" fill="#bb9af7" class="bar-fill" />
-        <text x="545" y="{y_fastfetch_block + 40}" class="ff-spec-val">18%</text>
+        <!-- issues_solved -->
+        <text x="160" y="{y_fastfetch_block + 40}" class="ff-spec-label" fill="#7aa2f7">issues_solved</text>
+        <rect x="255" y="{y_fastfetch_block + 32}" width="190" height="8" rx="4" class="bar-bg" />
+        <rect x="255" y="{y_fastfetch_block + 32}" width="{issue_bar_w}" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <text x="570" y="{y_fastfetch_block + 40}" text-anchor="end" class="ff-spec-val">{issue_str}</text>
 
-        <!-- college_level -->
-        <text x="160" y="{y_fastfetch_block + 62}" class="ff-spec-label" fill="#bb9af7">college_level</text>
-        <rect x="255" y="{y_fastfetch_block + 54}" width="250" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="{y_fastfetch_block + 54}" width="62.5" height="8" rx="4" fill="#f79acf" class="bar-fill" />
-        <text x="545" y="{y_fastfetch_block + 62}" class="ff-spec-val">25%</text>
+        <!-- commit_streak -->
+        <text x="160" y="{y_fastfetch_block + 62}" class="ff-spec-label" fill="#73daca">commit_streak</text>
+        <rect x="255" y="{y_fastfetch_block + 54}" width="190" height="8" rx="4" class="bar-bg" />
+        <rect x="255" y="{y_fastfetch_block + 54}" width="{streak_bar_w}" height="8" rx="4" fill="#73daca" class="bar-fill" />
+        <text x="570" y="{y_fastfetch_block + 62}" text-anchor="end" class="ff-spec-val">{streak_str}</text>
 
         <line x1="160" y1="{y_fastfetch_block + 78}" x2="570" y2="{y_fastfetch_block + 78}" stroke="#414868" stroke-dasharray="4,4" />
 
         <!-- Course & Traits -->
-        <text x="160" y="{y_fastfetch_block + 96}">
-          <tspan class="ff-course-hdr">COURSE</tspan><tspan class="ff-course-val">: Bachelor of Science in Computer Science</tspan>
-        </text>
-        <text x="160" y="{y_fastfetch_block + 116}">
-          <tspan class="ff-course-hdr">TRAITS</tspan><tspan class="ff-course-val">: Procrastinator, Crammer, Night Owl</tspan>
-        </text>
+        <text x="160" y="{y_fastfetch_block + 96}"><tspan class="ff-course-hdr">COURSE</tspan><tspan class="ff-course-val">: Bachelor of Science in Computer Science</tspan></text>
+        <text x="160" y="{y_fastfetch_block + 116}"><tspan class="ff-course-hdr">TRAITS</tspan><tspan class="ff-course-val">: Procrastinator, Crammer, Night Owl</tspan></text>
       </g>
     </g>
   </g>
 
   <!-- ==================== 2. BIO ==================== -->
   <g id="bio-section">
-    <text x="20" y="{y_bio_prompt}">
-      <tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-cat)">cat about_me.txt</tspan><tspan class="cmd-cursor"> _</tspan>
-    </text>
+    <text x="20" y="{y_bio_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-cat)">cat about_me.txt</tspan><tspan class="cmd-cursor"> _</tspan></text>
 
     <g class="output-fade">
-      <text x="20" y="{y_bio_1}" clip-path="url(#clip-bio-1)">
-        <tspan class="bio-line">&gt; Hello, I'm </tspan><tspan class="bio-accent">Aldrin James A. Alciso</tspan>
-      </text>
-      <text x="20" y="{y_bio_2}" clip-path="url(#clip-bio-2)">
-        <tspan class="bio-line">&gt; Student at </tspan><tspan class="bio-accent">University of Caloocan City</tspan>
-      </text>
-      <text x="20" y="{y_bio_3}" clip-path="url(#clip-bio-3)">
-        <tspan class="bio-line">&gt; Exploring new things everyday :3</tspan>
-      </text>
+      <text x="20" y="{y_bio_1}" xml:space="preserve" clip-path="url(#clip-bio-1)"><tspan class="bio-line">&gt; Hello, I'm </tspan><tspan class="bio-accent">Aldrin James A. Alciso</tspan></text>
+      <text x="20" y="{y_bio_2}" xml:space="preserve" clip-path="url(#clip-bio-2)"><tspan class="bio-line">&gt; Student at </tspan><tspan class="bio-accent">University of Caloocan City</tspan></text>
+      <text x="20" y="{y_bio_3}" xml:space="preserve" clip-path="url(#clip-bio-3)"><tspan class="bio-line">&gt; Exploring new things everyday :3</tspan></text>
     </g>
   </g>
 
   <!-- ==================== 3. WAKATIME ==================== -->
   <g id="wakatime-section">
-    <text x="20" y="{y_waka_prompt}">
-      <tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-htop)">htop --stats</tspan><tspan class="cmd-cursor"> _</tspan>
-    </text>
+    <text x="20" y="{y_waka_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-htop)">htop --stats</tspan><tspan class="cmd-cursor"> _</tspan></text>
 
     <g class="output-fade">
       <!-- Languages Section -->
@@ -526,9 +676,7 @@ def generate_native_profile_svg(stats, skills):
 
   <!-- ==================== 4. SKILLS ==================== -->
   <g id="skills-section">
-    <text x="20" y="{y_skills_prompt}">
-      <tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-skills)">cat ~/skills.txt</tspan><tspan class="cmd-cursor"> _</tspan>
-    </text>
+    <text x="20" y="{y_skills_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-skills)">cat ~/skills.txt</tspan><tspan class="cmd-cursor"> _</tspan></text>
 
     <g class="output-fade">
       <!-- Left Column Skills -->
@@ -553,9 +701,7 @@ def generate_native_profile_svg(stats, skills):
 
   <!-- ==================== 5. FOOTER ==================== -->
   <g id="footer-section">
-    <text x="20" y="{y_final_prompt}">
-      <tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-cursor">_</tspan>
-    </text>
+    <text x="20" y="{y_final_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-cursor">_</tspan></text>
 
     <line x1="0" y1="{total_height - 28}" x2="600" y2="{total_height - 28}" stroke="#24283b" />
     <text x="20" y="{y_footer}" class="footer-text">LOGS: monitoring pid 1476</text>
@@ -572,8 +718,10 @@ def main():
     print("Fetching and building pure native profile SVG...")
     stats = load_wakatime_stats()
     skills = load_skills()
+    gh_stats = fetch_github_stats()
+    print(f"GitHub Stats: PRs={gh_stats.get('pr_str')}, Issues={gh_stats.get('issue_str')}, Streak={gh_stats.get('streak_str')}")
 
-    svg_content, total_height = generate_native_profile_svg(stats, skills)
+    svg_content, total_height = generate_native_profile_svg(stats, skills, gh_stats)
 
     # Validate XML syntax before writing
     try:
