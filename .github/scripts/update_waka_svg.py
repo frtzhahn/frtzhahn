@@ -16,8 +16,8 @@ import html
 # ---------------------------------------------------------------------------
 # 1. Mascot Vector Data Loader
 # ---------------------------------------------------------------------------
-def load_mocha_mascot():
-    """Loads Mocha mascot SVG vector paths from .github/assets/mocha.svg."""
+def load_mocha_mascot(x=20, y=74):
+    """Loads Mocha mascot SVG vector paths from .github/assets/mocha.svg with explicit viewport coordinates."""
     script_dir = os.path.dirname(os.path.abspath(__file__))
     candidates = [
         os.path.join(script_dir, '..', 'assets', 'mocha.svg'),
@@ -31,7 +31,7 @@ def load_mocha_mascot():
                     content = f.read()
                     inner = re.search(r'<svg[^>]*>(.*?)</svg>', content, re.DOTALL)
                     if inner:
-                        return f'<svg width="120" height="120" viewBox="0 0 500 500">\n{inner.group(1)}\n        </svg>'
+                        return f'<svg x="{x}" y="{y}" width="120" height="120" viewBox="0 0 500 500">\n{inner.group(1)}\n        </svg>'
             except Exception as e:
                 print(f"Warning: Failed reading {p}: {e}", file=sys.stderr)
     raise FileNotFoundError("Could not find .github/assets/mocha.svg mascot vector file.")
@@ -97,8 +97,6 @@ def load_skills():
 # ---------------------------------------------------------------------------
 def generate_native_profile_svg(stats, skills):
     """Generates pure native SVG markup with exact coordinate tracking."""
-    mocha_mascot_svg = load_mocha_mascot()
-
     # Data extraction
     langs_raw = stats.get('languages', [])
     editors_raw = [e.get('name') if isinstance(e, dict) else str(e) for e in stats.get('editors', [])]
@@ -115,6 +113,9 @@ def generate_native_profile_svg(stats, skills):
     y_fastfetch_prompt = y_cursor + 24 # 54
     y_fastfetch_block = y_fastfetch_prompt + 20 # 74
     y_cursor = y_fastfetch_block + 130 # 204
+    mocha_mascot_svg = load_mocha_mascot(x=20, y=y_fastfetch_block)
+
+
 
     # Section 2: Bio
     y_bio_prompt = y_cursor + 24 # 228
@@ -393,9 +394,13 @@ def generate_native_profile_svg(stats, skills):
 
     /* Reduced Motion Accessibility */
     @media (prefers-reduced-motion: reduce) {{
-      *, .clip-stencil, .output-fade, .bar-fill {{
+      * {{
         animation: none !important;
+      }}
+      .output-fade {{
         opacity: 1 !important;
+      }}
+      .clip-stencil, .bar-fill {{
         transform: none !important;
       }}
     }}
@@ -420,7 +425,7 @@ def generate_native_profile_svg(stats, skills):
 
     <g class="output-fade">
       <!-- Mocha Avatar -->
-      <g id="fastfetch-avatar" transform="translate(20, {y_fastfetch_block})">
+      <g id="fastfetch-avatar">
         {mocha_mascot_svg}
       </g>
 
