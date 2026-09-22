@@ -594,184 +594,166 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       transform-origin: left;
     }}
 
-    /* Command Typography / Typewriter Stencils and Cursor Synchronizers */
-    .clip-fastfetch-anim {{ animation: type-fastfetch 25s infinite; }}
-    .cursor-fastfetch-anim {{ animation: cursor-fastfetch 25s infinite; }}
+    /* Command Typography / Typewriter Stencils and Cursor Synchronizers (One-Shot Entrance) */
+    .clip-fastfetch-anim {{ animation: type-fastfetch 5s forwards; }}
+    .cursor-fastfetch-anim {{ animation: cursor-fastfetch 5s forwards; }}
 
-    .clip-cat-anim       {{ animation: type-cat 25s infinite; }}
-    .cursor-cat-anim     {{ animation: cursor-cat 25s infinite; }}
+    .clip-cat-anim       {{ animation: type-cat 5s forwards; }}
+    .cursor-cat-anim     {{ animation: cursor-cat 5s forwards; }}
 
-    .clip-htop-anim      {{ animation: type-htop 25s infinite; }}
-    .cursor-htop-anim    {{ animation: cursor-htop 25s infinite; }}
+    .clip-htop-anim      {{ animation: type-htop 5s forwards; }}
+    .cursor-htop-anim    {{ animation: cursor-htop 5s forwards; }}
 
-    .clip-skills-anim    {{ animation: type-skills 25s infinite; }}
-    .cursor-skills-anim  {{ animation: cursor-skills 25s infinite; }}
+    .clip-skills-anim    {{ animation: type-skills 5s forwards; }}
+    .cursor-skills-anim  {{ animation: cursor-skills 5s forwards; }}
 
     @keyframes type-fastfetch {{
-      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(9, end); }}
-      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: scaleX(0); }}
+      0% {{ transform: scaleX(0); animation-timing-function: steps(9, end); }}
+      16.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-fastfetch {{
-      0%, 4.0% {{ transform: translateX(-76px); animation-timing-function: steps(9, end); }}
-      12.0%, 92.0% {{ transform: translateX(0); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: translateX(-76px); }}
+      0% {{ transform: translateX(-76px); animation-timing-function: steps(9, end); }}
+      16.0%, 100% {{ transform: translateX(0); }}
     }}
 
     @keyframes type-cat {{
-      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
-      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: scaleX(0); }}
+      0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
+      16.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-cat {{
-      0%, 4.0% {{ transform: translateX(-135px); animation-timing-function: steps(16, end); }}
-      12.0%, 92.0% {{ transform: translateX(0); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: translateX(-135px); }}
+      0% {{ transform: translateX(-135px); animation-timing-function: steps(16, end); }}
+      16.0%, 100% {{ transform: translateX(0); }}
     }}
 
     @keyframes type-htop {{
-      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(12, end); }}
-      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: scaleX(0); }}
+      0% {{ transform: scaleX(0); animation-timing-function: steps(12, end); }}
+      16.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-htop {{
-      0%, 4.0% {{ transform: translateX(-101px); animation-timing-function: steps(12, end); }}
-      12.0%, 92.0% {{ transform: translateX(0); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: translateX(-101px); }}
+      0% {{ transform: translateX(-101px); animation-timing-function: steps(12, end); }}
+      16.0%, 100% {{ transform: translateX(0); }}
     }}
 
     @keyframes type-skills {{
-      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
-      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: scaleX(0); }}
+      0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
+      16.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-skills {{
-      0%, 4.0% {{ transform: translateX(-135px); animation-timing-function: steps(16, end); }}
-      12.0%, 92.0% {{ transform: translateX(0); animation-timing-function: linear; }}
-      96.0%, 100% {{ transform: translateX(-135px); }}
+      0% {{ transform: translateX(-135px); animation-timing-function: steps(16, end); }}
+      16.0%, 100% {{ transform: translateX(0); }}
     }}
 
-    /* Bio Sequential Keyframes (Commit 43a7899: 8-18%, 18-28%, 28-38%) */
-    .clip-bio1-anim {{ animation: type-bio-1 25s infinite; }}
-    .clip-bio2-anim {{ animation: type-bio-2 25s infinite; }}
-    .clip-bio3-anim {{ animation: type-bio-3 25s infinite; }}
+    /* Bio Sequential Keyframes (One-Shot: 16-36%, 36-56%, 56-76%) */
+    .clip-bio1-anim {{ animation: type-bio-1 5s forwards; }}
+    .clip-bio2-anim {{ animation: type-bio-2 5s forwards; }}
+    .clip-bio3-anim {{ animation: type-bio-3 5s forwards; }}
 
     @keyframes type-bio-1 {{
-      0%, 8.0% {{ transform: scaleX(0); animation-timing-function: steps(26, end); }}
-      18.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      88.0%, 100% {{ transform: scaleX(0); }}
+      0%, 16.0% {{ transform: scaleX(0); animation-timing-function: steps(26, end); }}
+      36.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes type-bio-2 {{
-      0%, 18.0% {{ transform: scaleX(0); animation-timing-function: steps(30, end); }}
-      28.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      88.0%, 100% {{ transform: scaleX(0); }}
+      0%, 36.0% {{ transform: scaleX(0); animation-timing-function: steps(30, end); }}
+      56.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes type-bio-3 {{
-      0%, 28.0% {{ transform: scaleX(0); animation-timing-function: steps(32, end); }}
-      38.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      88.0%, 100% {{ transform: scaleX(0); }}
+      0%, 56.0% {{ transform: scaleX(0); animation-timing-function: steps(32, end); }}
+      76.0%, 100% {{ transform: scaleX(1); }}
     }}
 
-    /* Fastfetch Course and Traits Sequential Keyframes (Commit 43a7899: 8-18%, 18-28%) */
-    .clip-course-anim {{ animation: type-course 25s infinite; }}
-    .clip-traits-anim {{ animation: type-traits 25s infinite; }}
+    /* Fastfetch Course and Traits Sequential Keyframes (One-Shot: 16-36%, 36-56%) */
+    .clip-course-anim {{ animation: type-course 5s forwards; }}
+    .clip-traits-anim {{ animation: type-traits 5s forwards; }}
 
     @keyframes type-course {{
-      0%, 8.0% {{ transform: scaleX(0); animation-timing-function: steps(46, end); }}
-      18.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      88.0%, 100% {{ transform: scaleX(0); }}
+      0%, 16.0% {{ transform: scaleX(0); animation-timing-function: steps(46, end); }}
+      36.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes type-traits {{
-      0%, 18.0% {{ transform: scaleX(0); animation-timing-function: steps(40, end); }}
-      28.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      88.0%, 100% {{ transform: scaleX(0); }}
+      0%, 36.0% {{ transform: scaleX(0); animation-timing-function: steps(40, end); }}
+      56.0%, 100% {{ transform: scaleX(1); }}
     }}
 
-    /* Section and Category Headers Typewriter Keyframes (8-24%) */
-    .clip-hdr-anim {{ animation: type-header 25s infinite; }}
+    /* Section and Category Headers Typewriter Keyframes (One-Shot: 20-50%) */
+    .clip-hdr-anim {{ animation: type-header 5s forwards; }}
 
     @keyframes type-header {{
-      0%, 8.0% {{ transform: scaleX(0); animation-timing-function: steps(18, end); }}
-      24.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
-      88.0%, 100% {{ transform: scaleX(0); }}
+      0%, 20.0% {{ transform: scaleX(0); animation-timing-function: steps(18, end); }}
+      50.0%, 100% {{ transform: scaleX(1); }}
     }}
 
     /* Output Fades (Fastfetch, Bio, Waka, Skills) */
     .output-fade {{
-      animation: output-fade-anim 25s infinite;
+      animation: output-fade-anim 5s forwards;
     }}
     @keyframes output-fade-anim {{
-      0%, 12.0% {{ opacity: 0; }}
-      32.0%, 72.0% {{ opacity: 1; }}
-      92.0%, 100% {{ opacity: 0; }}
+      0%, 14.0% {{ opacity: 0; }}
+      34.0%, 100% {{ opacity: 1; }}
     }}
 
-    /* Progress Bar Fills (Commit 43a7899) */
+    /* Progress Bar Fills (One-Shot) */
     .bar-bg {{ fill: {THEME['bar_bg']}; }}
     .bar-fill {{
       transform-box: fill-box;
       transform-origin: left;
-      animation: fill-bar-anim 25s infinite;
+      animation: fill-bar-anim 5s forwards;
     }}
     @keyframes fill-bar-anim {{
-      0%, 12.0% {{ transform: scaleX(0); }}
-      32.0%, 72.0% {{ transform: scaleX(1); }}
-      92.0%, 100% {{ transform: scaleX(0); }}
+      0%, 16.0% {{ transform: scaleX(0); }}
+      44.0%, 100% {{ transform: scaleX(1); }}
     }}
 
-    /* WakaTime Bar Rows - Staggered Cascade Entrance (Commit 43a7899) */
+    /* WakaTime Bar Rows - Staggered Cascade Entrance (One-Shot) */
     .waka-bar-row {{
-      animation: fade-row 25s infinite forwards;
+      animation: fade-row 5s forwards;
     }}
     @keyframes fade-row {{
-      0%, 8.0% {{ opacity: 0; transform: translateX(-10px); }}
-      38.0%, 72.0% {{ opacity: 1; transform: translateX(0); }}
-      88.0%, 100% {{ opacity: 0; transform: translateX(10px); }}
+      0%, 20.0% {{ opacity: 0; transform: translateX(-10px); }}
+      60.0%, 100% {{ opacity: 1; transform: translateX(0); }}
     }}
-    .waka-bar-row-1 {{ animation-delay: 0.1s; }}
-    .waka-bar-row-2 {{ animation-delay: 0.3s; }}
-    .waka-bar-row-3 {{ animation-delay: 0.5s; }}
-    .waka-bar-row-4 {{ animation-delay: 0.7s; }}
-    .waka-bar-row-5 {{ animation-delay: 0.9s; }}
-    .waka-bar-row-6 {{ animation-delay: 1.1s; }}
-    .waka-bar-row-7 {{ animation-delay: 1.3s; }}
-    .waka-bar-row-8 {{ animation-delay: 1.5s; }}
-    .waka-bar-row-9 {{ animation-delay: 1.7s; }}
+    .waka-bar-row-1 {{ animation-delay: 0.05s; }}
+    .waka-bar-row-2 {{ animation-delay: 0.10s; }}
+    .waka-bar-row-3 {{ animation-delay: 0.15s; }}
+    .waka-bar-row-4 {{ animation-delay: 0.20s; }}
+    .waka-bar-row-5 {{ animation-delay: 0.25s; }}
+    .waka-bar-row-6 {{ animation-delay: 0.30s; }}
+    .waka-bar-row-7 {{ animation-delay: 0.35s; }}
+    .waka-bar-row-8 {{ animation-delay: 0.40s; }}
+    .waka-bar-row-9 {{ animation-delay: 0.45s; }}
 
-    /* Stat Items - Staggered Cascade Entrance (Commit 43a7899) */
+    /* Stat Items - Staggered Cascade Entrance (One-Shot) */
     .stat-item {{
-      animation: fade-stat 25s infinite forwards;
+      animation: fade-stat 5s forwards;
     }}
     @keyframes fade-stat {{
-      0%, 8.0% {{ opacity: 0; transform: translateX(-8px); }}
-      38.0%, 72.0% {{ opacity: 1; transform: translateX(0); }}
-      88.0%, 100% {{ opacity: 0; transform: translateX(8px); }}
+      0%, 20.0% {{ opacity: 0; transform: translateX(-8px); }}
+      60.0%, 100% {{ opacity: 1; transform: translateX(0); }}
     }}
-    .stat-item-1 {{ animation-delay: 0.1s; }}
-    .stat-item-2 {{ animation-delay: 0.5s; }}
-    .stat-item-3 {{ animation-delay: 0.9s; }}
-    .stat-item-4 {{ animation-delay: 1.3s; }}
-    .stat-item-5 {{ animation-delay: 1.7s; }}
-    .stat-item-6 {{ animation-delay: 2.1s; }}
-    .stat-item-7 {{ animation-delay: 2.5s; }}
-    .stat-item-8 {{ animation-delay: 2.9s; }}
-    .stat-item-9 {{ animation-delay: 3.3s; }}
+    .stat-item-1 {{ animation-delay: 0.05s; }}
+    .stat-item-2 {{ animation-delay: 0.15s; }}
+    .stat-item-3 {{ animation-delay: 0.25s; }}
+    .stat-item-4 {{ animation-delay: 0.35s; }}
+    .stat-item-5 {{ animation-delay: 0.45s; }}
+    .stat-item-6 {{ animation-delay: 0.55s; }}
+    .stat-item-7 {{ animation-delay: 0.65s; }}
+    .stat-item-8 {{ animation-delay: 0.75s; }}
+    .stat-item-9 {{ animation-delay: 0.85s; }}
 
-    /* Skills Grid Entries - Staggered Cascade (Commit 43a7899) */
+    /* Skills Grid Entries - Staggered Cascade (One-Shot) */
     .skill-entry {{
-      animation: fade-stat 25s infinite forwards;
+      animation: fade-stat 5s forwards;
     }}
-    .skill-entry-1  {{ animation-delay: 0.1s; }}
-    .skill-entry-2  {{ animation-delay: 0.3s; }}
-    .skill-entry-3  {{ animation-delay: 0.5s; }}
-    .skill-entry-4  {{ animation-delay: 0.7s; }}
-    .skill-entry-5  {{ animation-delay: 0.9s; }}
-    .skill-entry-6  {{ animation-delay: 1.1s; }}
-    .skill-entry-7  {{ animation-delay: 1.3s; }}
-    .skill-entry-8  {{ animation-delay: 1.5s; }}
-    .skill-entry-9  {{ animation-delay: 1.7s; }}
-    .skill-entry-10 {{ animation-delay: 1.9s; }}
-    .skill-entry-11 {{ animation-delay: 2.1s; }}
+    .skill-entry-1  {{ animation-delay: 0.05s; }}
+    .skill-entry-2  {{ animation-delay: 0.10s; }}
+    .skill-entry-3  {{ animation-delay: 0.15s; }}
+    .skill-entry-4  {{ animation-delay: 0.20s; }}
+    .skill-entry-5  {{ animation-delay: 0.25s; }}
+    .skill-entry-6  {{ animation-delay: 0.30s; }}
+    .skill-entry-7  {{ animation-delay: 0.35s; }}
+    .skill-entry-8  {{ animation-delay: 0.40s; }}
+    .skill-entry-9  {{ animation-delay: 0.45s; }}
+    .skill-entry-10 {{ animation-delay: 0.50s; }}
+    .skill-entry-11 {{ animation-delay: 0.55s; }}
 
     /* Fastfetch Styles */
     .ff-spec-label {{ fill: {THEME['fastfetch_spec_label']}; font-size: 11px; }}
