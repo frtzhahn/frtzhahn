@@ -13,6 +13,90 @@ import re
 import xml.etree.ElementTree as ET
 import html
 
+
+# ===========================================================================
+# THEME CONFIGURATION
+# To switch themes, uncomment the desired THEME dictionary and comment out the other.
+# ===========================================================================
+
+# --- Tokyo Night (Original) ---
+# THEME = {
+#     'name': 'Tokyo Night',
+#     'bg': '#1a1b26',
+#     'header_bg': '#1f2335',
+#     'tab_bg': '#16161e',
+#     'border': '#414868',
+#     'divider': '#24283b',
+#     'bar_bg': '#24283b',
+#     'fg': '#a9b1d6',
+#     'fg_muted': '#565f89',
+#     'fg_subtle': '#414868',
+#     'prompt_host': '#bb9af7',
+#     'prompt_colon': '#a9b1d6',
+#     'prompt_dir': '#7aa2f7',
+#     'cmd': '#7aa2f7',
+#     'cursor': '#7aa2f7',
+#     'tab_accent': '#7aa2f7',
+#     'fastfetch_spec_label': '#7aa2f7',
+#     'fastfetch_course_hdr': '#7aa2f7',
+#     'pr_bar': '#bb9af7',
+#     'issue_bar': '#7aa2f7',
+#     'streak_bar': '#73daca',
+#     'bio_line': '#9ece6a',
+#     'bio_accent': '#bb9af7',
+#     'section_title': '#565f89',
+#     'waka_lang_name': '#7aa2f7',
+#     'stat_bullet': '#414868',
+#     'stat_project': '#7dcfff',
+#     'perf_time_label': '#7aa2f7',
+#     'perf_avg_label': '#9ece6a',
+#     'skills_hdr': '#565f89',
+#     'footer_text': '#414868',
+#     'footer_badge': '#bb9af7',
+#     'dot_red': '#f7768e',
+#     'dot_yellow': '#e0af68',
+#     'dot_green': '#9ece6a',
+# }
+
+# --- Gruvbox Dark (Active) ---
+THEME = {
+    'name': 'Gruvbox Dark',
+    'bg': '#282828',             # dark0
+    'header_bg': '#1d2021',      # dark0_hard
+    'tab_bg': '#282828',         # dark0 active tab background
+    'border': '#504945',         # dark2
+    'divider': '#3c3836',        # dark1
+    'bar_bg': '#3c3836',         # dark1
+    'fg': '#ebdbb2',             # light1
+    'fg_muted': '#a89984',       # light4
+    'fg_subtle': '#928374',      # gray
+    'prompt_host': '#d3869b',    # bright purple
+    'prompt_colon': '#a89984',   # light4
+    'prompt_dir': '#83a598',     # bright blue
+    'cmd': '#8ec07c',            # bright aqua
+    'cursor': '#fe8019',         # bright orange
+    'tab_accent': '#fe8019',     # bright orange
+    'fastfetch_spec_label': '#83a598',  # bright blue
+    'fastfetch_course_hdr': '#fabd2f',  # bright yellow
+    'pr_bar': '#d3869b',         # bright purple
+    'issue_bar': '#83a598',      # bright blue
+    'streak_bar': '#8ec07c',     # bright aqua
+    'bio_line': '#b8bb26',       # bright green
+    'bio_accent': '#fabd2f',     # bright yellow
+    'section_title': '#fe8019',  # bright orange
+    'waka_lang_name': '#83a598', # bright blue
+    'stat_bullet': '#928374',    # gray
+    'stat_project': '#8ec07c',   # bright aqua
+    'perf_time_label': '#83a598',# bright blue
+    'perf_avg_label': '#b8bb26', # bright green
+    'skills_hdr': '#fe8019',     # bright orange
+    'footer_text': '#928374',    # gray
+    'footer_badge': '#d3869b',   # bright purple
+    'dot_red': '#fb4934',        # bright red
+    'dot_yellow': '#fabd2f',     # bright yellow
+    'dot_green': '#b8bb26',      # bright green
+}
+
 # ---------------------------------------------------------------------------
 # 1. Mascot Vector Data Loader
 # ---------------------------------------------------------------------------
@@ -302,7 +386,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     for l in langs_raw:
         name = html.escape(l.get('name', 'Unknown'))
         pct = round(l.get('percent', 0), 1)
-        color = l.get('color') or '#7aa2f7'
+        color = l.get('color') or THEME['waka_lang_name']
         bar_w = round(370 * (pct / 100.0), 1)
         langs_svg_lines.append(f"""
       <g class="waka-bar-row">
@@ -321,7 +405,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     editors_svg = []
     y_left += 20
     for ed in editors_raw:
-        editors_svg.append(f'<text x="20" y="{y_left}" class="stat-item"><tspan fill="#414868">●</tspan> {html.escape(ed)}</text>')
+        editors_svg.append(f'<text x="20" y="{y_left}" class="stat-item"><tspan fill="{THEME["stat_bullet"]}">●</tspan> {html.escape(ed)}</text>')
         y_left += 18
 
     y_left += 15
@@ -329,15 +413,15 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_left += 20
     os_svg = []
     for o in os_raw:
-        os_svg.append(f'<text x="20" y="{y_left}" class="stat-item"><tspan fill="#414868">●</tspan> {html.escape(o)}</text>')
+        os_svg.append(f'<text x="20" y="{y_left}" class="stat-item"><tspan fill="{THEME["stat_bullet"]}">●</tspan> {html.escape(o)}</text>')
         y_left += 18
 
     y_left += 15
     y_perf_header = y_left
     y_left += 20
     perf_svg = [
-        f'<text x="20" y="{y_left}" class="stat-item"><tspan fill="#7aa2f7" font-weight="bold">TIME:</tspan> <tspan id="stat-time">{html.escape(time_str)}</tspan></text>',
-        f'<text x="20" y="{y_left + 18}" class="stat-item"><tspan fill="#9ece6a" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">{html.escape(avg_str)}</tspan></text>'
+        f'<text x="20" y="{y_left}" class="stat-item"><tspan fill="{THEME["perf_time_label"]}" font-weight="bold">TIME:</tspan> <tspan id="stat-time">{html.escape(time_str)}</tspan></text>',
+        f'<text x="20" y="{y_left + 18}" class="stat-item"><tspan fill="{THEME["perf_avg_label"]}" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">{html.escape(avg_str)}</tspan></text>'
     ]
     y_left += 36
 
@@ -346,7 +430,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     projects_svg = []
     y_right += 20
     for prj in projects_raw:
-        projects_svg.append(f'<text x="310" y="{y_right}" class="stat-item stat-project"><tspan fill="#414868">●</tspan> {html.escape(prj)}</text>')
+        projects_svg.append(f'<text x="310" y="{y_right}" class="stat-item stat-project"><tspan fill="{THEME["stat_bullet"]}">●</tspan> {html.escape(prj)}</text>')
         y_right += 18
 
     y_cursor = max(y_left, y_right) + 28
@@ -410,16 +494,16 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
   <defs>
     <!-- Typewriter Clip Paths (Using scaleX for 100% WebKit hardware compatibility) -->
     <clipPath id="clip-fastfetch">
-      <rect class="clip-stencil clip-fastfetch-anim" x="145" y="{y_fastfetch_prompt - 16}" width="120" height="24" />
+      <rect class="clip-stencil clip-fastfetch-anim" x="156" y="{y_fastfetch_prompt - 16}" width="110" height="24" />
     </clipPath>
     <clipPath id="clip-cat">
-      <rect class="clip-stencil clip-cat-anim" x="145" y="{y_bio_prompt - 16}" width="180" height="24" />
+      <rect class="clip-stencil clip-cat-anim" x="156" y="{y_bio_prompt - 16}" width="180" height="24" />
     </clipPath>
     <clipPath id="clip-htop">
-      <rect class="clip-stencil clip-htop-anim" x="145" y="{y_waka_prompt - 16}" width="140" height="24" />
+      <rect class="clip-stencil clip-htop-anim" x="156" y="{y_waka_prompt - 16}" width="140" height="24" />
     </clipPath>
     <clipPath id="clip-skills">
-      <rect class="clip-stencil clip-skills-anim" x="145" y="{y_skills_prompt - 16}" width="180" height="24" />
+      <rect class="clip-stencil clip-skills-anim" x="156" y="{y_skills_prompt - 16}" width="180" height="24" />
     </clipPath>
 
     <!-- Bio Sequential Line Clip Paths -->
@@ -441,14 +525,14 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       dominant-baseline: alphabetic;
     }}
 
-    .prompt-host {{ fill: #bb9af7; font-size: 14px; }}
-    .prompt-colon {{ fill: #a9b1d6; font-size: 14px; }}
-    .prompt-dir   {{ fill: #7aa2f7; font-weight: bold; font-size: 14px; }}
-    .prompt-char  {{ fill: #a9b1d6; font-size: 14px; }}
-    .cmd-text     {{ fill: #7aa2f7; font-size: 14px; }}
+    .prompt-host {{ fill: {THEME['prompt_host']}; font-size: 14px; }}
+    .prompt-colon {{ fill: {THEME['prompt_colon']}; font-size: 14px; }}
+    .prompt-dir   {{ fill: {THEME['prompt_dir']}; font-weight: bold; font-size: 14px; }}
+    .prompt-char  {{ fill: {THEME['prompt_colon']}; font-size: 14px; }}
+    .cmd-text     {{ fill: {THEME['cmd']}; font-size: 14px; }}
 
     .cmd-cursor {{
-      fill: #7aa2f7;
+      fill: {THEME['cursor']};
       font-size: 14px;
       animation: cursor-blink 0.8s infinite;
     }}
@@ -469,23 +553,23 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     .clip-skills-anim    {{ animation: type-skills 25s infinite; }}
 
     @keyframes type-fastfetch {{
-      0%, 4.0% {{ transform: scaleX(0); }}
-      12.0%, 92.0% {{ transform: scaleX(1); }}
+      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(9, end); }}
+      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
       98.0%, 100% {{ transform: scaleX(0); }}
     }}
     @keyframes type-cat {{
-      0%, 4.0% {{ transform: scaleX(0); }}
-      12.0%, 92.0% {{ transform: scaleX(1); }}
+      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
+      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
       98.0%, 100% {{ transform: scaleX(0); }}
     }}
     @keyframes type-htop {{
-      0%, 4.0% {{ transform: scaleX(0); }}
-      12.0%, 92.0% {{ transform: scaleX(1); }}
+      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(12, end); }}
+      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
       98.0%, 100% {{ transform: scaleX(0); }}
     }}
     @keyframes type-skills {{
-      0%, 4.0% {{ transform: scaleX(0); }}
-      12.0%, 92.0% {{ transform: scaleX(1); }}
+      0%, 4.0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
+      12.0%, 92.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
       98.0%, 100% {{ transform: scaleX(0); }}
     }}
 
@@ -495,18 +579,18 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     .clip-bio3-anim {{ animation: type-bio-3 25s infinite; }}
 
     @keyframes type-bio-1 {{
-      0%, 8.0% {{ transform: scaleX(0); }}
-      18.0%, 72.0% {{ transform: scaleX(1); }}
+      0%, 8.0% {{ transform: scaleX(0); animation-timing-function: steps(26, end); }}
+      18.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
       88.0%, 100% {{ transform: scaleX(0); }}
     }}
     @keyframes type-bio-2 {{
-      0%, 18.0% {{ transform: scaleX(0); }}
-      28.0%, 72.0% {{ transform: scaleX(1); }}
+      0%, 18.0% {{ transform: scaleX(0); animation-timing-function: steps(30, end); }}
+      28.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
       88.0%, 100% {{ transform: scaleX(0); }}
     }}
     @keyframes type-bio-3 {{
-      0%, 28.0% {{ transform: scaleX(0); }}
-      38.0%, 72.0% {{ transform: scaleX(1); }}
+      0%, 28.0% {{ transform: scaleX(0); animation-timing-function: steps(32, end); }}
+      38.0%, 72.0% {{ transform: scaleX(1); animation-timing-function: linear; }}
       88.0%, 100% {{ transform: scaleX(0); }}
     }}
 
@@ -521,7 +605,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     }}
 
     /* Progress Bar Fills */
-    .bar-bg {{ fill: #24283b; }}
+    .bar-bg {{ fill: {THEME['bar_bg']}; }}
     .bar-fill {{
       transform-box: fill-box;
       transform-origin: left;
@@ -534,29 +618,29 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     }}
 
     /* Fastfetch Styles */
-    .ff-spec-label {{ fill: #7aa2f7; font-size: 11px; }}
-    .ff-spec-val   {{ fill: #a9b1d6; font-size: 11px; }}
-    .ff-course-hdr {{ fill: #7aa2f7; font-weight: bold; font-size: 11px; }}
-    .ff-course-val {{ fill: #a9b1d6; font-size: 11px; }}
+    .ff-spec-label {{ fill: {THEME['fastfetch_spec_label']}; font-size: 11px; }}
+    .ff-spec-val   {{ fill: {THEME['fg']}; font-size: 11px; }}
+    .ff-course-hdr {{ fill: {THEME['fastfetch_course_hdr']}; font-weight: bold; font-size: 11px; }}
+    .ff-course-val {{ fill: {THEME['fg']}; font-size: 11px; }}
 
     /* Bio Styles */
-    .bio-line   {{ fill: #9ece6a; font-size: 12px; }}
-    .bio-accent {{ fill: #bb9af7; font-weight: bold; font-size: 12px; }}
+    .bio-line   {{ fill: {THEME['bio_line']}; font-size: 12px; }}
+    .bio-accent {{ fill: {THEME['bio_accent']}; font-weight: bold; font-size: 12px; }}
 
     /* WakaTime Styles */
-    .section-title {{ fill: #565f89; font-size: 14px; font-weight: bold; text-transform: uppercase; }}
-    .waka-lang-name {{ fill: #7aa2f7; font-size: 11px; }}
-    .waka-lang-val  {{ fill: #a9b1d6; font-size: 11px; }}
-    .stat-item      {{ fill: #a9b1d6; font-size: 12px; }}
-    .stat-project   {{ fill: #7dcfff; }}
+    .section-title {{ fill: {THEME['section_title']}; font-size: 14px; font-weight: bold; text-transform: uppercase; }}
+    .waka-lang-name {{ fill: {THEME['waka_lang_name']}; font-size: 11px; }}
+    .waka-lang-val  {{ fill: {THEME['fg']}; font-size: 11px; }}
+    .stat-item      {{ fill: {THEME['fg']}; font-size: 12px; }}
+    .stat-project   {{ fill: {THEME['stat_project']}; }}
 
     /* Skills Styles */
-    .skills-hdr  {{ fill: #565f89; font-size: 13px; font-weight: bold; text-transform: uppercase; }}
-    .skill-name  {{ fill: #a9b1d6; font-size: 12px; }}
+    .skills-hdr  {{ fill: {THEME['skills_hdr']}; font-size: 13px; font-weight: bold; text-transform: uppercase; }}
+    .skill-name  {{ fill: {THEME['fg']}; font-size: 12px; }}
 
     /* Footer */
-    .footer-text {{ fill: #414868; font-size: 10px; }}
-    .footer-en-cours {{ fill: #bb9af7; font-size: 10px; font-weight: bold; }}
+    .footer-text {{ fill: {THEME['footer_text']}; font-size: 10px; }}
+    .footer-en-cours {{ fill: {THEME['footer_badge']}; font-size: 10px; font-weight: bold; }}
 
     /* Reduced Motion Accessibility */
     @media (prefers-reduced-motion: reduce) {{
@@ -573,19 +657,43 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
   </style>
 
   <!-- Window Frame Background -->
-  <rect x="0.5" y="0.5" width="599" height="{total_height - 1}" rx="6" fill="#1a1b26" stroke="#414868" />
+  <rect x="0.5" y="0.5" width="599" height="{total_height - 1}" rx="6" fill="{THEME['bg']}" stroke="{THEME['border']}" />
 
   <!-- Window Header -->
-  <path d="M0.5 6.5A6 6 0 0 1 6.5 0.5H593.5A6 6 0 0 1 599.5 6.5V30.5H0.5Z" fill="#1f2335" />
-  <line x1="0" y1="30.5" x2="600" y2="30.5" stroke="#414868" />
-  <circle cx="21" cy="15.5" r="5" fill="#f7768e" />
-  <circle cx="37" cy="15.5" r="5" fill="#e0af68" />
-  <circle cx="53" cy="15.5" r="5" fill="#9ece6a" />
-  <text x="300" y="19" text-anchor="middle" fill="#565f89" font-size="11">aldrin@frtzhahn: ~</text>
+  <path d="M0.5 6.5A6 6 0 0 1 6.5 0.5H593.5A6 6 0 0 1 599.5 6.5V30.5H0.5Z" fill="{THEME['header_bg']}" />
+  <line x1="0" y1="30.5" x2="600" y2="30.5" stroke="{THEME['border']}" />
+
+  <!-- macOS Window Controls (Commented out: Uncomment to restore)
+  <circle cx="21" cy="15.5" r="5" fill="{THEME['dot_red']}" />
+  <circle cx="37" cy="15.5" r="5" fill="{THEME['dot_yellow']}" />
+  <circle cx="53" cy="15.5" r="5" fill="{THEME['dot_green']}" />
+  -->
+
+  <!-- Linux Terminal Tab & Window Header (Kitty / Sway Rice) -->
+  <g id="window-header-linux">
+    <!-- Active Tab -->
+    <rect x="12" y="4" width="125" height="26.5" rx="4" fill="{THEME['tab_bg']}" />
+    <line x1="12" y1="30.5" x2="137" y2="30.5" stroke="{THEME['tab_accent']}" stroke-width="2" />
+    <text x="20" y="20" fill="{THEME['tab_accent']}" font-size="11" font-weight="bold">&gt;_</text>
+    <text x="38" y="20" fill="{THEME['fg']}" font-size="11" font-weight="bold">1: zsh (~)</text>
+    <!-- New Tab (+) -->
+    <text x="148" y="20" fill="{THEME['fg_subtle']}" font-size="13">+</text>
+    <!-- Centered Host/Session Title -->
+    <text x="310" y="20" text-anchor="middle" fill="{THEME['fg_muted']}" font-size="11">aldrin@frtzhahn: ~</text>
+    <!-- Obsidian-style Window Controls (slots: 500-532, 532-564, 564-596) -->
+    <g id="window-controls-obsidian">
+      <!-- Minimize: centered at x=516, y=15.5 -->
+      <line x1="511" y1="15.5" x2="521" y2="15.5" stroke="{THEME['fg_subtle']}" stroke-width="1.2" stroke-linecap="round" />
+      <!-- Maximize: centered at x=548, y=15.5 -->
+      <rect x="543" y="10.5" width="10" height="10" rx="1.5" fill="none" stroke="{THEME['fg_subtle']}" stroke-width="1.2" />
+      <!-- Close: centered at x=580, y=15.5 -->
+      <path d="M575.5 11 L584.5 20 M584.5 11 L575.5 20" stroke="{THEME['fg_subtle']}" stroke-width="1.2" stroke-linecap="round" />
+    </g>
+  </g>
 
   <!-- ==================== 1. FASTFETCH ==================== -->
   <g id="fastfetch-section">
-    <text x="20" y="{y_fastfetch_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-fastfetch)">fastfetch</tspan><tspan class="cmd-cursor"> _</tspan></text>
+    <text x="20" y="{y_fastfetch_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-fastfetch)">fastfetch</tspan><tspan class="cmd-cursor" dy="-2">_</tspan></text>
 
     <g class="output-fade">
       <!-- Mocha Avatar -->
@@ -598,22 +706,22 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
         <!-- pull_requests -->
         <text x="160" y="{y_fastfetch_block + 18}" class="ff-spec-label">pull_requests</text>
         <rect x="255" y="{y_fastfetch_block + 10}" width="190" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="{y_fastfetch_block + 10}" width="{pr_bar_w}" height="8" rx="4" fill="#bb9af7" class="bar-fill" />
+        <rect x="255" y="{y_fastfetch_block + 10}" width="{pr_bar_w}" height="8" rx="4" fill="{THEME['pr_bar']}" class="bar-fill" />
         <text x="570" y="{y_fastfetch_block + 18}" text-anchor="end" class="ff-spec-val">{pr_str}</text>
 
         <!-- issues_solved -->
-        <text x="160" y="{y_fastfetch_block + 40}" class="ff-spec-label" fill="#7aa2f7">issues_solved</text>
+        <text x="160" y="{y_fastfetch_block + 40}" class="ff-spec-label">issues_solved</text>
         <rect x="255" y="{y_fastfetch_block + 32}" width="190" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="{y_fastfetch_block + 32}" width="{issue_bar_w}" height="8" rx="4" fill="#7aa2f7" class="bar-fill" />
+        <rect x="255" y="{y_fastfetch_block + 32}" width="{issue_bar_w}" height="8" rx="4" fill="{THEME['issue_bar']}" class="bar-fill" />
         <text x="570" y="{y_fastfetch_block + 40}" text-anchor="end" class="ff-spec-val">{issue_str}</text>
 
         <!-- commit_streak -->
-        <text x="160" y="{y_fastfetch_block + 62}" class="ff-spec-label" fill="#73daca">commit_streak</text>
+        <text x="160" y="{y_fastfetch_block + 62}" class="ff-spec-label">commit_streak</text>
         <rect x="255" y="{y_fastfetch_block + 54}" width="190" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="{y_fastfetch_block + 54}" width="{streak_bar_w}" height="8" rx="4" fill="#73daca" class="bar-fill" />
+        <rect x="255" y="{y_fastfetch_block + 54}" width="{streak_bar_w}" height="8" rx="4" fill="{THEME['streak_bar']}" class="bar-fill" />
         <text x="570" y="{y_fastfetch_block + 62}" text-anchor="end" class="ff-spec-val">{streak_str}</text>
 
-        <line x1="160" y1="{y_fastfetch_block + 78}" x2="570" y2="{y_fastfetch_block + 78}" stroke="#414868" stroke-dasharray="4,4" />
+        <line x1="160" y1="{y_fastfetch_block + 78}" x2="570" y2="{y_fastfetch_block + 78}" stroke="{THEME['border']}" stroke-dasharray="4,4" />
 
         <!-- Course & Traits -->
         <text x="160" y="{y_fastfetch_block + 96}"><tspan class="ff-course-hdr">COURSE</tspan><tspan class="ff-course-val">: Bachelor of Science in Computer Science</tspan></text>
@@ -624,7 +732,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
   <!-- ==================== 2. BIO ==================== -->
   <g id="bio-section">
-    <text x="20" y="{y_bio_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-cat)">cat about_me.txt</tspan><tspan class="cmd-cursor"> _</tspan></text>
+    <text x="20" y="{y_bio_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-cat)">cat about_me.txt</tspan><tspan class="cmd-cursor" dy="-2">_</tspan></text>
 
     <g class="output-fade">
       <text x="20" y="{y_bio_1}" xml:space="preserve" clip-path="url(#clip-bio-1)"><tspan class="bio-line">&gt; Hello, I'm </tspan><tspan class="bio-accent">Aldrin James A. Alciso</tspan></text>
@@ -635,12 +743,12 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
   <!-- ==================== 3. WAKATIME ==================== -->
   <g id="wakatime-section">
-    <text x="20" y="{y_waka_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-htop)">htop --stats</tspan><tspan class="cmd-cursor"> _</tspan></text>
+    <text x="20" y="{y_waka_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-htop)">htop --stats</tspan><tspan class="cmd-cursor" dy="-2">_</tspan></text>
 
     <g class="output-fade">
       <!-- Languages Section -->
       <text x="20" y="{y_waka_block}" class="section-title">LANGUAGES</text>
-      <line x1="20" y1="{y_waka_block + 6}" x2="580" y2="{y_waka_block + 6}" stroke="#24283b" />
+      <line x1="20" y1="{y_waka_block + 6}" x2="580" y2="{y_waka_block + 6}" stroke="{THEME['divider']}" />
       <!-- LANG_START -->
 {''.join(langs_svg_lines)}
       <!-- LANG_END -->
@@ -648,26 +756,26 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <!-- Left Column: Active Editors, OS, Performance -->
       <!-- Editors -->
       <text x="20" y="{y_waka_lists_top}" class="section-title">ACTIVE EDITORS</text>
-      <line x1="20" y1="{y_waka_lists_top + 6}" x2="280" y2="{y_waka_lists_top + 6}" stroke="#24283b" />
+      <line x1="20" y1="{y_waka_lists_top + 6}" x2="280" y2="{y_waka_lists_top + 6}" stroke="{THEME['divider']}" />
       <!-- EDITORS_START -->
       {''.join(editors_svg)}
       <!-- EDITORS_END -->
 
       <!-- OS -->
       <text x="20" y="{y_os_header}" class="section-title">OPERATING SYSTEMS</text>
-      <line x1="20" y1="{y_os_header + 6}" x2="280" y2="{y_os_header + 6}" stroke="#24283b" />
+      <line x1="20" y1="{y_os_header + 6}" x2="280" y2="{y_os_header + 6}" stroke="{THEME['divider']}" />
       <!-- OS_START -->
       {''.join(os_svg)}
       <!-- OS_END -->
 
       <!-- Performance -->
       <text x="20" y="{y_perf_header}" class="section-title">aldrin@frtzhahn performance</text>
-      <line x1="20" y1="{y_perf_header + 6}" x2="280" y2="{y_perf_header + 6}" stroke="#24283b" />
+      <line x1="20" y1="{y_perf_header + 6}" x2="280" y2="{y_perf_header + 6}" stroke="{THEME['divider']}" />
       {''.join(perf_svg)}
 
       <!-- Right Column: Current Projects -->
       <text x="310" y="{y_waka_lists_top}" class="section-title">CURRENT PROJECTS</text>
-      <line x1="310" y1="{y_waka_lists_top + 6}" x2="580" y2="{y_waka_lists_top + 6}" stroke="#24283b" />
+      <line x1="310" y1="{y_waka_lists_top + 6}" x2="580" y2="{y_waka_lists_top + 6}" stroke="{THEME['divider']}" />
       <!-- PROJECTS_START -->
       {''.join(projects_svg)}
       <!-- PROJECTS_END -->
@@ -676,34 +784,34 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
   <!-- ==================== 4. SKILLS ==================== -->
   <g id="skills-section">
-    <text x="20" y="{y_skills_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-skills)">cat ~/skills.txt</tspan><tspan class="cmd-cursor"> _</tspan></text>
+    <text x="20" y="{y_skills_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-text" clip-path="url(#clip-skills)">cat ~/skills.txt</tspan><tspan class="cmd-cursor" dy="-2">_</tspan></text>
 
     <g class="output-fade">
       <!-- Left Column Skills -->
       <text x="20" y="{y_skills_top}" class="skills-hdr">OPERATING SYSTEMS</text>
-      <line x1="20" y1="{y_skills_top + 6}" x2="280" y2="{y_skills_top + 6}" stroke="#24283b" />
+      <line x1="20" y1="{y_skills_top + 6}" x2="280" y2="{y_skills_top + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_os_svg)}
 
       <text x="20" y="{y_sk_ed_header}" class="skills-hdr">EDITORS &amp; IDES</text>
-      <line x1="20" y1="{y_sk_ed_header + 6}" x2="280" y2="{y_sk_ed_header + 6}" stroke="#24283b" />
+      <line x1="20" y1="{y_sk_ed_header + 6}" x2="280" y2="{y_sk_ed_header + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_ed_svg)}
 
       <!-- Right Column Skills -->
       <text x="310" y="{y_skills_top}" class="skills-hdr">DESKTOP ENVIRONMENTS</text>
-      <line x1="310" y1="{y_skills_top + 6}" x2="580" y2="{y_skills_top + 6}" stroke="#24283b" />
+      <line x1="310" y1="{y_skills_top + 6}" x2="580" y2="{y_skills_top + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_de_svg)}
 
       <text x="310" y="{y_sk_lt_header}" class="skills-hdr">LANGUAGES/TOOLS</text>
-      <line x1="310" y1="{y_sk_lt_header + 6}" x2="580" y2="{y_sk_lt_header + 6}" stroke="#24283b" />
+      <line x1="310" y1="{y_sk_lt_header + 6}" x2="580" y2="{y_sk_lt_header + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_lt_svg)}
     </g>
   </g>
 
   <!-- ==================== 5. FOOTER ==================== -->
   <g id="footer-section">
-    <text x="20" y="{y_final_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-cursor">_</tspan></text>
+    <text x="20" y="{y_final_prompt}" xml:space="preserve"><tspan class="prompt-host">aldrin@frtzhahn</tspan><tspan class="prompt-colon">:</tspan><tspan class="prompt-dir">~</tspan><tspan class="prompt-char">$ </tspan><tspan class="cmd-cursor" dy="-2">_</tspan></text>
 
-    <line x1="0" y1="{total_height - 28}" x2="600" y2="{total_height - 28}" stroke="#24283b" />
+    <line x1="0" y1="{total_height - 28}" x2="600" y2="{total_height - 28}" stroke="{THEME['divider']}" />
     <text x="20" y="{y_footer}" class="footer-text">LOGS: monitoring pid 1476</text>
     <text x="580" y="{y_footer}" text-anchor="end" class="footer-en-cours">"STATUS: EN_COURS"</text>
   </g>
