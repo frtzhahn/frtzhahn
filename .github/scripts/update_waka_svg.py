@@ -649,21 +649,21 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
     <!-- Bio Sequential Line Clip Paths -->
     <clipPath id="clip-bio-1">
-      <rect class="clip-stencil clip-bio1-anim" x="20" y="{y_bio_1 - 14}" width="275" height="20" />
+      <rect class="clip-stencil clip-bio1-anim" x="20" y="{y_bio_1 - 14}" width="145" height="20" />
     </clipPath>
     <clipPath id="clip-bio-2">
-      <rect class="clip-stencil clip-bio2-anim" x="20" y="{y_bio_2 - 14}" width="305" height="20" />
+      <rect class="clip-stencil clip-bio2-anim" x="20" y="{y_bio_2 - 14}" width="175" height="20" />
     </clipPath>
     <clipPath id="clip-bio-3">
       <rect class="clip-stencil clip-bio3-anim" x="20" y="{y_bio_3 - 14}" width="260" height="20" />
     </clipPath>
 
-    <!-- Fastfetch Course and Traits Clip Paths -->
-    <clipPath id="clip-course">
-      <rect class="clip-stencil clip-course-anim" x="160" y="{y_fastfetch_block + 96 - 14}" width="324" height="20" />
+    <!-- Fastfetch Brain and Misc Clip Paths -->
+    <clipPath id="clip-brain">
+      <rect class="clip-stencil clip-brain-anim" x="160" y="{y_fastfetch_block + 96 - 14}" width="345" height="20" />
     </clipPath>
-    <clipPath id="clip-traits">
-      <rect class="clip-stencil clip-traits-anim" x="160" y="{y_fastfetch_block + 116 - 14}" width="300" height="20" />
+    <clipPath id="clip-misc">
+      <rect class="clip-stencil clip-misc-anim" x="160" y="{y_fastfetch_block + 116 - 14}" width="382" height="20" />
     </clipPath>
 
     <!-- Section and Category Header Clip Paths -->
@@ -766,8 +766,8 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     @keyframes cur-bio-1 {{
       0%, 18.0% {{ transform: translateX(0); opacity: 0; }}
       18.5% {{ opacity: 1; }}
-      44.0% {{ transform: translateX(265px); opacity: 1; }}
-      44.5%, 100% {{ transform: translateX(265px); opacity: 0; }}
+      44.0% {{ transform: translateX(140px); opacity: 1; }}
+      44.5%, 100% {{ transform: translateX(140px); opacity: 0; }}
     }}
 
     .clip-bio2-anim {{ animation: type-bio-2 10s forwards; }}
@@ -779,8 +779,8 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     @keyframes cur-bio-2 {{
       0%, 44.0% {{ transform: translateX(0); opacity: 0; }}
       44.5% {{ opacity: 1; }}
-      70.0% {{ transform: translateX(295px); opacity: 1; }}
-      70.5%, 100% {{ transform: translateX(295px); opacity: 0; }}
+      70.0% {{ transform: translateX(169px); opacity: 1; }}
+      70.5%, 100% {{ transform: translateX(169px); opacity: 0; }}
     }}
 
     .clip-bio3-anim {{ animation: type-bio-3 10s forwards; }}
@@ -796,31 +796,31 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       94.5%, 100% {{ transform: translateX(250px); opacity: 0; }}
     }}
 
-    /* Fastfetch Course and Traits Sequential Keyframes with Aqua Cursor */
-    .clip-course-anim {{ animation: type-course 10s forwards; }}
-    .cursor-course-anim {{ animation: cur-course 10s forwards; }}
-    @keyframes type-course {{
+    /* Fastfetch Brain and Misc Sequential Keyframes with Aqua Cursor */
+    .clip-brain-anim {{ animation: type-brain 10s forwards; }}
+    .cursor-brain-anim {{ animation: cur-brain 10s forwards; }}
+    @keyframes type-brain {{
       0%, 18.0% {{ transform: scaleX(0); }}
       44.0%, 100% {{ transform: scaleX(1); }}
     }}
-    @keyframes cur-course {{
+    @keyframes cur-brain {{
       0%, 18.0% {{ transform: translateX(0); opacity: 0; }}
       18.5% {{ opacity: 1; }}
-      44.0% {{ transform: translateX(320px); opacity: 1; }}
-      44.5%, 100% {{ transform: translateX(320px); opacity: 0; }}
+      44.0% {{ transform: translateX(340px); opacity: 1; }}
+      44.5%, 100% {{ transform: translateX(340px); opacity: 0; }}
     }}
 
-    .clip-traits-anim {{ animation: type-traits 10s forwards; }}
-    .cursor-traits-anim {{ animation: cur-traits 10s forwards; }}
-    @keyframes type-traits {{
+    .clip-misc-anim {{ animation: type-misc 10s forwards; }}
+    .cursor-misc-anim {{ animation: cur-misc 10s forwards; }}
+    @keyframes type-misc {{
       0%, 44.0% {{ transform: scaleX(0); }}
       70.0%, 100% {{ transform: scaleX(1); }}
     }}
-    @keyframes cur-traits {{
+    @keyframes cur-misc {{
       0%, 44.0% {{ transform: translateX(0); opacity: 0; }}
       44.5% {{ opacity: 1; }}
-      70.0% {{ transform: translateX(285px); opacity: 1; }}
-      70.5%, 100% {{ transform: translateX(285px); opacity: 0; }}
+      70.0% {{ transform: translateX(380px); opacity: 1; }}
+      70.5%, 100% {{ transform: translateX(380px); opacity: 0; }}
     }}
 
     /* Section and Category Headers Typewriter Keyframes */
@@ -1000,16 +1000,16 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
         <line x1="160" y1="{y_fastfetch_block + 78}" x2="570" y2="{y_fastfetch_block + 78}" stroke="{THEME['border']}" stroke-dasharray="4,4" />
 
-        <!-- Course & Traits -->
-        <g clip-path="url(#clip-course)">
-          <text x="160" y="{y_fastfetch_block + 96}"><tspan class="ff-course-hdr">COURSE</tspan><tspan class="ff-course-val">: Bachelor of Science in Computer Science</tspan></text>
+        <!-- Brain and Misc -->
+        <g clip-path="url(#clip-brain)">
+          <text x="160" y="{y_fastfetch_block + 96}" xml:space="preserve"><tspan class="ff-course-hdr">BRAIN</tspan><tspan class="ff-course-val">: i5 6300U 2 cores 2 threads each 3.00 max GHz</tspan></text>
         </g>
-        <line class="content-cursor cursor-course-anim" x1="160" y1="{y_fastfetch_block + 96 - 10}" x2="160" y2="{y_fastfetch_block + 96 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+        <line class="content-cursor cursor-brain-anim" x1="160" y1="{y_fastfetch_block + 96 - 10}" x2="160" y2="{y_fastfetch_block + 96 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
 
-        <g clip-path="url(#clip-traits)">
-          <text x="160" y="{y_fastfetch_block + 116}"><tspan class="ff-course-hdr">TRAITS</tspan><tspan class="ff-course-val">: Procrastinator, Crammer, Night Owl</tspan></text>
+        <g clip-path="url(#clip-misc)">
+          <text x="160" y="{y_fastfetch_block + 116}" xml:space="preserve"><tspan class="ff-course-hdr">MISC</tspan><tspan class="ff-course-val">: intel  HD graphics 520, Living Room - Not for Radio</tspan></text>
         </g>
-        <line class="content-cursor cursor-traits-anim" x1="160" y1="{y_fastfetch_block + 116 - 10}" x2="160" y2="{y_fastfetch_block + 116 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+        <line class="content-cursor cursor-misc-anim" x1="160" y1="{y_fastfetch_block + 116 - 10}" x2="160" y2="{y_fastfetch_block + 116 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       </g>
     </g>
   </g>
@@ -1028,12 +1028,12 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
     <g class="output-fade">
       <g clip-path="url(#clip-bio-1)">
-        <text x="20" y="{y_bio_1}" xml:space="preserve"><tspan class="bio-line">&gt; Hello, I'm </tspan><tspan class="bio-accent">Aldrin James A. Alciso</tspan></text>
+        <text x="20" y="{y_bio_1}" xml:space="preserve"><tspan class="bio-line">&gt; Hello, I'm </tspan><tspan class="bio-accent">Aldrin</tspan></text>
       </g>
       <line class="content-cursor cursor-bio1-anim" x1="20" y1="{y_bio_1 - 11}" x2="20" y2="{y_bio_1 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
 
       <g clip-path="url(#clip-bio-2)">
-        <text x="20" y="{y_bio_2}" xml:space="preserve"><tspan class="bio-line">&gt; Student at </tspan><tspan class="bio-accent">University of Caloocan City</tspan></text>
+        <text x="20" y="{y_bio_2}" xml:space="preserve"><tspan class="bio-line">&gt; ComSci student at </tspan><tspan class="bio-accent">UCC</tspan></text>
       </g>
       <line class="content-cursor cursor-bio2-anim" x1="20" y1="{y_bio_2 - 11}" x2="20" y2="{y_bio_2 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
 
