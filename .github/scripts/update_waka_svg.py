@@ -3,7 +3,8 @@
 update_waka_svg.py
 Dynamically builds a Pure Native SVG terminal dashboard (profile.svg) for GitHub Readme.
 Eliminates <foreignObject> entirely to fix iOS/iPadOS WebKit rendering bugs (WebKit #23113).
-Maintains Tokyo Night dark aesthetic and 25-second animation timeline.
+Maintains Gruvbox Dark aesthetic and 10.0-second One-Shot entrance animation timeline.
+Features smooth continuous typography unmasking and synchronized Gruvbox Bright Aqua vertical cursor bars.
 """
 
 import json
@@ -37,6 +38,7 @@ import html
 #     'cmd': '#7aa2f7',
 #     'cursor': '#7aa2f7',
 #     'tab_accent': '#7aa2f7',
+#     'content_cursor': '#7aa2f7',
 #     'fastfetch_spec_label': '#7aa2f7',
 #     'fastfetch_course_hdr': '#7aa2f7',
 #     'pr_bar': '#bb9af7',
@@ -76,6 +78,7 @@ THEME = {
     'cmd': '#8ec07c',            # bright aqua
     'cursor': '#fe8019',         # bright orange
     'tab_accent': '#fe8019',     # bright orange
+    'content_cursor': '#8ec07c', # bright aqua for content cursor bar
     'fastfetch_spec_label': '#83a598',  # bright blue
     'fastfetch_course_hdr': '#fabd2f',  # bright yellow
     'pr_bar': '#d3869b',         # bright purple
@@ -347,7 +350,6 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     streak_bar_w = round(190 * (streak_pct / 100.0), 1)
 
     # Data extraction
-
     langs_raw = stats.get('languages', [])
     editors_raw = [e.get('name') if isinstance(e, dict) else str(e) for e in stats.get('editors', [])]
     projects_raw = [p.get('name') if isinstance(p, dict) else str(p) for p in stats.get('projects', [])]
@@ -364,8 +366,6 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_fastfetch_block = y_fastfetch_prompt + 20 # 74
     y_cursor = y_fastfetch_block + 130 # 204
     mocha_mascot_svg = load_mocha_mascot(x=20, y=y_fastfetch_block)
-
-
 
     # Section 2: Bio
     y_bio_prompt = y_cursor + 24 # 228
@@ -401,13 +401,28 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_waka_curr += 15
     y_waka_lists_top = y_waka_curr
 
+    # Tracking sets for dynamic CSS and clip definitions
+    clip_defs = []
+    unique_widths = set()
+
     # Left column: Active Editors, Operating Systems, Performance (x=20)
     y_left = y_waka_lists_top
     editors_svg = []
     y_left += 20
     for idx, ed in enumerate(editors_raw, 1):
-        cls_idx = min(idx, 9)
-        editors_svg.append(f'<text x="20" y="{y_left}" class="stat-item stat-item-{cls_idx}"><tspan fill="{THEME["stat_bullet"]}">●</tspan> {html.escape(ed)}</text>')
+        cls_idx = min(idx, 12)
+        ed_esc = html.escape(ed)
+        clip_id = f"clip-ed-{idx}"
+        w = max(int(round(len(ed) * 7.2)) + 2, 12)
+        unique_widths.add(w)
+        clip_defs.append(f'<clipPath id="{clip_id}"><rect class="clip-stencil clip-stat-anim clip-del-{cls_idx}" x="36" y="{y_left - 12}" width="{w + 4}" height="18" /></clipPath>')
+        editors_svg.append(f'''<g class="stat-row">
+        <text x="20" y="{y_left}"><tspan fill="{THEME["stat_bullet"]}">●</tspan></text>
+        <g clip-path="url(#{clip_id})">
+          <text x="36" y="{y_left}" class="stat-item">{ed_esc}</text>
+        </g>
+        <line class="content-cursor cur-w-{w} cur-del-{cls_idx}" x1="36" y1="{y_left - 11}" x2="36" y2="{y_left + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+      </g>''')
         y_left += 18
 
     y_left += 15
@@ -415,16 +430,43 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_left += 20
     os_svg = []
     for idx, o in enumerate(os_raw, 1):
-        cls_idx = min(idx, 9)
-        os_svg.append(f'<text x="20" y="{y_left}" class="stat-item stat-item-{cls_idx}"><tspan fill="{THEME["stat_bullet"]}">●</tspan> {html.escape(o)}</text>')
+        cls_idx = min(idx, 12)
+        o_esc = html.escape(o)
+        clip_id = f"clip-waka-os-{idx}"
+        w = max(int(round(len(o) * 7.2)) + 2, 12)
+        unique_widths.add(w)
+        clip_defs.append(f'<clipPath id="{clip_id}"><rect class="clip-stencil clip-stat-anim clip-del-{cls_idx}" x="36" y="{y_left - 12}" width="{w + 4}" height="18" /></clipPath>')
+        os_svg.append(f'''<g class="stat-row">
+        <text x="20" y="{y_left}"><tspan fill="{THEME["stat_bullet"]}">●</tspan></text>
+        <g clip-path="url(#{clip_id})">
+          <text x="36" y="{y_left}" class="stat-item">{o_esc}</text>
+        </g>
+        <line class="content-cursor cur-w-{w} cur-del-{cls_idx}" x1="36" y1="{y_left - 11}" x2="36" y2="{y_left + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+      </g>''')
         y_left += 18
 
     y_left += 15
     y_perf_header = y_left
     y_left += 20
+    w_time = max(int(round((len("TIME: ") + len(time_str)) * 7.2)) + 2, 12)
+    w_avg = max(int(round((len("DAILY AVG: ") + len(avg_str)) * 7.2)) + 2, 12)
+    unique_widths.add(w_time)
+    unique_widths.add(w_avg)
+    clip_defs.append(f'<clipPath id="clip-perf-1"><rect class="clip-stencil clip-stat-anim clip-del-1" x="20" y="{y_left - 12}" width="{w_time + 4}" height="18" /></clipPath>')
+    clip_defs.append(f'<clipPath id="clip-perf-2"><rect class="clip-stencil clip-stat-anim clip-del-2" x="20" y="{y_left + 18 - 12}" width="{w_avg + 4}" height="18" /></clipPath>')
     perf_svg = [
-        f'<text x="20" y="{y_left}" class="stat-item stat-item-1"><tspan fill="{THEME["perf_time_label"]}" font-weight="bold">TIME:</tspan> <tspan id="stat-time">{html.escape(time_str)}</tspan></text>',
-        f'<text x="20" y="{y_left + 18}" class="stat-item stat-item-2"><tspan fill="{THEME["perf_avg_label"]}" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">{html.escape(avg_str)}</tspan></text>'
+        f'''<g class="stat-row">
+        <g clip-path="url(#clip-perf-1)">
+          <text x="20" y="{y_left}" class="stat-item"><tspan fill="{THEME["perf_time_label"]}" font-weight="bold">TIME:</tspan> <tspan id="stat-time">{html.escape(time_str)}</tspan></text>
+        </g>
+        <line class="content-cursor cur-w-{w_time} cur-del-1" x1="20" y1="{y_left - 11}" x2="20" y2="{y_left + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+      </g>''',
+        f'''<g class="stat-row">
+        <g clip-path="url(#clip-perf-2)">
+          <text x="20" y="{y_left + 18}" class="stat-item"><tspan fill="{THEME["perf_avg_label"]}" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">{html.escape(avg_str)}</tspan></text>
+        </g>
+        <line class="content-cursor cur-w-{w_avg} cur-del-2" x1="20" y1="{y_left + 18 - 11}" x2="20" y2="{y_left + 18 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+      </g>'''
     ]
     y_left += 36
 
@@ -433,8 +475,19 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     projects_svg = []
     y_right += 20
     for idx, prj in enumerate(projects_raw, 1):
-        cls_idx = min(idx, 9)
-        projects_svg.append(f'<text x="310" y="{y_right}" class="stat-item stat-project stat-item-{cls_idx}"><tspan fill="{THEME["stat_bullet"]}">●</tspan> {html.escape(prj)}</text>')
+        cls_idx = min(idx, 12)
+        prj_esc = html.escape(prj)
+        clip_id = f"clip-prj-{idx}"
+        w = max(int(round(len(prj) * 7.2)) + 2, 12)
+        unique_widths.add(w)
+        clip_defs.append(f'<clipPath id="{clip_id}"><rect class="clip-stencil clip-stat-anim clip-del-{cls_idx}" x="326" y="{y_right - 12}" width="{w + 4}" height="18" /></clipPath>')
+        projects_svg.append(f'''<g class="stat-row">
+        <text x="310" y="{y_right}"><tspan fill="{THEME["stat_bullet"]}">●</tspan></text>
+        <g clip-path="url(#{clip_id})">
+          <text x="326" y="{y_right}" class="stat-item stat-project">{prj_esc}</text>
+        </g>
+        <line class="content-cursor cur-w-{w} cur-del-{cls_idx}" x1="326" y1="{y_right - 11}" x2="326" y2="{y_right + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+      </g>''')
         y_right += 18
 
     y_cursor = max(y_left, y_right) + 28
@@ -448,10 +501,18 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_sk_left = y_skills_top + 20
     sk_os_svg = []
     for idx, item in enumerate(skills.get('operating_systems', []), 1):
-        cls_idx = min(idx, 11)
-        sk_os_svg.append(f'''<g class="skill-entry skill-entry-{cls_idx}">
+        cls_idx = min(idx, 12)
+        name_esc = html.escape(item['name'])
+        clip_id = f"clip-sk-os-{idx}"
+        w = max(int(round(len(item['name']) * 7.2)) + 2, 12)
+        unique_widths.add(w)
+        clip_defs.append(f'<clipPath id="{clip_id}"><rect class="clip-stencil clip-stat-anim clip-del-{cls_idx}" x="44" y="{y_sk_left - 12}" width="{w + 4}" height="18" /></clipPath>')
+        sk_os_svg.append(f'''<g class="skill-entry">
       <image href="{item['icon']}" x="20" y="{y_sk_left - 13}" width="16" height="16" />
-      <text x="44" y="{y_sk_left}" class="skill-name">{html.escape(item['name'])}</text>
+      <g clip-path="url(#{clip_id})">
+        <text x="44" y="{y_sk_left}" class="skill-name">{name_esc}</text>
+      </g>
+      <line class="content-cursor cur-w-{w} cur-del-{cls_idx}" x1="44" y1="{y_sk_left - 11}" x2="44" y2="{y_sk_left + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
     </g>''')
         y_sk_left += 22
 
@@ -460,10 +521,18 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_sk_left += 20
     sk_ed_svg = []
     for idx, item in enumerate(skills.get('editors', []), 1):
-        cls_idx = min(idx, 11)
-        sk_ed_svg.append(f'''<g class="skill-entry skill-entry-{cls_idx}">
+        cls_idx = min(idx, 12)
+        name_esc = html.escape(item['name'])
+        clip_id = f"clip-sk-ed-{idx}"
+        w = max(int(round(len(item['name']) * 7.2)) + 2, 12)
+        unique_widths.add(w)
+        clip_defs.append(f'<clipPath id="{clip_id}"><rect class="clip-stencil clip-stat-anim clip-del-{cls_idx}" x="44" y="{y_sk_left - 12}" width="{w + 4}" height="18" /></clipPath>')
+        sk_ed_svg.append(f'''<g class="skill-entry">
       <image href="{item['icon']}" x="20" y="{y_sk_left - 13}" width="16" height="16" />
-      <text x="44" y="{y_sk_left}" class="skill-name">{html.escape(item['name'])}</text>
+      <g clip-path="url(#{clip_id})">
+        <text x="44" y="{y_sk_left}" class="skill-name">{name_esc}</text>
+      </g>
+      <line class="content-cursor cur-w-{w} cur-del-{cls_idx}" x1="44" y1="{y_sk_left - 11}" x2="44" y2="{y_sk_left + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
     </g>''')
         y_sk_left += 22
 
@@ -471,10 +540,18 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_sk_right = y_skills_top + 20
     sk_de_svg = []
     for idx, item in enumerate(skills.get('desktop_environments', []), 1):
-        cls_idx = min(idx, 11)
-        sk_de_svg.append(f'''<g class="skill-entry skill-entry-{cls_idx}">
+        cls_idx = min(idx, 12)
+        name_esc = html.escape(item['name'])
+        clip_id = f"clip-sk-de-{idx}"
+        w = max(int(round(len(item['name']) * 7.2)) + 2, 12)
+        unique_widths.add(w)
+        clip_defs.append(f'<clipPath id="{clip_id}"><rect class="clip-stencil clip-stat-anim clip-del-{cls_idx}" x="334" y="{y_sk_right - 12}" width="{w + 4}" height="18" /></clipPath>')
+        sk_de_svg.append(f'''<g class="skill-entry">
       <image href="{item['icon']}" x="310" y="{y_sk_right - 13}" width="16" height="16" />
-      <text x="334" y="{y_sk_right}" class="skill-name">{html.escape(item['name'])}</text>
+      <g clip-path="url(#{clip_id})">
+        <text x="334" y="{y_sk_right}" class="skill-name">{name_esc}</text>
+      </g>
+      <line class="content-cursor cur-w-{w} cur-del-{cls_idx}" x1="334" y1="{y_sk_right - 11}" x2="334" y2="{y_sk_right + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
     </g>''')
         y_sk_right += 22
 
@@ -483,10 +560,18 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_sk_right += 20
     sk_lt_svg = []
     for idx, item in enumerate(skills.get('languages_tools', []), 1):
-        cls_idx = min(idx, 11)
-        sk_lt_svg.append(f'''<g class="skill-entry skill-entry-{cls_idx}">
+        cls_idx = min(idx, 12)
+        name_esc = html.escape(item['name'])
+        clip_id = f"clip-sk-lt-{idx}"
+        w = max(int(round(len(item['name']) * 7.2)) + 2, 12)
+        unique_widths.add(w)
+        clip_defs.append(f'<clipPath id="{clip_id}"><rect class="clip-stencil clip-stat-anim clip-del-{cls_idx}" x="334" y="{y_sk_right - 12}" width="{w + 4}" height="18" /></clipPath>')
+        sk_lt_svg.append(f'''<g class="skill-entry">
       <image href="{item['icon']}" x="310" y="{y_sk_right - 13}" width="16" height="16" />
-      <text x="334" y="{y_sk_right}" class="skill-name">{html.escape(item['name'])}</text>
+      <g clip-path="url(#{clip_id})">
+        <text x="334" y="{y_sk_right}" class="skill-name">{name_esc}</text>
+      </g>
+      <line class="content-cursor cur-w-{w} cur-del-{cls_idx}" x1="334" y1="{y_sk_right - 11}" x2="334" y2="{y_sk_right + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
     </g>''')
         y_sk_right += 22
 
@@ -497,10 +582,58 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     total_height = y_final_prompt + 55
     y_footer = total_height - 12
 
+    # Section Headers (9 headers)
+    # Header format: (id_suffix, raw_title, display_title, x, y, font_size, css_class, width)
+    header_configs = [
+        ('lang', 'LANGUAGES', 'LANGUAGES', 20, y_waka_block, 14, 'section-title', 76),
+        ('editors', 'ACTIVE EDITORS', 'ACTIVE EDITORS', 20, y_waka_lists_top, 14, 'section-title', 118),
+        ('os', 'OPERATING SYSTEMS', 'OPERATING SYSTEMS', 20, y_os_header, 14, 'section-title', 143),
+        ('perf', 'aldrin@frtzhahn performance', 'aldrin@frtzhahn performance', 20, y_perf_header, 14, 'section-title', 227),
+        ('projects', 'CURRENT PROJECTS', 'CURRENT PROJECTS', 310, y_waka_lists_top, 14, 'section-title', 135),
+        ('sk-os', 'OPERATING SYSTEMS', 'OPERATING SYSTEMS', 20, y_skills_top, 13, 'skills-hdr', 133),
+        ('sk-ed', 'EDITORS & IDES', 'EDITORS &amp; IDES', 20, y_sk_ed_header, 13, 'skills-hdr', 110),
+        ('sk-de', 'DESKTOP ENVIRONMENTS', 'DESKTOP ENVIRONMENTS', 310, y_skills_top, 13, 'skills-hdr', 156),
+        ('sk-lt', 'LANGUAGES/TOOLS', 'LANGUAGES/TOOLS', 310, y_sk_lt_header, 13, 'skills-hdr', 117),
+    ]
+
+    header_clips = []
+    header_css = []
+    for hid, rtitle, dtitle, hx, hy, hfs, hcls, hw in header_configs:
+        y_rect = hy - (15 if hfs == 14 else 14)
+        header_clips.append(f'<clipPath id="clip-hdr-{hid}"><rect class="clip-stencil clip-hdr-anim" x="{hx}" y="{y_rect}" width="{hw + 4}" height="22" /></clipPath>')
+        header_css.append(f'''    .cur-hdr-{hid} {{ animation: cur-hdr-{hid} 10s forwards; }}
+    @keyframes cur-hdr-{hid} {{
+      0%, 18.0% {{ transform: translateX(0); opacity: 0; }}
+      18.5% {{ opacity: 1; }}
+      45.0% {{ transform: translateX({hw}px); opacity: 1; }}
+      45.5%, 100% {{ transform: translateX({hw}px); opacity: 0; }}
+    }}''')
+
+    # Generate dynamic CSS for stat and skill cursors
+    dynamic_css_lines = []
+    for w in sorted(unique_widths):
+        dynamic_css_lines.append(f"""    .cur-w-{w} {{ animation: cur-anim-{w} 10s forwards; }}
+    @keyframes cur-anim-{w} {{
+      0%, 20.0% {{ transform: translateX(0); opacity: 0; }}
+      20.5% {{ opacity: 1; }}
+      55.0% {{ transform: translateX({w}px); opacity: 1; }}
+      55.5%, 100% {{ transform: translateX({w}px); opacity: 0; }}
+    }}""")
+
+    for i in range(1, 13):
+        d = round(0.08 * i, 2)
+        dynamic_css_lines.append(f"    .clip-del-{i} {{ animation-delay: {d}s; }}")
+        dynamic_css_lines.append(f"    .cur-del-{i}  {{ animation-delay: {d}s; }}")
+
+    dynamic_stat_css = "\n".join(dynamic_css_lines)
+    header_css_str = "\n".join(header_css)
+    all_clip_defs_str = "\n    ".join(clip_defs)
+    header_clips_str = "\n    ".join(header_clips)
+
     # ---------------- SVG Assembly ----------------
     svg_out = f"""<svg viewBox="0 0 600 {total_height}" width="600" height="{total_height}" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Typewriter Clip Paths (Using scaleX for 100% WebKit hardware compatibility) -->
+    <!-- Typewriter Command Clip Paths (Using scaleX for 100% WebKit hardware compatibility) -->
     <clipPath id="clip-fastfetch">
       <rect class="clip-stencil clip-fastfetch-anim" x="180" y="{y_fastfetch_prompt - 16}" width="80" height="24" />
     </clipPath>
@@ -516,53 +649,28 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
     <!-- Bio Sequential Line Clip Paths -->
     <clipPath id="clip-bio-1">
-      <rect class="clip-stencil clip-bio1-anim" x="20" y="{y_bio_1 - 16}" width="560" height="24" />
+      <rect class="clip-stencil clip-bio1-anim" x="20" y="{y_bio_1 - 14}" width="275" height="20" />
     </clipPath>
     <clipPath id="clip-bio-2">
-      <rect class="clip-stencil clip-bio2-anim" x="20" y="{y_bio_2 - 16}" width="560" height="24" />
+      <rect class="clip-stencil clip-bio2-anim" x="20" y="{y_bio_2 - 14}" width="305" height="20" />
     </clipPath>
     <clipPath id="clip-bio-3">
-      <rect class="clip-stencil clip-bio3-anim" x="20" y="{y_bio_3 - 16}" width="560" height="24" />
+      <rect class="clip-stencil clip-bio3-anim" x="20" y="{y_bio_3 - 14}" width="260" height="20" />
     </clipPath>
 
-    <!-- Fastfetch Course & Traits Clip Paths -->
+    <!-- Fastfetch Course and Traits Clip Paths -->
     <clipPath id="clip-course">
-      <rect class="clip-stencil clip-course-anim" x="160" y="{y_fastfetch_block + 96 - 16}" width="340" height="24" />
+      <rect class="clip-stencil clip-course-anim" x="160" y="{y_fastfetch_block + 96 - 14}" width="324" height="20" />
     </clipPath>
     <clipPath id="clip-traits">
-      <rect class="clip-stencil clip-traits-anim" x="160" y="{y_fastfetch_block + 116 - 16}" width="300" height="24" />
+      <rect class="clip-stencil clip-traits-anim" x="160" y="{y_fastfetch_block + 116 - 14}" width="300" height="20" />
     </clipPath>
 
-    <!-- WakaTime Section Header Clip Paths -->
-    <clipPath id="clip-hdr-lang">
-      <rect class="clip-stencil clip-hdr-anim" x="20" y="{y_waka_block - 16}" width="110" height="24" />
-    </clipPath>
-    <clipPath id="clip-hdr-editors">
-      <rect class="clip-stencil clip-hdr-anim" x="20" y="{y_waka_lists_top - 16}" width="150" height="24" />
-    </clipPath>
-    <clipPath id="clip-hdr-projects">
-      <rect class="clip-stencil clip-hdr-anim" x="310" y="{y_waka_lists_top - 16}" width="170" height="24" />
-    </clipPath>
-    <clipPath id="clip-hdr-os">
-      <rect class="clip-stencil clip-hdr-anim" x="20" y="{y_os_header - 16}" width="180" height="24" />
-    </clipPath>
-    <clipPath id="clip-hdr-perf">
-      <rect class="clip-stencil clip-hdr-anim" x="20" y="{y_perf_header - 16}" width="260" height="24" />
-    </clipPath>
+    <!-- Section and Category Header Clip Paths -->
+    {header_clips_str}
 
-    <!-- Skills Category Header Clip Paths -->
-    <clipPath id="clip-hdr-sk-os">
-      <rect class="clip-stencil clip-hdr-anim" x="20" y="{y_skills_top - 16}" width="180" height="24" />
-    </clipPath>
-    <clipPath id="clip-hdr-sk-de">
-      <rect class="clip-stencil clip-hdr-anim" x="310" y="{y_skills_top - 16}" width="200" height="24" />
-    </clipPath>
-    <clipPath id="clip-hdr-sk-ed">
-      <rect class="clip-stencil clip-hdr-anim" x="20" y="{y_sk_ed_header - 16}" width="150" height="24" />
-    </clipPath>
-    <clipPath id="clip-hdr-sk-lt">
-      <rect class="clip-stencil clip-hdr-anim" x="310" y="{y_sk_lt_header - 16}" width="160" height="24" />
-    </clipPath>
+    <!-- Content Items Dynamic Clip Paths -->
+    {all_clip_defs_str}
   </defs>
 
   <style>
@@ -594,7 +702,12 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       transform-origin: left;
     }}
 
-    /* Command Typography / Typewriter Stencils and Cursor Synchronizers (One-Shot Entrance: 10s) */
+    /* Content Aqua Vertical Cursor */
+    .content-cursor {{
+      opacity: 0;
+    }}
+
+    /* Command Typography / Typewriter Stencils and Cursor Synchronizers (Smooth Linear Entrance: 10s) */
     .clip-fastfetch-anim {{ animation: type-fastfetch 10s forwards; }}
     .cursor-fastfetch-anim {{ animation: cursor-fastfetch 10s forwards; }}
 
@@ -608,79 +721,115 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     .cursor-skills-anim  {{ animation: cursor-skills 10s forwards; }}
 
     @keyframes type-fastfetch {{
-      0% {{ transform: scaleX(0); animation-timing-function: steps(9, end); }}
+      0% {{ transform: scaleX(0); }}
       24.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-fastfetch {{
-      0% {{ transform: translateX(-76px); animation-timing-function: steps(9, end); }}
+      0% {{ transform: translateX(-76px); }}
       24.0%, 100% {{ transform: translateX(0); }}
     }}
 
     @keyframes type-cat {{
-      0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
+      0% {{ transform: scaleX(0); }}
       24.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-cat {{
-      0% {{ transform: translateX(-135px); animation-timing-function: steps(16, end); }}
+      0% {{ transform: translateX(-135px); }}
       24.0%, 100% {{ transform: translateX(0); }}
     }}
 
     @keyframes type-htop {{
-      0% {{ transform: scaleX(0); animation-timing-function: steps(12, end); }}
+      0% {{ transform: scaleX(0); }}
       24.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-htop {{
-      0% {{ transform: translateX(-101px); animation-timing-function: steps(12, end); }}
+      0% {{ transform: translateX(-101px); }}
       24.0%, 100% {{ transform: translateX(0); }}
     }}
 
     @keyframes type-skills {{
-      0% {{ transform: scaleX(0); animation-timing-function: steps(16, end); }}
+      0% {{ transform: scaleX(0); }}
       24.0%, 100% {{ transform: scaleX(1); }}
     }}
     @keyframes cursor-skills {{
-      0% {{ transform: translateX(-135px); animation-timing-function: steps(16, end); }}
+      0% {{ transform: translateX(-135px); }}
       24.0%, 100% {{ transform: translateX(0); }}
     }}
 
-    /* Bio Sequential Keyframes (One-Shot: 18-44%, 44-70%, 70-94%) */
+    /* Bio Sequential Keyframes with Synchronized Aqua Cursor */
     .clip-bio1-anim {{ animation: type-bio-1 10s forwards; }}
-    .clip-bio2-anim {{ animation: type-bio-2 10s forwards; }}
-    .clip-bio3-anim {{ animation: type-bio-3 10s forwards; }}
-
+    .cursor-bio1-anim {{ animation: cur-bio-1 10s forwards; }}
     @keyframes type-bio-1 {{
-      0%, 18.0% {{ transform: scaleX(0); animation-timing-function: steps(26, end); }}
+      0%, 18.0% {{ transform: scaleX(0); }}
       44.0%, 100% {{ transform: scaleX(1); }}
     }}
+    @keyframes cur-bio-1 {{
+      0%, 18.0% {{ transform: translateX(0); opacity: 0; }}
+      18.5% {{ opacity: 1; }}
+      44.0% {{ transform: translateX(265px); opacity: 1; }}
+      44.5%, 100% {{ transform: translateX(265px); opacity: 0; }}
+    }}
+
+    .clip-bio2-anim {{ animation: type-bio-2 10s forwards; }}
+    .cursor-bio2-anim {{ animation: cur-bio-2 10s forwards; }}
     @keyframes type-bio-2 {{
-      0%, 44.0% {{ transform: scaleX(0); animation-timing-function: steps(30, end); }}
+      0%, 44.0% {{ transform: scaleX(0); }}
       70.0%, 100% {{ transform: scaleX(1); }}
     }}
+    @keyframes cur-bio-2 {{
+      0%, 44.0% {{ transform: translateX(0); opacity: 0; }}
+      44.5% {{ opacity: 1; }}
+      70.0% {{ transform: translateX(295px); opacity: 1; }}
+      70.5%, 100% {{ transform: translateX(295px); opacity: 0; }}
+    }}
+
+    .clip-bio3-anim {{ animation: type-bio-3 10s forwards; }}
+    .cursor-bio3-anim {{ animation: cur-bio-3 10s forwards; }}
     @keyframes type-bio-3 {{
-      0%, 70.0% {{ transform: scaleX(0); animation-timing-function: steps(32, end); }}
+      0%, 70.0% {{ transform: scaleX(0); }}
       94.0%, 100% {{ transform: scaleX(1); }}
     }}
+    @keyframes cur-bio-3 {{
+      0%, 70.0% {{ transform: translateX(0); opacity: 0; }}
+      70.5% {{ opacity: 1; }}
+      94.0% {{ transform: translateX(250px); opacity: 1; }}
+      94.5%, 100% {{ transform: translateX(250px); opacity: 0; }}
+    }}
 
-    /* Fastfetch Course and Traits Sequential Keyframes (One-Shot: 18-44%, 44-70%) */
+    /* Fastfetch Course and Traits Sequential Keyframes with Aqua Cursor */
     .clip-course-anim {{ animation: type-course 10s forwards; }}
-    .clip-traits-anim {{ animation: type-traits 10s forwards; }}
-
+    .cursor-course-anim {{ animation: cur-course 10s forwards; }}
     @keyframes type-course {{
-      0%, 18.0% {{ transform: scaleX(0); animation-timing-function: steps(46, end); }}
+      0%, 18.0% {{ transform: scaleX(0); }}
       44.0%, 100% {{ transform: scaleX(1); }}
     }}
+    @keyframes cur-course {{
+      0%, 18.0% {{ transform: translateX(0); opacity: 0; }}
+      18.5% {{ opacity: 1; }}
+      44.0% {{ transform: translateX(320px); opacity: 1; }}
+      44.5%, 100% {{ transform: translateX(320px); opacity: 0; }}
+    }}
+
+    .clip-traits-anim {{ animation: type-traits 10s forwards; }}
+    .cursor-traits-anim {{ animation: cur-traits 10s forwards; }}
     @keyframes type-traits {{
-      0%, 44.0% {{ transform: scaleX(0); animation-timing-function: steps(40, end); }}
+      0%, 44.0% {{ transform: scaleX(0); }}
       70.0%, 100% {{ transform: scaleX(1); }}
     }}
-
-    /* Section and Category Headers Typewriter Keyframes (One-Shot: 20-55%) */
-    .clip-hdr-anim {{ animation: type-header 10s forwards; }}
-
-    @keyframes type-header {{
-      0%, 20.0% {{ transform: scaleX(0); animation-timing-function: steps(18, end); }}
-      55.0%, 100% {{ transform: scaleX(1); }}
+    @keyframes cur-traits {{
+      0%, 44.0% {{ transform: translateX(0); opacity: 0; }}
+      44.5% {{ opacity: 1; }}
+      70.0% {{ transform: translateX(285px); opacity: 1; }}
+      70.5%, 100% {{ transform: translateX(285px); opacity: 0; }}
     }}
+
+    /* Section and Category Headers Typewriter Keyframes */
+    .clip-hdr-anim {{ animation: type-header 10s forwards; }}
+    @keyframes type-header {{
+      0%, 18.0% {{ transform: scaleX(0); }}
+      45.0%, 100% {{ transform: scaleX(1); }}
+    }}
+{header_css_str}
 
     /* Output Fades (Fastfetch, Bio, Waka, Skills) */
     .output-fade {{
@@ -721,39 +870,17 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     .waka-bar-row-8 {{ animation-delay: 0.8s; }}
     .waka-bar-row-9 {{ animation-delay: 0.9s; }}
 
-    /* Stat Items - Staggered Cascade Entrance (One-Shot: 20-70%) */
-    .stat-item {{
-      animation: fade-stat 10s forwards;
+    /* Stat and Skill Content Items Smooth Typewriter Stencil */
+    .clip-stat-anim {{
+      animation: type-stat-clip 10s forwards;
     }}
-    @keyframes fade-stat {{
-      0%, 20.0% {{ opacity: 0; transform: translateX(-8px); }}
-      70.0%, 100% {{ opacity: 1; transform: translateX(0); }}
+    @keyframes type-stat-clip {{
+      0%, 20.0% {{ transform: scaleX(0); }}
+      55.0%, 100% {{ transform: scaleX(1); }}
     }}
-    .stat-item-1 {{ animation-delay: 0.1s; }}
-    .stat-item-2 {{ animation-delay: 0.3s; }}
-    .stat-item-3 {{ animation-delay: 0.5s; }}
-    .stat-item-4 {{ animation-delay: 0.7s; }}
-    .stat-item-5 {{ animation-delay: 0.9s; }}
-    .stat-item-6 {{ animation-delay: 1.1s; }}
-    .stat-item-7 {{ animation-delay: 1.3s; }}
-    .stat-item-8 {{ animation-delay: 1.5s; }}
-    .stat-item-9 {{ animation-delay: 1.7s; }}
 
-    /* Skills Grid Entries - Staggered Cascade (One-Shot: 20-70%) */
-    .skill-entry {{
-      animation: fade-stat 10s forwards;
-    }}
-    .skill-entry-1  {{ animation-delay: 0.1s; }}
-    .skill-entry-2  {{ animation-delay: 0.2s; }}
-    .skill-entry-3  {{ animation-delay: 0.3s; }}
-    .skill-entry-4  {{ animation-delay: 0.4s; }}
-    .skill-entry-5  {{ animation-delay: 0.5s; }}
-    .skill-entry-6  {{ animation-delay: 0.6s; }}
-    .skill-entry-7  {{ animation-delay: 0.7s; }}
-    .skill-entry-8  {{ animation-delay: 0.8s; }}
-    .skill-entry-9  {{ animation-delay: 0.9s; }}
-    .skill-entry-10 {{ animation-delay: 1.0s; }}
-    .skill-entry-11 {{ animation-delay: 1.1s; }}
+    /* Dynamic Content Cursor Animations and Staggered Ripple Delays */
+{dynamic_stat_css}
 
     /* Fastfetch Styles */
     .ff-spec-label {{ fill: {THEME['fastfetch_spec_label']}; font-size: 11px; }}
@@ -792,6 +919,9 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       .clip-stencil, .bar-fill {{
         transform: none !important;
       }}
+      .content-cursor {{
+        display: none !important;
+      }}
     }}
   </style>
 
@@ -808,7 +938,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
   <circle cx="53" cy="15.5" r="5" fill="{THEME['dot_green']}" />
   -->
 
-  <!-- Linux Terminal Tab & Window Header (Kitty / Sway Rice) -->
+  <!-- Linux Terminal Tab and Window Header (Kitty / Sway Rice) -->
   <g id="window-header-linux">
     <!-- Active Tab -->
     <rect x="12" y="4" width="125" height="26.5" rx="4" fill="{THEME['tab_bg']}" />
@@ -874,9 +1004,12 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
         <g clip-path="url(#clip-course)">
           <text x="160" y="{y_fastfetch_block + 96}"><tspan class="ff-course-hdr">COURSE</tspan><tspan class="ff-course-val">: Bachelor of Science in Computer Science</tspan></text>
         </g>
+        <line class="content-cursor cursor-course-anim" x1="160" y1="{y_fastfetch_block + 96 - 10}" x2="160" y2="{y_fastfetch_block + 96 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+
         <g clip-path="url(#clip-traits)">
           <text x="160" y="{y_fastfetch_block + 116}"><tspan class="ff-course-hdr">TRAITS</tspan><tspan class="ff-course-val">: Procrastinator, Crammer, Night Owl</tspan></text>
         </g>
+        <line class="content-cursor cursor-traits-anim" x1="160" y1="{y_fastfetch_block + 116 - 10}" x2="160" y2="{y_fastfetch_block + 116 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       </g>
     </g>
   </g>
@@ -894,9 +1027,20 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     </g>
 
     <g class="output-fade">
-      <text x="20" y="{y_bio_1}" xml:space="preserve" clip-path="url(#clip-bio-1)"><tspan class="bio-line">&gt; Hello, I'm </tspan><tspan class="bio-accent">Aldrin James A. Alciso</tspan></text>
-      <text x="20" y="{y_bio_2}" xml:space="preserve" clip-path="url(#clip-bio-2)"><tspan class="bio-line">&gt; Student at </tspan><tspan class="bio-accent">University of Caloocan City</tspan></text>
-      <text x="20" y="{y_bio_3}" xml:space="preserve" clip-path="url(#clip-bio-3)"><tspan class="bio-line">&gt; Exploring new things everyday :3</tspan></text>
+      <g clip-path="url(#clip-bio-1)">
+        <text x="20" y="{y_bio_1}" xml:space="preserve"><tspan class="bio-line">&gt; Hello, I'm </tspan><tspan class="bio-accent">Aldrin James A. Alciso</tspan></text>
+      </g>
+      <line class="content-cursor cursor-bio1-anim" x1="20" y1="{y_bio_1 - 11}" x2="20" y2="{y_bio_1 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+
+      <g clip-path="url(#clip-bio-2)">
+        <text x="20" y="{y_bio_2}" xml:space="preserve"><tspan class="bio-line">&gt; Student at </tspan><tspan class="bio-accent">University of Caloocan City</tspan></text>
+      </g>
+      <line class="content-cursor cursor-bio2-anim" x1="20" y1="{y_bio_2 - 11}" x2="20" y2="{y_bio_2 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
+
+      <g clip-path="url(#clip-bio-3)">
+        <text x="20" y="{y_bio_3}" xml:space="preserve"><tspan class="bio-line">&gt; Exploring new things everyday :3</tspan></text>
+      </g>
+      <line class="content-cursor cursor-bio3-anim" x1="20" y1="{y_bio_3 - 11}" x2="20" y2="{y_bio_3 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
     </g>
   </g>
 
@@ -917,6 +1061,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <g clip-path="url(#clip-hdr-lang)">
         <text x="20" y="{y_waka_block}" class="section-title">LANGUAGES</text>
       </g>
+      <line class="content-cursor cur-hdr-lang" x1="20" y1="{y_waka_block - 13}" x2="20" y2="{y_waka_block + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_waka_block + 6}" x2="580" y2="{y_waka_block + 6}" stroke="{THEME['divider']}" />
       <!-- LANG_START -->
 {''.join(langs_svg_lines)}
@@ -927,6 +1072,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <g clip-path="url(#clip-hdr-editors)">
         <text x="20" y="{y_waka_lists_top}" class="section-title">ACTIVE EDITORS</text>
       </g>
+      <line class="content-cursor cur-hdr-editors" x1="20" y1="{y_waka_lists_top - 13}" x2="20" y2="{y_waka_lists_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_waka_lists_top + 6}" x2="280" y2="{y_waka_lists_top + 6}" stroke="{THEME['divider']}" />
       <!-- EDITORS_START -->
       {''.join(editors_svg)}
@@ -936,6 +1082,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <g clip-path="url(#clip-hdr-os)">
         <text x="20" y="{y_os_header}" class="section-title">OPERATING SYSTEMS</text>
       </g>
+      <line class="content-cursor cur-hdr-os" x1="20" y1="{y_os_header - 13}" x2="20" y2="{y_os_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_os_header + 6}" x2="280" y2="{y_os_header + 6}" stroke="{THEME['divider']}" />
       <!-- OS_START -->
       {''.join(os_svg)}
@@ -945,6 +1092,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <g clip-path="url(#clip-hdr-perf)">
         <text x="20" y="{y_perf_header}" class="section-title">aldrin@frtzhahn performance</text>
       </g>
+      <line class="content-cursor cur-hdr-perf" x1="20" y1="{y_perf_header - 13}" x2="20" y2="{y_perf_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_perf_header + 6}" x2="280" y2="{y_perf_header + 6}" stroke="{THEME['divider']}" />
       {''.join(perf_svg)}
 
@@ -952,6 +1100,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <g clip-path="url(#clip-hdr-projects)">
         <text x="310" y="{y_waka_lists_top}" class="section-title">CURRENT PROJECTS</text>
       </g>
+      <line class="content-cursor cur-hdr-projects" x1="310" y1="{y_waka_lists_top - 13}" x2="310" y2="{y_waka_lists_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="310" y1="{y_waka_lists_top + 6}" x2="580" y2="{y_waka_lists_top + 6}" stroke="{THEME['divider']}" />
       <!-- PROJECTS_START -->
       {''.join(projects_svg)}
@@ -976,12 +1125,14 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <g clip-path="url(#clip-hdr-sk-os)">
         <text x="20" y="{y_skills_top}" class="skills-hdr">OPERATING SYSTEMS</text>
       </g>
+      <line class="content-cursor cur-hdr-sk-os" x1="20" y1="{y_skills_top - 12}" x2="20" y2="{y_skills_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_skills_top + 6}" x2="280" y2="{y_skills_top + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_os_svg)}
 
       <g clip-path="url(#clip-hdr-sk-ed)">
         <text x="20" y="{y_sk_ed_header}" class="skills-hdr">EDITORS &amp; IDES</text>
       </g>
+      <line class="content-cursor cur-hdr-sk-ed" x1="20" y1="{y_sk_ed_header - 12}" x2="20" y2="{y_sk_ed_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_sk_ed_header + 6}" x2="280" y2="{y_sk_ed_header + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_ed_svg)}
 
@@ -989,12 +1140,14 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <g clip-path="url(#clip-hdr-sk-de)">
         <text x="310" y="{y_skills_top}" class="skills-hdr">DESKTOP ENVIRONMENTS</text>
       </g>
+      <line class="content-cursor cur-hdr-sk-de" x1="310" y1="{y_skills_top - 12}" x2="310" y2="{y_skills_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="310" y1="{y_skills_top + 6}" x2="580" y2="{y_skills_top + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_de_svg)}
 
       <g clip-path="url(#clip-hdr-sk-lt)">
         <text x="310" y="{y_sk_lt_header}" class="skills-hdr">LANGUAGES/TOOLS</text>
       </g>
+      <line class="content-cursor cur-hdr-sk-lt" x1="310" y1="{y_sk_lt_header - 12}" x2="310" y2="{y_sk_lt_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="310" y1="{y_sk_lt_header + 6}" x2="580" y2="{y_sk_lt_header + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_lt_svg)}
     </g>
