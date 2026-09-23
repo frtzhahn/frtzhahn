@@ -56,10 +56,10 @@
     <clipPath id="clip-perf-2"><rect class="clip-stencil clip-stat-anim clip-del-2" x="20" y="889" width="222" height="18" /></clipPath>
     <clipPath id="clip-prj-1"><rect class="clip-stencil clip-stat-anim clip-del-1" x="326" y="675" width="56" height="18" /></clipPath>
     <clipPath id="clip-prj-2"><rect class="clip-stencil clip-stat-anim clip-del-2" x="326" y="693" width="114" height="18" /></clipPath>
-    <clipPath id="clip-prj-3"><rect class="clip-stencil clip-stat-anim clip-del-3" x="326" y="711" width="42" height="18" /></clipPath>
-    <clipPath id="clip-prj-4"><rect class="clip-stencil clip-stat-anim clip-del-4" x="326" y="729" width="56" height="18" /></clipPath>
-    <clipPath id="clip-prj-5"><rect class="clip-stencil clip-stat-anim clip-del-5" x="326" y="747" width="35" height="18" /></clipPath>
-    <clipPath id="clip-prj-6"><rect class="clip-stencil clip-stat-anim clip-del-6" x="326" y="765" width="64" height="18" /></clipPath>
+    <clipPath id="clip-prj-3"><rect class="clip-stencil clip-stat-anim clip-del-3" x="326" y="711" width="64" height="18" /></clipPath>
+    <clipPath id="clip-prj-4"><rect class="clip-stencil clip-stat-anim clip-del-4" x="326" y="729" width="42" height="18" /></clipPath>
+    <clipPath id="clip-prj-5"><rect class="clip-stencil clip-stat-anim clip-del-5" x="326" y="747" width="56" height="18" /></clipPath>
+    <clipPath id="clip-prj-6"><rect class="clip-stencil clip-stat-anim clip-del-6" x="326" y="765" width="35" height="18" /></clipPath>
     <clipPath id="clip-prj-7"><rect class="clip-stencil clip-stat-anim clip-del-7" x="326" y="783" width="143" height="18" /></clipPath>
     <clipPath id="clip-prj-8"><rect class="clip-stencil clip-stat-anim clip-del-8" x="326" y="801" width="49" height="18" /></clipPath>
     <clipPath id="clip-prj-9"><rect class="clip-stencil clip-stat-anim clip-del-9" x="326" y="819" width="114" height="18" /></clipPath>
@@ -697,46 +697,46 @@
       <!-- LANG_START -->
 
       <g class="waka-bar-row waka-bar-row-1">
-        <text x="20" y="366" class="waka-lang-name">Markdown</text>
+        <text x="20" y="366" class="waka-lang-name">Other</text>
         <rect x="135" y="357" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="357" width="150.6" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="580" y="366" text-anchor="end" class="waka-lang-val">40.7%</text>
+        <rect x="135" y="357" width="141.0" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="580" y="366" text-anchor="end" class="waka-lang-val">38.1%</text>
       </g>
       <g class="waka-bar-row waka-bar-row-2">
-        <text x="20" y="388" class="waka-lang-name">Other</text>
+        <text x="20" y="388" class="waka-lang-name">Markdown</text>
         <rect x="135" y="379" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="379" width="96.6" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="580" y="388" text-anchor="end" class="waka-lang-val">26.1%</text>
+        <rect x="135" y="379" width="109.9" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="580" y="388" text-anchor="end" class="waka-lang-val">29.7%</text>
       </g>
       <g class="waka-bar-row waka-bar-row-3">
         <text x="20" y="410" class="waka-lang-name">hyprlang</text>
         <rect x="135" y="401" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="401" width="34.8" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="580" y="410" text-anchor="end" class="waka-lang-val">9.4%</text>
+        <rect x="135" y="401" width="33.7" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="580" y="410" text-anchor="end" class="waka-lang-val">9.1%</text>
       </g>
       <g class="waka-bar-row waka-bar-row-4">
         <text x="20" y="432" class="waka-lang-name">Bash</text>
         <rect x="135" y="423" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="423" width="29.6" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="580" y="432" text-anchor="end" class="waka-lang-val">8.0%</text>
+        <rect x="135" y="423" width="30.7" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="580" y="432" text-anchor="end" class="waka-lang-val">8.3%</text>
       </g>
       <g class="waka-bar-row waka-bar-row-5">
         <text x="20" y="454" class="waka-lang-name">conf</text>
         <rect x="135" y="445" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="445" width="17.4" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="580" y="454" text-anchor="end" class="waka-lang-val">4.7%</text>
+        <rect x="135" y="445" width="17.0" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="580" y="454" text-anchor="end" class="waka-lang-val">4.6%</text>
       </g>
       <g class="waka-bar-row waka-bar-row-6">
         <text x="20" y="476" class="waka-lang-name">C#</text>
         <rect x="135" y="467" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="467" width="16.6" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="580" y="476" text-anchor="end" class="waka-lang-val">4.5%</text>
+        <rect x="135" y="467" width="16.3" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="580" y="476" text-anchor="end" class="waka-lang-val">4.4%</text>
       </g>
       <g class="waka-bar-row waka-bar-row-7">
         <text x="20" y="498" class="waka-lang-name">Lua</text>
         <rect x="135" y="489" width="370" height="8" rx="4" class="bar-bg" />
-        <rect x="135" y="489" width="12.2" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="580" y="498" text-anchor="end" class="waka-lang-val">3.3%</text>
+        <rect x="135" y="489" width="9.6" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="580" y="498" text-anchor="end" class="waka-lang-val">2.6%</text>
       </g>
       <g class="waka-bar-row waka-bar-row-8">
         <text x="20" y="520" class="waka-lang-name">XML</text>
@@ -847,12 +847,12 @@
       <line x1="20" y1="869" x2="280" y2="869" stroke="#3c3836" />
       <g class="stat-row">
         <g clip-path="url(#clip-perf-1)">
-          <text x="20" y="883" class="stat-item"><tspan fill="#83a598" font-weight="bold">TIME:</tspan> <tspan id="stat-time">22 hrs 12 mins total</tspan></text>
+          <text x="20" y="883" class="stat-item"><tspan fill="#83a598" font-weight="bold">TIME:</tspan> <tspan id="stat-time">22 hrs 55 mins total</tspan></text>
         </g>
         <line class="content-cursor cur-w-189 cur-del-1" x1="20" y1="872" x2="20" y2="885" stroke="#8ec07c" stroke-width="1.8" />
       </g><g class="stat-row">
         <g clip-path="url(#clip-perf-2)">
-          <text x="20" y="901" class="stat-item"><tspan fill="#b8bb26" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">3 hrs 10 mins / day</tspan></text>
+          <text x="20" y="901" class="stat-item"><tspan fill="#b8bb26" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">3 hrs 16 mins / day</tspan></text>
         </g>
         <line class="content-cursor cur-w-218 cur-del-2" x1="20" y1="890" x2="20" y2="903" stroke="#8ec07c" stroke-width="1.8" />
       </g>
@@ -879,27 +879,27 @@
       </g><g class="stat-row">
         <text x="310" y="723"><tspan fill="#928374">●</tspan></text>
         <g clip-path="url(#clip-prj-3)">
-          <text x="326" y="723" class="stat-item stat-project">mocha</text>
+          <text x="326" y="723" class="stat-item stat-project">frtzhahn</text>
         </g>
-        <line class="content-cursor cur-w-38 cur-del-3" x1="326" y1="712" x2="326" y2="725" stroke="#8ec07c" stroke-width="1.8" />
+        <line class="content-cursor cur-w-60 cur-del-3" x1="326" y1="712" x2="326" y2="725" stroke="#8ec07c" stroke-width="1.8" />
       </g><g class="stat-row">
         <text x="310" y="741"><tspan fill="#928374">●</tspan></text>
         <g clip-path="url(#clip-prj-4)">
-          <text x="326" y="741" class="stat-item stat-project">success</text>
+          <text x="326" y="741" class="stat-item stat-project">mocha</text>
         </g>
-        <line class="content-cursor cur-w-52 cur-del-4" x1="326" y1="730" x2="326" y2="743" stroke="#8ec07c" stroke-width="1.8" />
+        <line class="content-cursor cur-w-38 cur-del-4" x1="326" y1="730" x2="326" y2="743" stroke="#8ec07c" stroke-width="1.8" />
       </g><g class="stat-row">
         <text x="310" y="759"><tspan fill="#928374">●</tspan></text>
         <g clip-path="url(#clip-prj-5)">
-          <text x="326" y="759" class="stat-item stat-project">nvim</text>
+          <text x="326" y="759" class="stat-item stat-project">success</text>
         </g>
-        <line class="content-cursor cur-w-31 cur-del-5" x1="326" y1="748" x2="326" y2="761" stroke="#8ec07c" stroke-width="1.8" />
+        <line class="content-cursor cur-w-52 cur-del-5" x1="326" y1="748" x2="326" y2="761" stroke="#8ec07c" stroke-width="1.8" />
       </g><g class="stat-row">
         <text x="310" y="777"><tspan fill="#928374">●</tspan></text>
         <g clip-path="url(#clip-prj-6)">
-          <text x="326" y="777" class="stat-item stat-project">frtzhahn</text>
+          <text x="326" y="777" class="stat-item stat-project">nvim</text>
         </g>
-        <line class="content-cursor cur-w-60 cur-del-6" x1="326" y1="766" x2="326" y2="779" stroke="#8ec07c" stroke-width="1.8" />
+        <line class="content-cursor cur-w-31 cur-del-6" x1="326" y1="766" x2="326" y2="779" stroke="#8ec07c" stroke-width="1.8" />
       </g><g class="stat-row">
         <text x="310" y="795"><tspan fill="#928374">●</tspan></text>
         <g clip-path="url(#clip-prj-7)">
