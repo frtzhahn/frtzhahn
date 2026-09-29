@@ -355,8 +355,8 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     projects_raw = [p.get('name') if isinstance(p, dict) else str(p) for p in stats.get('projects', [])]
     os_raw = [o.get('name') if isinstance(o, dict) else str(o) for o in stats.get('operating_systems', [])]
 
-    time_str = stats.get('human_readable_total_including_other_language', '0 secs') + ' total'
-    avg_str = stats.get('human_readable_daily_average_including_other_language', '0 secs') + ' / day'
+    time_str = stats.get('human_readable_total_including_other_language', '0 secs')
+    avg_str = stats.get('human_readable_daily_average_including_other_language', '0 secs')
 
     # ---------------- Layout Calculation Engine ----------------
     y_cursor = 30 # Base height below window title bar
@@ -448,8 +448,8 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     y_left += 15
     y_perf_header = y_left
     y_left += 20
-    w_time = max(int(round((len("TIME: ") + len(time_str)) * 7.2)) + 2, 12)
-    w_avg = max(int(round((len("DAILY AVG: ") + len(avg_str)) * 7.2)) + 2, 12)
+    w_time = max(int(round((len("WEEKLY TOTAL: ") + len(time_str)) * 7.5)) + 4, 12)
+    w_avg = max(int(round((len("DAILY AVG:    ") + len(avg_str)) * 7.5)) + 4, 12)
     unique_widths.add(w_time)
     unique_widths.add(w_avg)
     clip_defs.append(f'<clipPath id="clip-perf-1"><rect class="clip-stencil clip-stat-anim clip-del-1" x="20" y="{y_left - 12}" width="{w_time + 4}" height="18" /></clipPath>')
@@ -457,13 +457,13 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     perf_svg = [
         f'''<g class="stat-row">
         <g clip-path="url(#clip-perf-1)">
-          <text x="20" y="{y_left}" class="stat-item"><tspan fill="{THEME["perf_time_label"]}" font-weight="bold">TIME:</tspan> <tspan id="stat-time">{html.escape(time_str)}</tspan></text>
+          <text x="20" y="{y_left}" class="stat-item" xml:space="preserve"><tspan fill="{THEME["perf_time_label"]}" font-weight="bold">WEEKLY TOTAL:</tspan> <tspan id="stat-time">{html.escape(time_str)}</tspan></text>
         </g>
         <line class="content-cursor cur-w-{w_time} cur-del-1" x1="20" y1="{y_left - 11}" x2="20" y2="{y_left + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       </g>''',
         f'''<g class="stat-row">
         <g clip-path="url(#clip-perf-2)">
-          <text x="20" y="{y_left + 18}" class="stat-item"><tspan fill="{THEME["perf_avg_label"]}" font-weight="bold">DAILY AVG:</tspan> <tspan id="stat-avg">{html.escape(avg_str)}</tspan></text>
+          <text x="20" y="{y_left + 18}" class="stat-item" xml:space="preserve"><tspan fill="{THEME["perf_avg_label"]}" font-weight="bold">DAILY AVG:   </tspan> <tspan id="stat-avg">{html.escape(avg_str)}</tspan></text>
         </g>
         <line class="content-cursor cur-w-{w_avg} cur-del-2" x1="20" y1="{y_left + 18 - 11}" x2="20" y2="{y_left + 18 + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       </g>'''
@@ -585,15 +585,15 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     # Section Headers (9 headers)
     # Header format: (id_suffix, raw_title, display_title, x, y, font_size, css_class, width)
     header_configs = [
-        ('lang', 'LANGUAGES', 'LANGUAGES', 20, y_waka_block, 14, 'section-title', 76),
-        ('editors', 'ACTIVE EDITORS', 'ACTIVE EDITORS', 20, y_waka_lists_top, 14, 'section-title', 118),
-        ('os', 'OPERATING SYSTEMS', 'OPERATING SYSTEMS', 20, y_os_header, 14, 'section-title', 143),
-        ('perf', 'aldrin@frtzhahn performance', 'aldrin@frtzhahn performance', 20, y_perf_header, 14, 'section-title', 227),
-        ('projects', 'CURRENT PROJECTS', 'CURRENT PROJECTS', 310, y_waka_lists_top, 14, 'section-title', 135),
-        ('sk-os', 'OPERATING SYSTEMS', 'OPERATING SYSTEMS', 20, y_skills_top, 13, 'skills-hdr', 133),
-        ('sk-ed', 'EDITORS & IDES', 'EDITORS &amp; IDES', 20, y_sk_ed_header, 13, 'skills-hdr', 110),
-        ('sk-de', 'DESKTOP ENVIRONMENTS', 'DESKTOP ENVIRONMENTS', 310, y_skills_top, 13, 'skills-hdr', 156),
-        ('sk-lt', 'LANGUAGES/TOOLS', 'LANGUAGES/TOOLS', 310, y_sk_lt_header, 13, 'skills-hdr', 117),
+        ('lang', 'LANGUAGES I RECENTLY USED', 'LANGUAGES I RECENTLY USED', 20, y_waka_block, 14, 'section-title', 218),
+        ('editors', 'MY CURRENT EDITORS', 'MY CURRENT EDITORS', 20, y_waka_lists_top, 14, 'section-title', 160),
+        ('os', 'CURRENT WORKSPACES', 'CURRENT WORKSPACES', 20, y_os_header, 14, 'section-title', 160),
+        ('perf', 'MY CODING METRICS', 'MY CODING METRICS', 20, y_perf_header, 14, 'section-title', 152),
+        ('projects', "THINGS I'M WORKING ON", "THINGS I'M WORKING ON", 310, y_waka_lists_top, 14, 'section-title', 182),
+        ('sk-os', 'PREFERRED WORKSPACES', 'PREFERRED WORKSPACES', 20, y_skills_top, 13, 'skills-hdr', 165),
+        ('sk-ed', 'WHERE I WRITE CODE', 'WHERE I WRITE CODE', 20, y_sk_ed_header, 13, 'skills-hdr', 150),
+        ('sk-de', 'MY DESKTOP FLAVORS', 'MY DESKTOP FLAVORS', 310, y_skills_top, 13, 'skills-hdr', 150),
+        ('sk-lt', 'MY TECHSTACK', 'MY TECHSTACK', 310, y_sk_lt_header, 13, 'skills-hdr', 105),
     ]
 
     header_clips = []
@@ -1059,7 +1059,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     <g class="output-fade">
       <!-- Languages Section -->
       <g clip-path="url(#clip-hdr-lang)">
-        <text x="20" y="{y_waka_block}" class="section-title">LANGUAGES</text>
+        <text x="20" y="{y_waka_block}" class="section-title">LANGUAGES I RECENTLY USED</text>
       </g>
       <line class="content-cursor cur-hdr-lang" x1="20" y1="{y_waka_block - 13}" x2="20" y2="{y_waka_block + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_waka_block + 6}" x2="580" y2="{y_waka_block + 6}" stroke="{THEME['divider']}" />
@@ -1070,7 +1070,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
       <!-- Left Column: Active Editors, OS, Performance -->
       <!-- Editors -->
       <g clip-path="url(#clip-hdr-editors)">
-        <text x="20" y="{y_waka_lists_top}" class="section-title">ACTIVE EDITORS</text>
+        <text x="20" y="{y_waka_lists_top}" class="section-title">MY CURRENT EDITORS</text>
       </g>
       <line class="content-cursor cur-hdr-editors" x1="20" y1="{y_waka_lists_top - 13}" x2="20" y2="{y_waka_lists_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_waka_lists_top + 6}" x2="280" y2="{y_waka_lists_top + 6}" stroke="{THEME['divider']}" />
@@ -1080,7 +1080,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
       <!-- OS -->
       <g clip-path="url(#clip-hdr-os)">
-        <text x="20" y="{y_os_header}" class="section-title">OPERATING SYSTEMS</text>
+        <text x="20" y="{y_os_header}" class="section-title">CURRENT WORKSPACES</text>
       </g>
       <line class="content-cursor cur-hdr-os" x1="20" y1="{y_os_header - 13}" x2="20" y2="{y_os_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_os_header + 6}" x2="280" y2="{y_os_header + 6}" stroke="{THEME['divider']}" />
@@ -1090,7 +1090,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
       <!-- Performance -->
       <g clip-path="url(#clip-hdr-perf)">
-        <text x="20" y="{y_perf_header}" class="section-title">aldrin@frtzhahn performance</text>
+        <text x="20" y="{y_perf_header}" class="section-title">MY CODING METRICS</text>
       </g>
       <line class="content-cursor cur-hdr-perf" x1="20" y1="{y_perf_header - 13}" x2="20" y2="{y_perf_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_perf_header + 6}" x2="280" y2="{y_perf_header + 6}" stroke="{THEME['divider']}" />
@@ -1098,7 +1098,7 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
       <!-- Right Column: Current Projects -->
       <g clip-path="url(#clip-hdr-projects)">
-        <text x="310" y="{y_waka_lists_top}" class="section-title">CURRENT PROJECTS</text>
+        <text x="310" y="{y_waka_lists_top}" class="section-title">THINGS I'M WORKING ON</text>
       </g>
       <line class="content-cursor cur-hdr-projects" x1="310" y1="{y_waka_lists_top - 13}" x2="310" y2="{y_waka_lists_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="310" y1="{y_waka_lists_top + 6}" x2="580" y2="{y_waka_lists_top + 6}" stroke="{THEME['divider']}" />
@@ -1123,14 +1123,14 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
     <g class="output-fade">
       <!-- Left Column Skills -->
       <g clip-path="url(#clip-hdr-sk-os)">
-        <text x="20" y="{y_skills_top}" class="skills-hdr">OPERATING SYSTEMS</text>
+        <text x="20" y="{y_skills_top}" class="skills-hdr">PREFERRED WORKSPACES</text>
       </g>
       <line class="content-cursor cur-hdr-sk-os" x1="20" y1="{y_skills_top - 12}" x2="20" y2="{y_skills_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_skills_top + 6}" x2="280" y2="{y_skills_top + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_os_svg)}
 
       <g clip-path="url(#clip-hdr-sk-ed)">
-        <text x="20" y="{y_sk_ed_header}" class="skills-hdr">EDITORS &amp; IDES</text>
+        <text x="20" y="{y_sk_ed_header}" class="skills-hdr">WHERE I WRITE CODE</text>
       </g>
       <line class="content-cursor cur-hdr-sk-ed" x1="20" y1="{y_sk_ed_header - 12}" x2="20" y2="{y_sk_ed_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="20" y1="{y_sk_ed_header + 6}" x2="280" y2="{y_sk_ed_header + 6}" stroke="{THEME['divider']}" />
@@ -1138,14 +1138,14 @@ def generate_native_profile_svg(stats, skills, gh_stats=None):
 
       <!-- Right Column Skills -->
       <g clip-path="url(#clip-hdr-sk-de)">
-        <text x="310" y="{y_skills_top}" class="skills-hdr">DESKTOP ENVIRONMENTS</text>
+        <text x="310" y="{y_skills_top}" class="skills-hdr">MY DESKTOP FLAVORS</text>
       </g>
       <line class="content-cursor cur-hdr-sk-de" x1="310" y1="{y_skills_top - 12}" x2="310" y2="{y_skills_top + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="310" y1="{y_skills_top + 6}" x2="580" y2="{y_skills_top + 6}" stroke="{THEME['divider']}" />
       {''.join(sk_de_svg)}
 
       <g clip-path="url(#clip-hdr-sk-lt)">
-        <text x="310" y="{y_sk_lt_header}" class="skills-hdr">LANGUAGES/TOOLS</text>
+        <text x="310" y="{y_sk_lt_header}" class="skills-hdr">MY TECHSTACK</text>
       </g>
       <line class="content-cursor cur-hdr-sk-lt" x1="310" y1="{y_sk_lt_header - 12}" x2="310" y2="{y_sk_lt_header + 2}" stroke="{THEME['content_cursor']}" stroke-width="1.8" />
       <line x1="310" y1="{y_sk_lt_header + 6}" x2="580" y2="{y_sk_lt_header + 6}" stroke="{THEME['divider']}" />
