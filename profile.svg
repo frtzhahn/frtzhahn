@@ -605,20 +605,20 @@
         <!-- pull_requests -->
         <text x="160" y="92" class="ff-spec-label">pull_requests</text>
         <rect x="255" y="84" width="190" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="84" width="156.2" height="8" rx="4" fill="#d3869b" class="bar-fill" />
-        <text x="570" y="92" text-anchor="end" class="ff-spec-val">82.2% (Merged)</text>
+        <rect x="255" y="84" width="156.9" height="8" rx="4" fill="#d3869b" class="bar-fill" />
+        <text x="570" y="92" text-anchor="end" class="ff-spec-val">82.6% (Merged)</text>
 
         <!-- issues_solved -->
         <text x="160" y="114" class="ff-spec-label">issues_solved</text>
         <rect x="255" y="106" width="190" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="106" width="144.0" height="8" rx="4" fill="#83a598" class="bar-fill" />
-        <text x="570" y="114" text-anchor="end" class="ff-spec-val">75.8% (Closed)</text>
+        <rect x="255" y="106" width="155.4" height="8" rx="4" fill="#83a598" class="bar-fill" />
+        <text x="570" y="114" text-anchor="end" class="ff-spec-val">81.8% (Closed)</text>
 
         <!-- commit_streak -->
         <text x="160" y="136" class="ff-spec-label">commit_streak</text>
         <rect x="255" y="128" width="190" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="128" width="6.8" height="8" rx="4" fill="#8ec07c" class="bar-fill" />
-        <text x="570" y="136" text-anchor="end" class="ff-spec-val">3.6% (Goal: 365)</text>
+        <rect x="255" y="128" width="20.3" height="8" rx="4" fill="#8ec07c" class="bar-fill" />
+        <text x="570" y="136" text-anchor="end" class="ff-spec-val">10.7% (Goal: 365)</text>
 
         <line x1="160" y1="152" x2="570" y2="152" stroke="#504945" stroke-dasharray="4,4" />
 
