@@ -631,8 +631,8 @@
         <!-- commit_streak -->
         <text x="160" y="136" class="ff-spec-label">commit_streak</text>
         <rect x="255" y="128" width="190" height="8" rx="4" class="bar-bg" />
-        <rect x="255" y="128" width="27.5" height="8" rx="4" fill="#8ec07c" class="bar-fill" />
-        <text x="570" y="136" text-anchor="end" class="ff-spec-val">14.5% (Goal: 365)</text>
+        <rect x="255" y="128" width="28.1" height="8" rx="4" fill="#8ec07c" class="bar-fill" />
+        <text x="570" y="136" text-anchor="end" class="ff-spec-val">14.8% (Goal: 365)</text>
 
         <line x1="160" y1="152" x2="570" y2="152" stroke="#504945" stroke-dasharray="4,4" />
 
